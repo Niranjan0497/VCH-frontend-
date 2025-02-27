@@ -33,7 +33,7 @@ function ConsultationForm() {
     >
       <div className="bg-transparent-500 backdrop-blur-lg p-6 rounded-lg shadow-lg w-full max-w-lg sm:max-w-xl md:max-w-2xl lg:max-w-4xl flex flex-col lg:flex-row mx-auto">
         <div className="p-4 w-full">
-          <button className="flex bg-blue-100 items-center text-blue-600 font-medium px-3 py-2 rounded-md" onClick={() => navigate('/specialities')}>
+          <button className="flex bg-blue-100 items-center text-blue-600 font-medium px-3 py-2 rounded-md" onClick={() => navigate('/  ')}>
             <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <polyline points="15 18 9 12 15 6"></polyline>
             </svg>

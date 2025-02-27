@@ -1,11 +1,16 @@
-import React from 'react'
+import React from "react";
+import Specialities from "../Components/homecomponents/TopConsultants/TopConsultant.jsx";
+
+
 
 const Home = () => {
   return (
-    <div>
-      <p>landing Page</p>
-    </div>
-  )
-}
+    <>
 
-export default Home
+    <Specialities />
+
+    </>
+  );
+};
+
+export default Home;
