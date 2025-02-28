@@ -4,7 +4,7 @@ import health from "../../../assets/ArticleImages/Coronavirus.jpg";
 import health1 from "../../../assets/ArticleImages/Vitamins.jpg";
 const HomePage = () => {
   return (
-    <div className="container mx-auto px-6 py-12 flex flex-col md:flex-row items-center gap-12">
+    <div className="container mx-auto px-12 py-12 flex flex-col md:flex-row items-center gap-10">
       
       <div className="md:w-1/2">
         <h2 className="text-3xl font-bold text-gray-800">Read top articles from health experts</h2>
