@@ -8,6 +8,7 @@ import ConsultationForm from "./Components/homecomponents/TopConsultants/TopCons
 import BlogCards from "./Components/homecomponents/article/BlogCards.jsx";
 import HomePage from "./Components/homecomponents/article/HomePage.jsx";
 import ViewBlogCard from "./Components/homecomponents/article/ViewBlogCard.jsx";
+import ContactForm from "./pages/Contact.jsx";
 
 
 
@@ -24,6 +25,7 @@ function App() {
         <Route path="/blogcards" element={<BlogCards/>}/>
         <Route path="/homepage" element={<HomePage/>}/>
         <Route path="/viewblogcard/:id" element={<ViewBlogCard/>}/>
+        <Route path="/contacts" element={<ContactForm/>}/>
       </Routes>
       <Footer />
         </div>
