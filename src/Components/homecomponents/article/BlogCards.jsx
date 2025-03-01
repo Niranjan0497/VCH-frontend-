@@ -20,7 +20,7 @@ export default function BlogCards() {
   ];
 
   return (
-    <div className="w-full px-4 md:px-6 py-10 bg-gray-100 mt-7">
+    <div className="w-full px-4 md:px-6 py-10 bg-gray-100">
       <h2 className="text-3xl font-bold text-center">Top Health Articles</h2>
       <p className="text-center text-gray-600 mb-8">Trending tips from doctors and health experts</p>
       <div className="max-w-full mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 px-4 md:px-10">
