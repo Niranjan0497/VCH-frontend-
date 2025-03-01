@@ -8,6 +8,8 @@ import img2 from "../../../assets/ArticleImages/microneedling.avif";
 import img3 from "../../../assets/ArticleImages/Dental.jpg";
 import img4 from "../../../assets/ArticleImages/Anger.jpg";
 import img5 from "../../../assets/ArticleImages/Child.jpg";
+import health from "../../../assets/ArticleImages/Coronavirus.jpg"
+import health1 from "../../../assets/ArticleImages/Vitamins.jpg"
 
 const Data = [
   { 
@@ -25,6 +27,26 @@ const Data = [
   { id: 4, title: "4 Tips for Speedy Recovery from Chicken Pox", author: "Dr. Vandan H Kumar", description: "It's important to relieve/decrease the symptoms associated with chickenpox...", tags: ["Infection", "Flu"], image: img, likes: 74 },
   { id: 5, title: "How to Cure Bad Breath at Home", author: "Dr. Ushma K Kakkad", description: "Having bad breath can adversely affect your social life...", tags: ["Oral Hygiene", "Bad Breath", "Tooth Decay", "The Cure"], image: img1, likes: 3 },
   { id: 6, title: "Wish to turn back time on your scars?", author: "Women's Health", description: "As scary as needles can be, a few pokes can actually help you look more beautiful...", tags: [], image: img2, likes: 115 },
+  { 
+    id: 7,
+    title: "12 Coronavirus Myths and Facts That You Should Be Aware Of", 
+    author: "Dr. Diana Borgio", 
+    description: "12 Coronavirus Myths and Facts That You Should Be Aware Of",
+    tags: ["viruses","Common Cold","Coronavirus","COVID-19"], 
+    image:health,
+    likes:112,
+    
+  },
+  { 
+    id: 8,
+    title: "VITAMINS AND SUPPLEMENTS", 
+    author: "Dr. Diana Borgio", 
+    description: "Eating Right to Build Immunity Against Cold and Viral Infections",
+    tags: ["Immunity","Common Cold","Legal Immunity","Diet","COVID-19"],  
+    image:health1,
+    likes:109,
+    
+  }
 ];
 
 export default function ViewBlogCard() {
@@ -207,8 +229,8 @@ export default function ViewBlogCard() {
               <h3 className="font-bold text-lg mt-6">Here's why:</h3>
               <p className="text-gray-700 mt-2">
               Without treatment, dark spots and permanent scars can appear on the skin as acne clears.
-        Treating acne often boosts a person’s self-esteem.
-        Many effective treatments are available.
+              Treating acne often boosts a person’s self-esteem.
+               Many effective treatments are available.
               </p>
 
               <h3 className="font-bold text-lg mt-6">ACNE: SIGNS AND SYMPTOMS</h3>
@@ -230,7 +252,71 @@ export default function ViewBlogCard() {
               </p></div>
             </div>
           )}
-  
+
+  {post.id === 7 && (
+            <div className="mt-6">
+              <div className="mt-4">   <p className="text-gray-700 mt-2">
+              As of April 10, 2020, COVID-19 currently affects 210 countries and union territories across the globe and 7,600 confirmed cases in India. 
+
+            While there are so much news and information all over the internet about the spread and prevention of the outbreak, without a doubt, a few myths and fictions are also floating around. Believing in any of these myths can be more dangerous than the disease itself.
+
+            Here are some of the most common misbeliefs about Coronavirus along with the actual facts that you should be aware of:
+              </p>
+
+             
+              <p className="text-gray-700 mt-2">
+                
+        As of April 10, 2020, COVID-19 currently affects 210 countries and union territories across the globe and 7,600 confirmed cases in India. 
+
+      While </p>
+      <p className="text-gray-700 mt-2">
+      There are so much news and information all over the internet about the spread and prevention of the outbreak, without a doubt, a few myths and fictions are also floating around. Believing in any of these myths can be more dangerous than the disease itself.
+
+      Here are some of the most common misbeliefs about Coronavirus along with the actual facts that you should be aware of:
+
+
+
+
+      This information is important and must be shared with all. It is recommended to stay hydrated, stay away from people who are sick or down with a cold/ cough/ fever and maintain hand & face hygiene at all times to avoid catching an infection. 
+           </p>
+            </div>
+            </div>
+          )}
+
+{post.id === 8 && (
+            <div className="mt-6">
+              <div className="mt-4">   <p className="text-gray-700 mt-2">
+              With the COVID-19 outbreak, everyone’s focus is on increasing the body’s immunity and staying away from catching a cold or flu-like illness. Here, it becomes equally important to discuss how eating right and healthily can help to optimize our body’s ability to fight infections. 
+              </p>
+
+              <h3 className="font-bold text-lg mt-6">Eating right for strong immunity</h3>
+             
+              <p className="text-gray-700 mt-2">
+                Two misconceptions associated with eating and building immunity that we generally hear of are: 
+
+            (a) Loading up on Vitamin C will increase immunity & keep us away from cold or flu and (b) Only drinking fresh fruit juices will boost immunity
+
+            Contrary to these beliefs, a whole lot of micronutrients, probiotics, and antioxidants are responsible for preparing the body to fight infections and external allergens effectively.
+       </p>
+       <h3 className="font-bold text-lg mt-6">In this article, we will discuss:</h3>
+
+      <p className="text-gray-700 mt-2">
+      1. List of key nutrients, vitamins, and minerals involved in the immune function
+
+      2. Cooking techniques to boost our immune system
+      <h3 className="font-bold text-lg mt-6">List of key superfoods to be included in your daily diet</h3>
+           </p>
+           <p className="text-gray-700 mt-2">
+           <p className="text-gray-700 mt-2">
+      1. List of key nutrients, vitamins, and minerals involved in the immune function
+
+      2. Cooking techniques to boost our immune system
+      <h3 className="font-bold text-lg mt-6">List of key superfoods to be included in your daily diet</h3>
+           </p>
+           </p>
+            </div>
+            </div>
+          )}
           <p className="text-gray-600 mt-4 text-lg">{post.description}</p>
   
           <div className="flex flex-wrap gap-2 mt-4">
