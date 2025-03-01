@@ -81,7 +81,11 @@ function Navbar() {
   }, [isMenuOpen]);
 
   return (
+<<<<<<< HEAD
     <nav className="bg-white shadow-md fixed top-0 left-0 right-0 z-50 ">
+=======
+    <nav className="bg-white shadow-md sticky top-0  left-0 right-0 z-50 h-30">
+>>>>>>> 0d6f7c01a346cb782a193b20e256ea81f5a40bae
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-between items-center h-16">
           {/* Left side - Logo and main links */}
@@ -210,9 +214,9 @@ function Navbar() {
                   className="absolute right-0 mt-2 w-64 sm:w-72 md:w-80 bg-white rounded-md shadow-lg py-4 px-4 z-20"
                   onClick={(e) => e.stopPropagation()}
                 >
-                  <form onSubmit={handleProfileSubmit} className="space-y-4">
-                    <div className="relative">
-                      <label htmlFor="name" className="block text-sm font-medium text-gray-700">
+                  <form onSubmit={handleProfileSubmit} className="space-y-4 bg-white">
+                    <div className="relative bg-white ">
+                      <label htmlFor="name" className="block text-md font-medium text-gray-700">
                         Name
                       </label>
                       <input
@@ -221,12 +225,12 @@ function Navbar() {
                         id="name"
                         value={profileData.name}
                         onChange={handleProfileChange}
-                        className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-sky-500 focus:ring-sky-500 sm:text-sm"
+                        className="mt-1 block w-full h-10 p-4 rounded-md border-grey-800  bg-gray-100 shadow-sm focus:border-sky-500 focus:ring-sky-500 sm:text-lg"
                         placeholder="Enter your name"
                       />
                     </div>
                     <div className="relative">
-                      <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+                      <label htmlFor="email" className="block text-md font-medium text-gray-700">
                         Email
                       </label>
                       <input
@@ -235,15 +239,15 @@ function Navbar() {
                         id="email"
                         value={profileData.email}
                         onChange={handleProfileChange}
-                        className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-sky-500 focus:ring-sky-500 sm:text-sm"
+                        className="mt-1 block w-full  h-10 p-4 rounded-md border-gray-300  bg-gray-100 shadow-sm focus:border-sky-500 focus:ring-sky-500 sm:text-lg"
                         placeholder="Enter your email"
                       />
                     </div>
                     <div className="flex justify-between">
-                      <Link to="/login" className="text-sm text-blue-600 hover:text-blue-800" onClick={(e) => e.stopPropagation()}>
+                      <Link to="/login" className="text-md text-blue-600 hover:text-blue-800" onClick={(e) => e.stopPropagation()}>
                         Login
                       </Link>
-                      <Link to="/register" className="text-sm text-blue-600 hover:text-blue-800" onClick={(e) => e.stopPropagation()}>
+                      <Link to="/register" className="text-md text-blue-600 hover:text-blue-800" onClick={(e) => e.stopPropagation()}>
                         Register
                       </Link>
                     </div>
