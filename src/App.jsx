@@ -19,7 +19,7 @@ import UploadPage from "./Components/homecomponents/Admin/Uploadform.jsx";
 function App() {
   return (
     <>
-      <div className="min-h-screen bg-white">
+      
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -38,7 +38,7 @@ function App() {
           <Route path="/upload" element={<UploadPage />} />
         </Routes>
         <Footer />
-      </div>
+      
     </>
   );
 }
