@@ -89,15 +89,12 @@ function Navbar() {
             <Link to="/" className="flex-shrink-0">
               <img
                 src="https://static.vecteezy.com/system/resources/previews/020/037/356/non_2x/vch-letter-logo-design-on-white-background-vch-creative-circle-letter-logo-concept-vch-letter-design-vector.jpg"
-                alt="VCH"
-                className="h-12 sm:h-14 md:h-16"
-              />
+                alt="VCH" className="h-12 sm:h-14 md:h-16"/>
             </Link>
 
             <div className="hidden md:flex items-center space-x-2 lg:space-x-6">
               <Link
-                to="/find-experts"
-                className={`text-black font-extrabold text-sm sm:text-base lg:text-lg pb-1 hover:text-blue-900 ${
+                to="/find-experts" className={`text-black font-extrabold text-sm sm:text-base lg:text-lg pb-1 hover:text-blue-900 ${
                   isActive('/find-experts') ? 'text-blue-500 border-b-4 border-practo-blue font-medium' : ''
                 }`}
                 style={{ fontFamily: '"Lato", "Open Sans", sans-serif' }}
@@ -105,8 +102,7 @@ function Navbar() {
                 Find Experts
               </Link>
               <Link
-                to="/video-consult"
-                className={`text-black font-extrabold text-sm sm:text-base lg:text-lg pb-1 hover:text-blue-900 ${
+                to="/video-consult"  className={`text-black font-extrabold text-sm sm:text-base lg:text-lg pb-1 hover:text-blue-900 ${
                   isActive('/video-consult') ? 'text-blue-500 border-b-4 border-practo-blue font-medium' : ''
                 }`}
                 style={{ fontFamily: '"Lato", "Open Sans", sans-serif' }}
@@ -114,8 +110,7 @@ function Navbar() {
                 Services
               </Link>
               <Link
-                to="/contacts"
-                className={`text-black font-extrabold text-sm sm:text-base lg:text-lg pb-1 hover:text-blue-900 ${
+                to="/contacts" className={`text-black font-extrabold text-sm sm:text-base lg:text-lg pb-1 hover:text-blue-900 ${
                   isActive('/contacts') ? 'text-blue-500 border-b-4 border-practo-blue font-medium' : ''
                 }`}
                 style={{ fontFamily: '"Lato", "Open Sans", sans-serif' }}
@@ -133,11 +128,7 @@ function Navbar() {
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               aria-label="Toggle menu"
             >
-              {isMenuOpen ? (
-                <FaTimes className="h-5 w-5 text-blue-600" />
-              ) : (
-                <FaBars className="h-5 w-5 text-gray-600" />
-              )}
+              {isMenuOpen ? (<FaTimes className="h-5 w-5 text-blue-600" /> ) : (<FaBars className="h-5 w-5 text-gray-600" /> )}
             </button>
 
             {/* Dropdowns for Tablets and Desktop */}
@@ -207,47 +198,18 @@ function Navbar() {
               {isProfileOpen && (
                 <div 
                   ref={profileMenuRef} 
-                  className="absolute right-0 mt-2 w-64 sm:w-72 md:w-80 bg-white rounded-md shadow-lg py-4 px-4 z-20"
+                  className={"absolute right-0 mt-2 w-48 h-20 bg-white border border-gray-200 rounded-lg shadow-lg transition-all duration-300 ease-in-out overflow-hidden "}
                   onClick={(e) => e.stopPropagation()}
-                >
-                  <form onSubmit={handleProfileSubmit} className="space-y-4 bg-white">
-                    <div className="relative bg-white ">
-                      <label htmlFor="name" className="block text-md font-medium text-gray-700">
-                        Name
-                      </label>
-                      <input
-                        type="text"
-                        name="name"
-                        id="name"
-                        value={profileData.name}
-                        onChange={handleProfileChange}
-                        className="mt-1 block w-full h-10 p-4 rounded-md border-grey-800  bg-gray-100 shadow-sm focus:border-sky-500 focus:ring-sky-500 sm:text-lg"
-                        placeholder="Enter your name"
-                      />
-                    </div>
-                    <div className="relative">
-                      <label htmlFor="email" className="block text-md font-medium text-gray-700">
-                        Email
-                      </label>
-                      <input
-                        type="email"
-                        name="email"
-                        id="email"
-                        value={profileData.email}
-                        onChange={handleProfileChange}
-                        className="mt-1 block w-full  h-10 p-4 rounded-md border-gray-300  bg-gray-100 shadow-sm focus:border-sky-500 focus:ring-sky-500 sm:text-lg"
-                        placeholder="Enter your email"
-                      />
-                    </div>
-                    <div className="flex justify-between">
-                      <Link to="/login" className="text-md text-blue-600 hover:text-blue-800" onClick={(e) => e.stopPropagation()}>
+                > 
+                    <div className=" justify-between">
+                      <Link to="/login" className=" block m-2 text-lg text-gray-600 hover:text-black hover:bg-blue-300" onClick={(e) => e.stopPropagation()}>
                         Login
                       </Link>
-                      <Link to="/register" className="text-md text-blue-600 hover:text-blue-800" onClick={(e) => e.stopPropagation()}>
+                      <Link to="/register" className=" block m-2 text-lg text-gray-600 hover:text-black hover:bg-blue-300" onClick={(e) => e.stopPropagation()}>
                         Register
                       </Link>
                     </div>
-                  </form>
+                 
                 </div>
               )}
             </div>
@@ -264,35 +226,25 @@ function Navbar() {
             <div className="flex flex-col p-4 space-y-4">
               {/* Main Navigation Links */}
               <Link
-                to="/find-experts"
-                className={`flex items-center text-lg py-2 px-4 rounded-lg transition-colors ${
-                  isActive('/find-experts') 
-                    ? 'bg-blue-50 text-blue-600 font-medium' 
-                    : 'text-gray-800 hover:bg-gray-100'
+                to="/find-experts"className={`flex items-center text-lg py-2 px-4 rounded-lg transition-colors ${
+                  isActive('/find-experts')  ? 'bg-blue-50 text-blue-600 font-medium' : 'text-gray-800 hover:bg-gray-100'
                 }`}
                 onClick={() => setIsMenuOpen(false)}
               >
                 Find Experts
-              </Link>
-              
+              </Link>             
               <Link
                 to="/video-consult"
                 className={`flex items-center text-lg py-2 px-4 rounded-lg transition-colors ${
-                  isActive('/video-consult') 
-                    ? 'bg-blue-50 text-blue-600 font-medium' 
-                    : 'text-gray-800 hover:bg-gray-100'
+                  isActive('/video-consult')  ? 'bg-blue-50 text-blue-600 font-medium' : 'text-gray-800 hover:bg-gray-100'
                 }`}
                 onClick={() => setIsMenuOpen(false)}
               >
                 Services
-              </Link>
-              
+              </Link>              
               <Link
-                to="/contacts"
-                className={`flex items-center text-lg py-2 px-4 rounded-lg transition-colors ${
-                  isActive('/contacts') 
-                    ? 'bg-blue-50 text-blue-600 font-medium' 
-                    : 'text-gray-800 hover:bg-gray-100'
+                to="/contacts" className={`flex items-center text-lg py-2 px-4 rounded-lg transition-colors ${
+                  isActive('/contacts')  ? 'bg-blue-50 text-blue-600 font-medium' : 'text-gray-800 hover:bg-gray-100'
                 }`}
                 onClick={() => setIsMenuOpen(false)}
               >
@@ -307,20 +259,17 @@ function Navbar() {
                 >
                   <span>For Corporates</span>
                   <FaChevronDown className={`h-4 w-4 transition-transform duration-300 ${isMobileDropdownOpen === 'corporates' ? 'transform rotate-180' : ''}`} />
-                </button>
-                
+                </button>               
                 {isMobileDropdownOpen === 'corporates' && (
                   <div className="ml-4 mt-2 space-y-2 pl-4 border-l-2 border-gray-200">
                     <Link 
-                      to="/health-plans" 
-                      className="block py-2 px-3 text-gray-700 hover:text-blue-600"
+                      to="/health-plans" className="block py-2 px-3 text-gray-700 hover:text-blue-600"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       Health Plans
                     </Link>
                     <Link 
-                      to="/wellness-plans" 
-                      className="block py-2 px-3 text-gray-700 hover:text-blue-600"
+                      to="/wellness-plans"  className="block py-2 px-3 text-gray-700 hover:text-blue-600"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       Wellness Plans
@@ -337,41 +286,35 @@ function Navbar() {
                 >
                   <span>For Providers</span>
                   <FaChevronDown className={`h-4 w-4 transition-transform duration-300 ${isMobileDropdownOpen === 'providers' ? 'transform rotate-180' : ''}`} />
-                </button>
-                
+                </button>              
                 {isMobileDropdownOpen === 'providers' && (
                   <div className="ml-4 mt-2 space-y-2 pl-4 border-l-2 border-gray-200">
                     <Link 
-                      to="/practo-assured" 
-                      className="block py-2 px-3 text-gray-700 hover:text-blue-600"
+                      to="/practo-assured" className="block py-2 px-3 text-gray-700 hover:text-blue-600"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       Vch Assured
                     </Link>
                     <Link 
-                      to="/practo-prime" 
-                      className="block py-2 px-3 text-gray-700 hover:text-blue-600"
+                      to="/practo-prime" className="block py-2 px-3 text-gray-700 hover:text-blue-600"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       vch Prime
                     </Link>
                     <Link 
-                      to="/software" 
-                      className="block py-2 px-3 text-gray-700 hover:text-blue-600"
+                      to="/software"  className="block py-2 px-3 text-gray-700 hover:text-blue-600"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       Software for Providers
                     </Link>
                     <Link 
-                      to="/list-practice" 
-                      className="block py-2 px-3 text-gray-700 hover:text-blue-600"
+                      to="/list-practice"  className="block py-2 px-3 text-gray-700 hover:text-blue-600"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       List Your Practice for Free
                     </Link>
                     <Link 
-                      to="/abdm" 
-                      className="block py-2 px-3 text-gray-700 hover:text-blue-600"
+                      to="/abdm" className="block py-2 px-3 text-gray-700 hover:text-blue-600"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       ABDM
@@ -393,15 +336,13 @@ function Navbar() {
                 {isMobileDropdownOpen === 'security' && (
                   <div className="ml-4 mt-2 space-y-2 pl-4 border-l-2 border-gray-200">
                     <Link 
-                      to="/security" 
-                      className="block py-2 px-3 text-gray-700 hover:text-blue-600"
+                      to="/security" className="block py-2 px-3 text-gray-700 hover:text-blue-600"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       Data Security
                     </Link>
                     <Link 
-                      to="/help" 
-                      className="block py-2 px-3 text-gray-700 hover:text-blue-600"
+                      to="/help"  className="block py-2 px-3 text-gray-700 hover:text-blue-600"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       Help
@@ -416,5 +357,4 @@ function Navbar() {
     </nav>
   );
 }
-
 export default Navbar;
