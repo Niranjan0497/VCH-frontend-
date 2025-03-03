@@ -102,14 +102,14 @@ function Navbar() {
                 <button className="flex items-center text-black font-Normal text-sm sm:text-base lg:text-lg pb-1 hover:text-blue-900">
                 Find Experts <FaChevronDown className="ml-1 h-3 w-3" />
                 </button>
-                <div className="dropdown-menu opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 absolute left-0 mt-2 w-56 bg-white rounded-md shadow-lg py-2 z-20">
+                <div className=" flex dropdown-menu opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 absolute left-0 mt-2 w-105 bg-white rounded-md shadow-lg py-2 z-20">
                   {/* Finance Link with Nested Dropdown */}
                   <div className="relative group/finance px-4 py-2">
                     <div className="flex justify-between items-center text-sm text-gray-700 hover:bg-gray-100 group-hover/finance:bg-gray-100 cursor-pointer">
                       <span>Finance</span>
-                      < FaChevronRight className="ml-1 h-3 w-3" />
+                      < FaChevronDown className="ml-1 h-3 w-3" />
                     </div>
-                    <div className="absolute left-full top-0 w-56 bg-white rounded-md shadow-lg py-2 opacity-0 invisible group-hover/finance:opacity-100 group-hover/finance:visible transition-all duration-200">
+                    <div className="absolute down-full top-0 w-56 mt-10 bg-white rounded-md shadow-lg py-2 opacity-0 invisible group-hover/finance:opacity-100 group-hover/finance:visible transition-all duration-200">
                       <Link to="/services/finance/planning" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                         Financial Planning
                       </Link>
@@ -131,9 +131,9 @@ function Navbar() {
                   <div className="relative group/legal px-4 py-2">
                     <div className="flex justify-between items-center text-sm text-gray-700 hover:bg-gray-100 group-hover/legal:bg-gray-100 cursor-pointer">
                       <span>Legal</span>
-                      < FaChevronRight className="ml-1 h-3 w-3" />
+                      < FaChevronDown className="ml-1 h-3 w-3" />
                     </div>
-                    <div className="absolute left-full top-0 w-56 bg-white rounded-md shadow-lg py-2 opacity-0 invisible group-hover/legal:opacity-100 group-hover/legal:visible transition-all duration-200">
+                    <div className="absolute down-full top-0 w-56 mt-10 bg-white rounded-md shadow-lg py-2 opacity-0 invisible group-hover/legal:opacity-100 group-hover/legal:visible transition-all duration-200">
                       <Link to="/services/legal/corporate" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                         Corporate Law
                       </Link>
@@ -153,9 +153,9 @@ function Navbar() {
                   <div className="relative group/technology px-4 py-2">
                     <div className="flex justify-between items-center text-sm text-gray-700 hover:bg-gray-100 group-hover/technology:bg-gray-100 cursor-pointer">
                       <span>Technology</span>
-                      < FaChevronRight className="ml-1 h-3 w-3" />
+                      < FaChevronDown className="ml-1 h-3 w-3" />
                     </div>
-                    <div className="absolute left-full top-0 w-56 bg-white rounded-md shadow-lg py-2 opacity-0 invisible group-hover/technology:opacity-100 group-hover/technology:visible transition-all duration-200">
+                    <div className="absolute down-full top-0 w-56 mt-10 bg-white rounded-md shadow-lg py-2 opacity-0 invisible group-hover/technology:opacity-100 group-hover/technology:visible transition-all duration-200">
                       <Link to="/services/technology/consulting" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                         IT Consulting
                       </Link>
@@ -175,9 +175,9 @@ function Navbar() {
                   <div className="relative group/wellness px-4 py-2">
                     <div className="flex justify-between items-center text-sm text-gray-700 hover:bg-gray-100 group-hover/wellness:bg-gray-100 cursor-pointer">
                       <span>Wellness</span>
-                      < FaChevronRight className="ml-1 h-3 w-3" />
+                      < FaChevronDown className="ml-1 h-3 w-3" />
                     </div>
-                    <div className="absolute left-full top-0 w-56 bg-white rounded-md shadow-lg py-2 opacity-0 invisible group-hover/wellness:opacity-100 group-hover/wellness:visible transition-all duration-200">
+                    <div className="absolute down-full top-0 w-56 mt-10 bg-white rounded-md shadow-lg py-2 opacity-0 invisible group-hover/wellness:opacity-100 group-hover/wellness:visible transition-all duration-200">
                       <Link to="/services/wellness/mental" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                         Mental Health
                       </Link>
@@ -253,49 +253,20 @@ function Navbar() {
 
               {isProfileOpen && (
                 <div 
-                  ref={profileMenuRef} 
-                  className="absolute right-0 mt-2 w-64 sm:w-72 md:w-80 bg-white rounded-md shadow-lg py-4 px-4 z-20"
-                  onClick={(e) => e.stopPropagation()}
-                >
-                  <form onSubmit={handleProfileSubmit} className="space-y-4 bg-white">
-                    <div className="relative bg-white ">
-                      <label htmlFor="name" className="block text-md font-medium text-gray-700">
-                        Name
-                      </label>
-                      <input
-                        type="text"
-                        name="name"
-                        id="name"
-                        value={profileData.name}
-                        onChange={handleProfileChange}
-                        className="mt-1 block w-full h-10 p-4 rounded-md border-grey-800  bg-gray-100 shadow-sm focus:border-sky-500 focus:ring-sky-500 sm:text-lg"
-                        placeholder="Enter your name"
-                      />
-                    </div>
-                    <div className="relative">
-                      <label htmlFor="email" className="block text-md font-medium text-gray-700">
-                        Email
-                      </label>
-                      <input
-                        type="email"
-                        name="email"
-                        id="email"
-                        value={profileData.email}
-                        onChange={handleProfileChange}
-                        className="mt-1 block w-full  h-10 p-4 rounded-md border-gray-300  bg-gray-100 shadow-sm focus:border-sky-500 focus:ring-sky-500 sm:text-lg"
-                        placeholder="Enter your email"
-                      />
-                    </div>
-                    <div className="flex justify-between">
-                      <Link to="/login" className="text-md text-blue-600 hover:text-blue-800" onClick={(e) => e.stopPropagation()}>
-                        Login
-                      </Link>
-                      <Link to="/register" className="text-md text-blue-600 hover:text-blue-800" onClick={(e) => e.stopPropagation()}>
-                        Register
-                      </Link>
-                    </div>
-                  </form>
-                </div>
+                ref={profileMenuRef} 
+                className={"absolute right-0 mt-2 w-48 h-20 bg-white border border-gray-200 rounded-lg shadow-lg transition-all duration-300 ease-in-out overflow-hidden "}
+                onClick={(e) => e.stopPropagation()}
+              > 
+                  <div className=" justify-between">
+                    <Link to="/login" className=" block m-2 text-lg text-gray-600 hover:text-black hover:bg-blue-300" onClick={(e) => e.stopPropagation()}>
+                      Login
+                    </Link>
+                    <Link to="/register" className=" block m-2 text-lg text-gray-600 hover:text-black hover:bg-blue-300" onClick={(e) => e.stopPropagation()}>
+                      Register
+                    </Link>
+                  </div>
+               
+              </div>
               )}
             </div>
           </div>
