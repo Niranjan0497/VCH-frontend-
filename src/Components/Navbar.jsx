@@ -102,14 +102,14 @@ function Navbar() {
                 <button className="flex items-center text-black font-Normal text-sm sm:text-base lg:text-lg pb-1 hover:text-blue-900">
                 Find Experts <FaChevronDown className="ml-1 h-3 w-3" />
                 </button>
-                <div className="dropdown-menu opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 absolute left-0 mt-2 w-56 bg-white rounded-md shadow-lg py-2 z-20">
+                <div className=" flex dropdown-menu opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 absolute left-0 mt-2 w-105 bg-white rounded-md shadow-lg py-2 z-20">
                   {/* Finance Link with Nested Dropdown */}
                   <div className="relative group/finance px-4 py-2">
                     <div className="flex justify-between items-center text-sm text-gray-700 hover:bg-gray-100 group-hover/finance:bg-gray-100 cursor-pointer">
                       <span>Finance</span>
-                      < FaChevronRight className="ml-1 h-3 w-3" />
+                      < FaChevronDown className="ml-1 h-3 w-3" />
                     </div>
-                    <div className="absolute left-full top-0 w-56 bg-white rounded-md shadow-lg py-2 opacity-0 invisible group-hover/finance:opacity-100 group-hover/finance:visible transition-all duration-200">
+                    <div className="absolute down-full top-0 w-56 mt-10 bg-white rounded-md shadow-lg py-2 opacity-0 invisible group-hover/finance:opacity-100 group-hover/finance:visible transition-all duration-200">
                       <Link to="/services/finance/planning" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                         Financial Planning
                       </Link>
@@ -131,9 +131,9 @@ function Navbar() {
                   <div className="relative group/legal px-4 py-2">
                     <div className="flex justify-between items-center text-sm text-gray-700 hover:bg-gray-100 group-hover/legal:bg-gray-100 cursor-pointer">
                       <span>Legal</span>
-                      < FaChevronRight className="ml-1 h-3 w-3" />
+                      < FaChevronDown className="ml-1 h-3 w-3" />
                     </div>
-                    <div className="absolute left-full top-0 w-56 bg-white rounded-md shadow-lg py-2 opacity-0 invisible group-hover/legal:opacity-100 group-hover/legal:visible transition-all duration-200">
+                    <div className="absolute down-full top-0 w-56 mt-10 bg-white rounded-md shadow-lg py-2 opacity-0 invisible group-hover/legal:opacity-100 group-hover/legal:visible transition-all duration-200">
                       <Link to="/services/legal/corporate" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                         Corporate Law
                       </Link>
@@ -153,9 +153,9 @@ function Navbar() {
                   <div className="relative group/technology px-4 py-2">
                     <div className="flex justify-between items-center text-sm text-gray-700 hover:bg-gray-100 group-hover/technology:bg-gray-100 cursor-pointer">
                       <span>Technology</span>
-                      < FaChevronRight className="ml-1 h-3 w-3" />
+                      < FaChevronDown className="ml-1 h-3 w-3" />
                     </div>
-                    <div className="absolute left-full top-0 w-56 bg-white rounded-md shadow-lg py-2 opacity-0 invisible group-hover/technology:opacity-100 group-hover/technology:visible transition-all duration-200">
+                    <div className="absolute down-full top-0 w-56 mt-10 bg-white rounded-md shadow-lg py-2 opacity-0 invisible group-hover/technology:opacity-100 group-hover/technology:visible transition-all duration-200">
                       <Link to="/services/technology/consulting" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                         IT Consulting
                       </Link>
@@ -175,9 +175,9 @@ function Navbar() {
                   <div className="relative group/wellness px-4 py-2">
                     <div className="flex justify-between items-center text-sm text-gray-700 hover:bg-gray-100 group-hover/wellness:bg-gray-100 cursor-pointer">
                       <span>Wellness</span>
-                      < FaChevronRight className="ml-1 h-3 w-3" />
+                      < FaChevronDown className="ml-1 h-3 w-3" />
                     </div>
-                    <div className="absolute left-full top-0 w-56 bg-white rounded-md shadow-lg py-2 opacity-0 invisible group-hover/wellness:opacity-100 group-hover/wellness:visible transition-all duration-200">
+                    <div className="absolute down-full top-0 w-56 mt-10 bg-white rounded-md shadow-lg py-2 opacity-0 invisible group-hover/wellness:opacity-100 group-hover/wellness:visible transition-all duration-200">
                       <Link to="/services/wellness/mental" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                         Mental Health
                       </Link>
