@@ -22,6 +22,7 @@ function UploadFile() {
   const handleSubmit = () => {
     if (file) {
       alert('File uploaded successfully!');
+      alert('OTP Sent to the Registered Email.');
       navigate('/otp');
     } else {
       alert('Please upload a file first.');

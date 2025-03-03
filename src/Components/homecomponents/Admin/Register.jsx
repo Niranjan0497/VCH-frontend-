@@ -9,8 +9,9 @@ function Register() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert('OTP Sent to the Registered Email.');
+    
     if (formData.role === 'user') {
+      alert('OTP Sent to the Registered Email.');
       navigate('/otp', { state: formData });
     } else {
       navigate('/upload');
