@@ -1,7 +1,7 @@
 import { Link, useLocation } from 'react-router-dom';
 import { useState, useEffect, useRef } from 'react';
-import { FaChevronDown, FaUser, FaBars, FaTimes } from 'react-icons/fa';
-
+import {  FaUser, FaBars, FaTimes } from 'react-icons/fa';
+import { FaChevronRight,FaChevronDown } from "react-icons/fa";
 function Navbar() {
   const [isProfileOpen, setIsProfileOpen] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -95,27 +95,118 @@ function Navbar() {
             </Link>
 
             <div className="hidden md:flex items-center space-x-2 lg:space-x-6">
+              
+              
+              {/* Services Dropdown */}
+              <div className="relative group">
+                <button className="flex items-center text-black font-Normal text-sm sm:text-base lg:text-lg pb-1 hover:text-blue-900">
+                Find Experts <FaChevronDown className="ml-1 h-3 w-3" />
+                </button>
+                <div className="dropdown-menu opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 absolute left-0 mt-2 w-56 bg-white rounded-md shadow-lg py-2 z-20">
+                  {/* Finance Link with Nested Dropdown */}
+                  <div className="relative group/finance px-4 py-2">
+                    <div className="flex justify-between items-center text-sm text-gray-700 hover:bg-gray-100 group-hover/finance:bg-gray-100 cursor-pointer">
+                      <span>Finance</span>
+                      < FaChevronRight className="ml-1 h-3 w-3" />
+                    </div>
+                    <div className="absolute left-full top-0 w-56 bg-white rounded-md shadow-lg py-2 opacity-0 invisible group-hover/finance:opacity-100 group-hover/finance:visible transition-all duration-200">
+                      <Link to="/services/finance/planning" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                        Financial Planning
+                      </Link>
+                      <Link to="/services/finance/tax" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                        Tax Advisory
+                      </Link>
+                      <Link to="/services/finance/wealth" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                        Wealth Management
+                      </Link>
+                      <Link to="/services/finance/retirement" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                        Retirement Planning
+                      </Link>
+                      
+                    </div>
+                    
+                  </div>
+                  
+                  {/* Legal Link with Nested Dropdown */}
+                  <div className="relative group/legal px-4 py-2">
+                    <div className="flex justify-between items-center text-sm text-gray-700 hover:bg-gray-100 group-hover/legal:bg-gray-100 cursor-pointer">
+                      <span>Legal</span>
+                      < FaChevronRight className="ml-1 h-3 w-3" />
+                    </div>
+                    <div className="absolute left-full top-0 w-56 bg-white rounded-md shadow-lg py-2 opacity-0 invisible group-hover/legal:opacity-100 group-hover/legal:visible transition-all duration-200">
+                      <Link to="/services/legal/corporate" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                        Corporate Law
+                      </Link>
+                      <Link to="/services/legal/estate" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                        Estate Planning
+                      </Link>
+                      <Link to="/services/legal/intellectual" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                        Intellectual Property
+                      </Link>
+                      <Link to="/services/legal/litigation" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                        Litigation
+                      </Link>
+                    </div>
+                  </div>
+                  
+                  {/* Technology Link with Nested Dropdown */}
+                  <div className="relative group/technology px-4 py-2">
+                    <div className="flex justify-between items-center text-sm text-gray-700 hover:bg-gray-100 group-hover/technology:bg-gray-100 cursor-pointer">
+                      <span>Technology</span>
+                      < FaChevronRight className="ml-1 h-3 w-3" />
+                    </div>
+                    <div className="absolute left-full top-0 w-56 bg-white rounded-md shadow-lg py-2 opacity-0 invisible group-hover/technology:opacity-100 group-hover/technology:visible transition-all duration-200">
+                      <Link to="/services/technology/consulting" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                        IT Consulting
+                      </Link>
+                      <Link to="/services/technology/development" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                        Software Development
+                      </Link>
+                      <Link to="/services/technology/security" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                        Cybersecurity
+                      </Link>
+                      <Link to="/services/technology/cloud" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                        Cloud Services
+                      </Link>
+                    </div>
+                  </div>
+                  
+                  {/* Wellness Link with Nested Dropdown */}
+                  <div className="relative group/wellness px-4 py-2">
+                    <div className="flex justify-between items-center text-sm text-gray-700 hover:bg-gray-100 group-hover/wellness:bg-gray-100 cursor-pointer">
+                      <span>Wellness</span>
+                      < FaChevronRight className="ml-1 h-3 w-3" />
+                    </div>
+                    <div className="absolute left-full top-0 w-56 bg-white rounded-md shadow-lg py-2 opacity-0 invisible group-hover/wellness:opacity-100 group-hover/wellness:visible transition-all duration-200">
+                      <Link to="/services/wellness/mental" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                        Mental Health
+                      </Link>
+                      <Link to="/services/wellness/fitness" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                        Fitness Coaching
+                      </Link>
+                      <Link to="/services/wellness/nutrition" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                        Nutrition Counseling
+                      </Link>
+                      <Link to="/services/wellness/lifestyle" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                        Lifestyle Medicine
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
               <Link
-                to="/find-experts"
-                className={`text-black font-extrabold text-sm sm:text-base lg:text-lg pb-1 hover:text-blue-900 ${
-                  isActive('/find-experts') ? 'text-blue-500 border-b-4 border-practo-blue font-medium' : ''
-                }`}
-                style={{ fontFamily: '"Lato", "Open Sans", sans-serif' }}
-              >
-                Find Experts
-              </Link>
-              <Link
-                to="/video-consult"
-                className={`text-black font-extrabold text-sm sm:text-base lg:text-lg pb-1 hover:text-blue-900 ${
-                  isActive('/video-consult') ? 'text-blue-500 border-b-4 border-practo-blue font-medium' : ''
+                to="/Services"
+                className={`text-black font-Normal text-sm sm:text-base lg:text-lg pb-1 hover:text-blue-900 ${
+                  isActive('/services') ? 'text-blue-500 border-b-4 border-practo-blue font-medium' : ''
                 }`}
                 style={{ fontFamily: '"Lato", "Open Sans", sans-serif' }}
               >
                 Services
               </Link>
+              
               <Link
                 to="/contacts"
-                className={`text-black font-extrabold text-sm sm:text-base lg:text-lg pb-1 hover:text-blue-900 ${
+                className={`text-black font-Normal text-sm sm:text-base lg:text-lg pb-1 hover:text-blue-900 ${
                   isActive('/contacts') ? 'text-blue-500 border-b-4 border-practo-blue font-medium' : ''
                 }`}
                 style={{ fontFamily: '"Lato", "Open Sans", sans-serif' }}
@@ -141,56 +232,12 @@ function Navbar() {
             </button>
 
             {/* Dropdowns for Tablets and Desktop */}
-            <div className="relative group hidden md:block">
-              <button className="flex items-center text-practo-dark hover:text-practo-blue font-medium text-xs sm:text-sm lg:text-base whitespace-nowrap">
-                For Corporates <FaChevronDown className="ml-1 h-3 w-3" />
-              </button>
-              <div className="dropdown-menu opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 absolute left-1/2 transform -translate-x-1/2 mt-2 w-48 bg-white rounded-md shadow-lg py-2">
-                <Link to="/health-plans" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                  Health Plans
-                </Link>
-                <Link to="/wellness-plans" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                  Wellness Plans
-                </Link>
-              </div>
-            </div>
 
-            <div className="relative group hidden md:block">
-              <button className="flex items-center text-practo-dark hover:text-practo-blue font-medium text-xs sm:text-sm lg:text-base whitespace-nowrap">
-                For Providers <FaChevronDown className="ml-1 h-3 w-3" />
-              </button>
-              <div className="dropdown-menu opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 absolute left-1/2 transform -translate-x-1/2 mt-2 w-64 bg-white rounded-md shadow-lg py-2">
-                <Link to="/practo-assured" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                  Vch Assured
-                </Link>
-                <Link to="/practo-prime" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                  vch Prime
-                </Link>
-                <Link to="/software" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                  Software for Providers
-                </Link>
-                <Link to="/list-practice" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                  List Your Practice for Free
-                </Link>
-                <Link to="/abdm" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                  ABDM
-                </Link>
-              </div>
-            </div>
 
-            <div className="relative group hidden md:block">
-              <button className="flex items-center text-practo-dark hover:text-practo-blue font-medium text-xs sm:text-sm lg:text-base whitespace-nowrap">
-                Security & help <FaChevronDown className="ml-1 h-3 w-3" />
-              </button>
-              <div className="dropdown-menu opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 absolute left-1/2 transform -translate-x-1/2 mt-2 w-48 bg-white rounded-md shadow-lg py-2">
-                <Link to="/security" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                  Data Security
-                </Link>
-                <Link to="/help" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                  Help
-                </Link>
-              </div>
-            </div>
+            
+
+           
+            
 
             {/* Profile Section - Desktop and Tablet */}
             <div
@@ -262,30 +309,82 @@ function Navbar() {
             style={{ maxHeight: 'calc(100vh - 4rem)', height: 'auto' }}
           >
             <div className="flex flex-col p-4 space-y-4">
-              {/* Main Navigation Links */}
-              <Link
-                to="/find-experts"
-                className={`flex items-center text-lg py-2 px-4 rounded-lg transition-colors ${
-                  isActive('/find-experts') 
-                    ? 'bg-blue-50 text-blue-600 font-medium' 
-                    : 'text-gray-800 hover:bg-gray-100'
-                }`}
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Find Experts
-              </Link>
+             
+         
               
-              <Link
-                to="/video-consult"
-                className={`flex items-center text-lg py-2 px-4 rounded-lg transition-colors ${
-                  isActive('/video-consult') 
-                    ? 'bg-blue-50 text-blue-600 font-medium' 
-                    : 'text-gray-800 hover:bg-gray-100'
-                }`}
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Services
-              </Link>
+          
+            <div>
+  <button 
+    className="flex items-center justify-between w-full text-lg py-2 px-4 rounded-lg text-gray-800 hover:bg-gray-100"
+    onClick={() => toggleMobileDropdown('services')}
+  >
+    <span>Services</span>
+    <FaChevronLeft className={`h-4 w-4 transition-transform duration-300 ${isMobileDropdownOpen === 'services' ? 'rotate-90' : ''}`} />
+  </button>
+
+  {isMobileDropdownOpen === 'services' && (
+    <div className="ml-4 mt-2 space-y-2 pl-4 border-l-2 border-gray-200">
+      <Link 
+        to="/services/finance" 
+        className="block py-2 px-3 text-gray-700 hover:text-blue-600"
+        onClick={() => setIsMenuOpen(false)}
+      >
+        Finance
+      </Link>
+      <Link 
+        to="/services/legal" 
+        className="block py-2 px-3 text-gray-700 hover:text-blue-600"
+        onClick={() => setIsMenuOpen(false)}
+      >
+        Legal
+      </Link>
+      <Link 
+        to="/services/technology" 
+        className="block py-2 px-3 text-gray-700 hover:text-blue-600"
+        onClick={() => setIsMenuOpen(false)}
+      >
+        Technology
+      </Link>
+      <Link 
+        to="/services/wellness" 
+        className="block py-2 px-3 text-gray-700 hover:text-blue-600"
+        onClick={() => setIsMenuOpen(false)}
+      >
+        Wellness
+      </Link>
+    </div>
+  )}
+</div>
+
+{/* For Corporates Mobile Dropdown */}
+<div className="border-t border-gray-200 pt-4">
+  <button 
+    className="flex items-center justify-between w-full text-lg py-2 px-4 rounded-lg text-gray-800 hover:bg-gray-100"
+    onClick={() => toggleMobileDropdown('corporates')}
+  >
+    <span>For Corporates</span>
+    <FaChevronLeft className={`h-4 w-4 transition-transform duration-300 ${isMobileDropdownOpen === 'corporates' ? 'rotate-90' : ''}`} />
+  </button>
+
+  {isMobileDropdownOpen === 'corporates' && (
+    <div className="ml-4 mt-2 space-y-2 pl-4 border-l-2 border-gray-200">
+      <Link 
+        to="/health-plans" 
+        className="block py-2 px-3 text-gray-700 hover:text-blue-600"
+        onClick={() => setIsMenuOpen(false)}
+      >
+        Health Plans
+      </Link>
+      <Link 
+        to="/wellness-plans" 
+        className="block py-2 px-3 text-gray-700 hover:text-blue-600"
+        onClick={() => setIsMenuOpen(false)}
+      >
+        Wellness Plans
+      </Link>
+    </div>
+  )}
+</div>
               
               <Link
                 to="/contacts"
