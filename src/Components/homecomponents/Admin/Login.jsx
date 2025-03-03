@@ -20,7 +20,7 @@ function Login() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-sky-500 to-indigo-600 px-4 sm:px-6 lg:px-8">
       <div className="max-w-md w-full bg-white p-6 rounded-lg shadow-md">
         <h2 className="text-center text-2xl font-bold text-gray-900">Sign in to your account</h2>
         <form className="mt-6 space-y-4" onSubmit={handleSubmit}>
