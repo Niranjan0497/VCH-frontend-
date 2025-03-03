@@ -1,11 +1,20 @@
-import React from 'react'
+import React from "react";
+import Specialities from "../Components/homecomponents/TopConsultants/TopConsultant.jsx";
+
+import Articles from "../Components/homecomponents/article/Articles.jsx";
 
 const Home = () => {
   return (
-    <div>
-      <p>landing Page</p>
-    </div>
-  )
-}
+    <>
+      
+      
+      <Specialities />
+      <hr className="w-4/5  border-t-2 border-gray-300 mx-auto" />
 
-export default Home
+      <Articles />
+      
+    </>
+  );
+};
+
+export default Home;
