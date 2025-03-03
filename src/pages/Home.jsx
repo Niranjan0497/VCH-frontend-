@@ -7,7 +7,9 @@ import HomePage from "../Components/homecomponents/article/HomePage.jsx";
 const Home = () => {
   return (
     <>
+
     <Specialities />
+    
     <HomePage/>
     
 
