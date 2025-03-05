@@ -1,6 +1,9 @@
-import { Link, useLocation } from 'react-router-dom';
+import { Link, Route, Routes, useLocation } from 'react-router-dom';
 import { useState, useEffect, useRef } from 'react';
 import { FaChevronDown, FaUser, FaBars, FaTimes } from 'react-icons/fa';
+import { div } from 'framer-motion/client';
+import MainContent from './videoconsult/MainContent';
+import Newpage from './videoconsult/Newpage';
 
 function Navbar() {
   const [isProfileOpen, setIsProfileOpen] = useState(false);
@@ -81,7 +84,8 @@ function Navbar() {
   }, [isMenuOpen]);
 
   return (
-    <nav className="bg-white shadow-md sticky top-0  left-0 right-0 z-50 h-30">
+    <div>
+ <nav className="bg-white shadow-md sticky top-0  left-0 right-0 z-50 h-30">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-between items-center h-16">
           {/* Left side - Logo and main links */}
@@ -102,7 +106,7 @@ function Navbar() {
                 }`}
                 style={{ fontFamily: '"Lato", "Open Sans", sans-serif' }}
               >
-                Find Experts
+                Video Consult
               </Link>
               <Link
                 to="/video-consult"
@@ -414,6 +418,15 @@ function Navbar() {
         )}
       </div>
     </nav>
+    <div>
+      <Routes>
+        <Route path='/find-experts' element={<MainContent/>}/>
+        <Route path='/newpage' element={<Newpage/>}/>
+      </Routes>
+    </div>
+    </div>
+   
+    
   );
 }
 
