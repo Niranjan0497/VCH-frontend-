@@ -21,34 +21,29 @@ import Articles from "./Components/homecomponents/article/Articles.jsx";
 
 import OTPVerification from "./Components/homecomponents/Admin/OtpVerification.jsx";
 import UploadPage from "./Components/homecomponents/Admin/Uploadform.jsx";
+import MainContent from "./Components/videoconsult/MainContent.jsx";
 
 function App() {
   return (
     <>
       <Navbar />
-
       <Routes>
         <Route path="/" element={<Home />} />
-
-
         <Route path="/specialities" element={<Specialities />} />
         <Route path="/consultation" element={<ConsultationForm />} />
-
         <Route path="/articles" element={<Articles />} />
         <Route path="/blogcards" element={<BlogCards />} />
         <Route path="/viewblogcard/:id" element={<ViewBlogCard />} />
-  
         {/* Homebookappointment */}
         <Route path="/bookappointment" element={<Bookappointmenthome />}/>
         <Route path="/treatmentdetails/:title" element={<Doctorfilter/>}/>
         <Route path="/onedoctor/:id" element={<Onlyonedoctor/>}/>
         <Route path="/doctorbooking/:id" element={<Doctorbooking/>}/>
-      
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
-          
         <Route path="/otp" element={<OTPVerification />} />
         <Route path="/upload" element={<UploadPage />} />
+        <Route path="/video-consult" element={<MainContent />} />
       </Routes>
       <Footer />
  

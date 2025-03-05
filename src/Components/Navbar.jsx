@@ -195,13 +195,13 @@ function Navbar() {
                 </div>
               </div>
               <Link
-                to="/Services"
+                to="/video-consult"
                 className={`text-black font-Normal text-sm sm:text-base lg:text-lg pb-1 hover:text-blue-900 ${
                   isActive('/services') ? 'text-blue-500 border-b-4 border-practo-blue font-medium' : ''
                 }`}
                 style={{ fontFamily: '"Lato", "Open Sans", sans-serif' }}
               >
-                Services
+                Video Consult
               </Link>
               
               <Link
