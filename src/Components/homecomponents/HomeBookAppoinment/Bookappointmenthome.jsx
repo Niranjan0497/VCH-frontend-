@@ -156,11 +156,11 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { NavLink } from "react-router-dom";
-import img2 from "../../../../assets/BookappointmentImages/dent.jpg";
-import img3 from "../../../../assets/BookappointmentImages/gynecologist.jpg";
-import img4 from "../../../../assets/BookappointmentImages/dental.jpg";
-import img5 from "../../../../assets/BookappointmentImages/cardiology.jpg";
-import img6 from "../../../../assets/BookappointmentImages/Cardiology-scaled.jpg";
+import img2 from "../../../assets/BookappointmentImages/dent.jpg";
+import img3 from "../../../assets/BookappointmentImages/gynecologist.jpg";
+import img4 from "../../../assets/BookappointmentImages/dental.jpg";
+import img5 from "../../../assets/BookappointmentImages/cardiology.jpg";
+import img6 from "../../../assets/BookappointmentImages/Cardiology-scaled.jpg";
 
 const doctors = [
   { id: 1, title: "Dentist", description: "Teething troubles? Schedule a dental checkup", image: img4 },
