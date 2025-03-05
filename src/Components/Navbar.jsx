@@ -50,6 +50,10 @@ function Navbar() {
         isProfileOpen &&
         profileMenuRef.current && 
         !profileMenuRef.current.contains(event.target) && 
+
+
+
+        
         !profileTriggerRef.current.contains(event.target)
       ) {
         setIsProfileOpen(false);
@@ -231,15 +235,7 @@ function Navbar() {
               )}
             </button>
 
-            {/* Dropdowns for Tablets and Desktop */}
 
-
-            
-
-           
-            
-
-            {/* Profile Section - Desktop and Tablet */}
             <div
               ref={profileTriggerRef}
               className="relative profile-trigger"
