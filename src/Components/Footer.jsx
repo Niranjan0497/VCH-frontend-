@@ -91,7 +91,7 @@ const FooterColumn = ({ title, links }) => (
 
 const Footer = () => {
   return (
-    <footer className="bg-[#1F3B8D] py-10 px-6 w-full mt-auto">
+    <footer className="bg-[#2f2f30] py-10 px-6 w-full mt-auto">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8">
           {Object.entries(footerLinks).map(([key, section]) => (

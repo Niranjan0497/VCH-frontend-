@@ -211,9 +211,9 @@ function Bookappointmenthome() {
   };
 
   return (
-    <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 py-6">
+    <div className=" w-[93%] mx-auto px-4 md:px-6 lg:px-8 py-6 mb-10 ">
       <div className="mb-8">
-        <h2 className="text-2xl md:text-3xl font-bold">Book an appointment for an in-clinic consultation</h2>
+        <h2 className="text-2xl md:text-3xl font-bold text-blue-500">Book an appointment for an in-clinic consultation</h2>
         <p className="text-gray-600 text-sm md:text-base mt-2">Find experienced doctors across all specialties</p>
       </div>
       

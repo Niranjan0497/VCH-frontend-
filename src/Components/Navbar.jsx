@@ -195,13 +195,13 @@ function Navbar() {
                 </div>
               </div>
               <Link
-                to="/Services"
+                to="/video-consult"
                 className={`text-black font-Normal text-sm sm:text-base lg:text-lg pb-1 hover:text-blue-900 ${
                   isActive('/services') ? 'text-blue-500 border-b-4 border-practo-blue font-medium' : ''
                 }`}
                 style={{ fontFamily: '"Lato", "Open Sans", sans-serif' }}
               >
-                Services
+                Video Consult
               </Link>
               
               <Link
@@ -276,7 +276,7 @@ function Navbar() {
         {isMenuOpen && (
           <div 
             ref={mobileMenuRef}
-            className="md:hidden fixed top-16 left-0 right-0 bg-white shadow-lg overflow-y-auto z-50"
+            className=" fixed top-16 left-0 right-0 bg-white shadow-lg overflow-y-auto z-50"
             style={{ maxHeight: 'calc(100vh - 4rem)', height: 'auto' }}
           >
             <div className="flex flex-col p-4 space-y-4">

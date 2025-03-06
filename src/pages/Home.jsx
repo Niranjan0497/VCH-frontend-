@@ -10,10 +10,11 @@ const Home = () => {
       
       
       <Specialities />
-      <hr className="w-4/5  border-t-2 border-gray-300 mx-auto" />
-
-      <Articles />
+      {/* <hr className="w-4/5  border-t-2 border-gray-300 mx-auto" /> */}
+        
       <Bookappointmenthome />
+      <Articles />
+      
       
     </>
   );
