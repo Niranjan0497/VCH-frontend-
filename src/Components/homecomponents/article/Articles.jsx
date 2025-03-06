@@ -5,9 +5,9 @@ import health1 from "../../../assets/ArticleImages/Vitamins.jpg";
 const Articles = () => {
   return (
     <>
-      <div className="container mx-auto px-12 py-12 flex flex-col md:flex-row items-center gap-10">
-        <div className="md:w-1/2">
-          <h2 className="text-3xl font-bold text-gray-800">
+      <div className="container mx-auto flex flex-col md:flex-row gap-10 justify-center  px-4 py-12 w-[100%]">
+        <div className="md:w-1/3">
+          <h2 className="text-3xl font-bold text-gray-800 ">
             Read top articles from health experts
           </h2>
           <p className="text-gray-600 mt-4">
@@ -57,7 +57,7 @@ const Articles = () => {
           </div>
         </div>
       </div>
-      <hr className="w-4/5 border-t-2 border-gray-300 mx-auto my-6" />
+      
     </>
     
   );

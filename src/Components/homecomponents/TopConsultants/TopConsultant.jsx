@@ -50,8 +50,8 @@ function Specialities() {
 
   return (
     <>
-    <hr className="w-4/5 border-t-2 border-gray-300 mx-auto my-6" />
-      <div className="specialities mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mt-12 ">
+    {/* <hr className="w-4/5 border-t-2 border-gray-300 mx-auto my-6" /> */}
+      <div className="specialities mx-auto max-w-7xl px-4 sm:px-4 lg:px-8 mt-12  ">
         
         <div className="flex flex-col items-center py-6 bg-white w-full">
           <h2 className="text-2xl font-semibold text-gray-900 text-center sm:text-3xl">
@@ -61,7 +61,7 @@ function Specialities() {
             Private online consultations with verified doctors in all
             specialties
           </p>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 mt-8 w-full">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-3 gap-4 mt-8 w-full">
             {specialities.map((item, index) => (
               <motion.div
                 key={index}

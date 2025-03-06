@@ -19,7 +19,7 @@ const Finance = () => {
         {
             finance.map((data)=>{
                 return(
-                   <div>
+                   <div key={data.id}>
                      <h1>{data.name}</h1>
                      <h1>{data.qualification}</h1>
                    </div>
