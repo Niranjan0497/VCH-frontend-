@@ -21,7 +21,11 @@ import Articles from "./Components/homecomponents/article/Articles.jsx";
 
 import OTPVerification from "./Components/homecomponents/Admin/OtpVerification.jsx";
 import UploadPage from "./Components/homecomponents/Admin/Uploadform.jsx";
+
+import Finance from "./Finance.jsx";
+
 import MainContent from "./Components/videoconsult/MainContent.jsx";
+
 
 function App() {
   return (
@@ -35,12 +39,24 @@ function App() {
         <Route path="/blogcards" element={<BlogCards />} />
         <Route path="/viewblogcard/:id" element={<ViewBlogCard />} />
         {/* Homebookappointment */}
-        <Route path="/bookappointment" element={<Bookappointmenthome />} />
-        <Route path="/treatmentdetails/:title" element={<Doctorfilter />} />
-        <Route path="/onedoctor/:id" element={<Onlyonedoctor />} />
-        <Route path="/doctorbooking/:id" element={<Doctorbooking />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
+
+        <Route path="/bookappointment" element={<Bookappointmenthome />}/>
+        <Route path="/treatmentdetails/:title" element={<Doctorfilter/>}/>
+        <Route path="/onedoctor/:id" element={<Onlyonedoctor/>}/>
+        <Route path="/doctorbooking/:id" element={<Doctorbooking/>}/>
+        <Route path="/finance" element={<Finance/>}/>
+      
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          
+
+       
+        {/* <Route path="/treatmentdetails/:title" element={<Doctorfilter />} /> */}
+        {/* <Route path="/onedoctor/:id" element={<Onlyonedoctor />} /> */}
+        {/* <Route path="/doctorbooking/:id" element={<Doctorbooking />} /> */}
+        {/* <Route path="/login" element={<Login />} /> */}
+        {/* <Route path="/register" element={<Register />} /> */}
+
         <Route path="/otp" element={<OTPVerification />} />
         <Route path="/upload" element={<UploadPage />} />
         <Route path="/video-consult" element={<MainContent />} />
