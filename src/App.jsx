@@ -21,6 +21,7 @@ import Articles from "./Components/homecomponents/article/Articles.jsx";
 
 import OTPVerification from "./Components/homecomponents/Admin/OtpVerification.jsx";
 import UploadPage from "./Components/homecomponents/Admin/Uploadform.jsx";
+import Finance from "./Finance.jsx";
 
 function App() {
   return (
@@ -43,6 +44,7 @@ function App() {
         <Route path="/treatmentdetails/:title" element={<Doctorfilter/>}/>
         <Route path="/onedoctor/:id" element={<Onlyonedoctor/>}/>
         <Route path="/doctorbooking/:id" element={<Doctorbooking/>}/>
+        <Route path="/finance" element={<Finance/>}/>
       
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />

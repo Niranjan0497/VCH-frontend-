@@ -1,7 +1,8 @@
 import { Link, useLocation } from 'react-router-dom';
 import { useState, useEffect, useRef } from 'react';
 import {  FaUser, FaBars, FaTimes } from 'react-icons/fa';
-import { FaChevronRight,FaChevronDown } from "react-icons/fa";
+import {FaChevronLeft,FaChevronDown } from "react-icons/fa";
+
 function Navbar() {
   const [isProfileOpen, setIsProfileOpen] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
