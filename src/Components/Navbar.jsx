@@ -205,9 +205,9 @@ function Navbar() {
               </Link>
               
               <Link
-                to="/contacts"
+                to="/contact-us"
                 className={`text-black font-Normal text-sm sm:text-base lg:text-lg pb-1 hover:text-blue-900 ${
-                  isActive('/contacts') ? 'text-blue-500 border-b-4 border-practo-blue font-medium' : ''
+                  isActive('/contact-us') ? 'text-blue-500 border-b-4 border-practo-blue font-medium' : ''
                 }`}
                 style={{ fontFamily: '"Lato", "Open Sans", sans-serif' }}
               >

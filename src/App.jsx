@@ -22,6 +22,7 @@ import Articles from "./Components/homecomponents/article/Articles.jsx";
 import OTPVerification from "./Components/homecomponents/Admin/OtpVerification.jsx";
 import UploadPage from "./Components/homecomponents/Admin/Uploadform.jsx";
 import MainContent from "./Components/videoconsult/MainContent.jsx";
+import Contact from "./pages/Contact.jsx";
 
 function App() {
   return (
@@ -44,6 +45,7 @@ function App() {
         <Route path="/otp" element={<OTPVerification />} />
         <Route path="/upload" element={<UploadPage />} />
         <Route path="/video-consult" element={<MainContent />} />
+        <Route path="/contact-us" element={<Contact />} />
       </Routes>
       <Footer />
     </>
