@@ -3,6 +3,7 @@
     {
       "id": 1,
       "name": "Dr. Priya Sharma",
+      "category": "doctor",
       "description": "Dr. Prasad M is a Prosthodontist and Implantologist in Secunderabad, Hyderabad and has an experience of 17 years in these fields. Dr. Prasad M practices at KIMS Dental Care in Secunderabad, Hyderabad. He completed MDS",
       "specialization": "Dentist",
       " experience": "18 years",
@@ -19,6 +20,7 @@
     {
       "id": 2,
       "name": "Dr. Arjun Mehta",
+      "category": "doctor",
       "description": "Dr. Prasad M is a Prosthodontist and Implantologist in Secunderabad, Hyderabad and has an experience of 17 years in these fields. Dr. Prasad M practices at KIMS Dental Care in Secunderabad, Hyderabad. He completed MDS",
       "specialization": "Dentist",
       " experience": "22 years",
@@ -35,6 +37,7 @@
     {
       "id": 3,
       "name": "Dr. Neha Verma",
+      "category": "doctor",
       "description": "Dr. Prasad M is a Prosthodontist and Implantologist in Secunderabad, Hyderabad and has an experience of 17 years in these fields. Dr. Prasad M practices at KIMS Dental Care in Secunderabad, Hyderabad. He completed MDS",
       "specialization": "Dentist",
       " experience": "15 years",
@@ -51,6 +54,7 @@
     {
       "id": 4,
       "name": "Dr. Ravi Kumar",
+      "category": "doctor",
       "description": "Dr. Prasad M is a Prosthodontist and Implantologist in Secunderabad, Hyderabad and has an experience of 17 years in these fields. Dr. Prasad M practices at KIMS Dental Care in Secunderabad, Hyderabad. He completed MDS",
       "specialization": "Dentist",
       " experience": "20 years",
@@ -67,6 +71,7 @@
     {
       "id": 5,
       "name": "Dr. Ananya Roy",
+      "category": "doctor",
       "description": "Dr. Prasad M is a Prosthodontist and Implantologist in Secunderabad, Hyderabad and has an experience of 17 years in these fields. Dr. Prasad M practices at KIMS Dental Care in Secunderabad, Hyderabad. He completed MDS",
       "specialization": "Dentist",
       " experience": "12 years",
@@ -83,6 +88,7 @@
     {
       "id": 6,
       "name": "Dr. Kunal Kapoor",
+      "category": "doctor",
       "description": "Dr. Prasad M is a Prosthodontist and Implantologist in Secunderabad, Hyderabad and has an experience of 17 years in these fields. Dr. Prasad M practices at KIMS Dental Care in Secunderabad, Hyderabad. He completed MDS",
       "specialization": "Gynecologist",
       " experience": "25 years",
@@ -99,6 +105,7 @@
     {
       "id": 7,
       "name": "Dr. Sanya Malik",
+      "category": "doctor",
       "description": "Dr. Prasad M is a Prosthodontist and Implantologist in Secunderabad, Hyderabad and has an experience of 17 years in these fields. Dr. Prasad M practices at KIMS Dental Care in Secunderabad, Hyderabad. He completed MDS",
       "specialization": "Gynecologist",
       " experience": "10 years",
@@ -115,6 +122,7 @@
     {
       "id": 8,
       "name": "Dr. Rajesh Singh",
+      "category": "doctor",
       "description": "Dr. Prasad M is a Prosthodontist and Implantologist in Secunderabad, Hyderabad and has an experience of 17 years in these fields. Dr. Prasad M practices at KIMS Dental Care in Secunderabad, Hyderabad. He completed MDS",
       "specialization": "Gynecologist",
       " experience": "19 years",
@@ -131,6 +139,7 @@
     {
       "id": 9,
       "name": "Dr. Meera Joshi",
+      "category": "doctor",
       "description": "Dr. Prasad M is a Prosthodontist and Implantologist in Secunderabad, Hyderabad and has an experience of 17 years in these fields. Dr. Prasad M practices at KIMS Dental Care in Secunderabad, Hyderabad. He completed MDS",
       "specialization": "Gynecologist",
       " experience": "16 years",
@@ -147,6 +156,7 @@
     {
       "id": 10,
       "name": "Dr. Vishal Thakur",
+      "category": "doctor",
       "description": "Dr. Prasad M is a Prosthodontist and Implantologist in Secunderabad, Hyderabad and has an experience of 17 years in these fields. Dr. Prasad M practices at KIMS Dental Care in Secunderabad, Hyderabad. He completed MDS",
       "specialization": "Gynecologist",
       " experience": "21 years",
@@ -163,6 +173,7 @@
     {
       "id": 11,
       "name": "Dr. Sneha Reddy",
+      "category": "doctor",
       "description": "Dr. Prasad M is a Prosthodontist and Implantologist in Secunderabad, Hyderabad and has an experience of 17 years in these fields. Dr. Prasad M practices at KIMS Dental Care in Secunderabad, Hyderabad. He completed MDS",
       "specialization": "Dietitian",
       " experience": "23 years",
@@ -179,6 +190,7 @@
     {
       "id": 12,
       "name": "Dr. Ramesh Yadav",
+      "category": "doctor",
       "description": "Dr. Prasad M is a Prosthodontist and Implantologist in Secunderabad, Hyderabad and has an experience of 17 years in these fields. Dr. Prasad M practices at KIMS Dental Care in Secunderabad, Hyderabad. He completed MDS",
       "specialization": "Dietitian",
       " experience": "18 years",
@@ -195,6 +207,7 @@
     {
       "id": 13,
       "name": "Dr. Nidhi Pandey",
+      "category": "doctor",
       "description": "Dr. Prasad M is a Prosthodontist and Implantologist in Secunderabad, Hyderabad and has an experience of 17 years in these fields. Dr. Prasad M practices at KIMS Dental Care in Secunderabad, Hyderabad. He completed MDS",
       "specialization": "Dietitian",
       " experience": "17 years",
@@ -211,6 +224,7 @@
     {
       "id": 14,
       "name": "Dr. Akash Rajput",
+      "category": "doctor",
       "description": "Dr. Prasad M is a Prosthodontist and Implantologist in Secunderabad, Hyderabad and has an experience of 17 years in these fields. Dr. Prasad M practices at KIMS Dental Care in Secunderabad, Hyderabad. He completed MDS",
       "specialization": "Dietitian",
       " experience": "14 years",
@@ -227,6 +241,7 @@
     {
       "id": 15,
       "name": "Dr. Pooja Saxena",
+      "category": "doctor",
       "description": "Dr. Prasad M is a Prosthodontist and Implantologist in Secunderabad, Hyderabad and has an experience of 17 years in these fields. Dr. Prasad M practices at KIMS Dental Care in Secunderabad, Hyderabad. He completed MDS",
       "specialization": "Dietitian",
       " experience": "22 years",
@@ -243,6 +258,7 @@
     {
       "id": 16,
       "name": "Dr. Sneha Reddy",
+      "category": "doctor",
       "description": "Dr. Prasad M is a Prosthodontist and Implantologist in Secunderabad, Hyderabad and has an experience of 17 years in these fields. Dr. Prasad M practices at KIMS Dental Care in Secunderabad, Hyderabad. He completed MDS",
       "specialization": "Physiotherapist",
       " experience": "23 years",
@@ -259,6 +275,7 @@
     {
       "id": 17,
       "name": "Dr. Ramesh Yadav",
+      "category": "doctor",
       "description": "Dr. Prasad M is a Prosthodontist and Implantologist in Secunderabad, Hyderabad and has an experience of 17 years in these fields. Dr. Prasad M practices at KIMS Dental Care in Secunderabad, Hyderabad. He completed MDS",
       "specialization": "Physiotherapist",
       " experience": "18 years",
@@ -275,6 +292,7 @@
     {
       "id": 18,
       "name": "Dr. Nidhi Pandey",
+      "category": "doctor",
       "description": "Dr. Prasad M is a Prosthodontist and Implantologist in Secunderabad, Hyderabad and has an experience of 17 years in these fields. Dr. Prasad M practices at KIMS Dental Care in Secunderabad, Hyderabad. He completed MDS",
       "specialization": "Physiotherapist",
       " experience": "17 years",
@@ -291,6 +309,7 @@
     {
       "id": 19,
       "name": "Dr. Akash Rajput",
+      "category": "doctor",
       "description": "Dr. Prasad M is a Prosthodontist and Implantologist in Secunderabad, Hyderabad and has an experience of 17 years in these fields. Dr. Prasad M practices at KIMS Dental Care in Secunderabad, Hyderabad. He completed MDS",
       "specialization": "Physiotherapist",
       " experience": "14 years",
@@ -307,6 +326,7 @@
     {
       "id": 20,
       "name": "Dr. Pooja Saxena",
+      "category": "doctor",
       "description": "Dr. Prasad M is a Prosthodontist and Implantologist in Secunderabad, Hyderabad and has an experience of 17 years in these fields. Dr. Prasad M practices at KIMS Dental Care in Secunderabad, Hyderabad. He completed MDS",
       "specialization": "Physiotherapist",
       " experience": "22 years",
@@ -323,6 +343,7 @@
     {
       "id": 21,
       "name": "Dr. Sneha Reddy",
+      "category": "doctor",
       "description": "Dr. Prasad M is a Prosthodontist and Implantologist in Secunderabad, Hyderabad and has an experience of 17 years in these fields. Dr. Prasad M practices at KIMS Dental Care in Secunderabad, Hyderabad. He completed MDS",
       "specialization": "Cardiologist",
       " experience": "23 years",
@@ -339,6 +360,7 @@
     {
       "id": 22,
       "name": "Dr. Ramesh Yadav",
+      "category": "doctor",
       "description": "Dr. Prasad M is a Prosthodontist and Implantologist in Secunderabad, Hyderabad and has an experience of 17 years in these fields. Dr. Prasad M practices at KIMS Dental Care in Secunderabad, Hyderabad. He completed MDS",
       "specialization": "Cardiologist",
       " experience": "18 years",
@@ -355,6 +377,7 @@
     {
       "id": 23,
       "name": "Dr. Nidhi Pandey",
+      "category": "doctor",
       "description": "Dr. Prasad M is a Prosthodontist and Implantologist in Secunderabad, Hyderabad and has an experience of 17 years in these fields. Dr. Prasad M practices at KIMS Dental Care in Secunderabad, Hyderabad. He completed MDS",
       "specialization": "Cardiologist",
       " experience": "17 years",
@@ -371,6 +394,7 @@
     {
       "id": 24,
       "name": "Dr. Akash Rajput",
+      "category": "doctor",
       "description": "Dr. Prasad M is a Prosthodontist and Implantologist in Secunderabad, Hyderabad and has an experience of 17 years in these fields. Dr. Prasad M practices at KIMS Dental Care in Secunderabad, Hyderabad. He completed MDS",
       "specialization": "Cardiologist",
       " experience": "14 years",
@@ -387,6 +411,7 @@
     {
       "id": 25,
       "name": "Dr. Pooja Saxena",
+      "category": "doctor",
       "description": "Dr. Prasad M is a Prosthodontist and Implantologist in Secunderabad, Hyderabad and has an experience of 17 years in these fields. Dr. Prasad M practices at KIMS Dental Care in Secunderabad, Hyderabad. He completed MDS",
       "specialization": "Cardiologist",
       " experience": "22 years",
@@ -403,6 +428,7 @@
     {
       "id": 26,
       "name": "Dr. Sneha Reddy",
+      "category": "doctor",
       "description": "Dr. Prasad M is a Prosthodontist and Implantologist in Secunderabad, Hyderabad and has an experience of 17 years in these fields. Dr. Prasad M practices at KIMS Dental Care in Secunderabad, Hyderabad. He completed MDS",
       "specialization": "Dermatologist",
       " experience": "23 years",
@@ -419,6 +445,7 @@
     {
       "id": 27,
       "name": "Dr. Ramesh Yadav",
+      "category": "doctor",
       "description": "Dr. Prasad M is a Prosthodontist and Implantologist in Secunderabad, Hyderabad and has an experience of 17 years in these fields. Dr. Prasad M practices at KIMS Dental Care in Secunderabad, Hyderabad. He completed MDS",
       "specialization": "Dermatologist",
       " experience": "18 years",
@@ -435,6 +462,7 @@
     {
       "id": 28,
       "name": "Dr. Nidhi Pandey",
+      "category": "doctor",
       "description": "Dr. Prasad M is a Prosthodontist and Implantologist in Secunderabad, Hyderabad and has an experience of 17 years in these fields. Dr. Prasad M practices at KIMS Dental Care in Secunderabad, Hyderabad. He completed MDS",
       "specialization": "Dermatologist",
       " experience": "17 years",
@@ -451,6 +479,7 @@
     {
       "id": 29,
       "name": "Dr. Akash Rajput",
+      "category": "doctor",
       "description": "Dr. Prasad M is a Prosthodontist and Implantologist in Secunderabad, Hyderabad and has an experience of 17 years in these fields. Dr. Prasad M practices at KIMS Dental Care in Secunderabad, Hyderabad. He completed MDS",
       "specialization": "Dermatologist",
       " experience": "14 years",
@@ -467,6 +496,7 @@
     {
       "id": 30,
       "name": "Dr. Pooja Saxena",
+      "category": "doctor",
       "description": "Dr. Prasad M is a Prosthodontist and Implantologist in Secunderabad, Hyderabad and has an experience of 17 years in these fields. Dr. Prasad M practices at KIMS Dental Care in Secunderabad, Hyderabad. He completed MDS",
       "specialization": "Dermatologist",
       " experience": "22 years",
@@ -483,6 +513,7 @@
     {
       "id": 26,
       "name": "Dr. Sneha Reddy",
+      "category": "doctor",
       "description": "Dr. Prasad M is a Prosthodontist and Implantologist in Secunderabad, Hyderabad and has an experience of 17 years in these fields. Dr. Prasad M practices at KIMS Dental Care in Secunderabad, Hyderabad. He completed MDS",
       "specialization": "Neurologist",
       " experience": "23 years",
@@ -499,6 +530,7 @@
     {
       "id": 27,
       "name": "Dr. Ramesh Yadav",
+      "category": "doctor",
       "description": "Dr. Prasad M is a Prosthodontist and Implantologist in Secunderabad, Hyderabad and has an experience of 17 years in these fields. Dr. Prasad M practices at KIMS Dental Care in Secunderabad, Hyderabad. He completed MDS",
       "specialization": "Neurologist",
       " experience": "18 years",
@@ -515,6 +547,7 @@
     {
       "id": 28,
       "name": "Dr. Nidhi Pandey",
+      "category": "doctor",
       "description": "Dr. Prasad M is a Prosthodontist and Implantologist in Secunderabad, Hyderabad and has an experience of 17 years in these fields. Dr. Prasad M practices at KIMS Dental Care in Secunderabad, Hyderabad. He completed MDS",
       "specialization": "Neurologist",
       " experience": "17 years",
@@ -531,6 +564,7 @@
     {
       "id": 29,
       "name": "Dr. Akash Rajput",
+      "category": "doctor",
       "description": "Dr. Prasad M is a Prosthodontist and Implantologist in Secunderabad, Hyderabad and has an experience of 17 years in these fields. Dr. Prasad M practices at KIMS Dental Care in Secunderabad, Hyderabad. He completed MDS",
       "specialization": "Neurologist",
       " experience": "14 years",
@@ -547,6 +581,7 @@
     {
       "id": 30,
       "name": "Dr. Pooja Saxena",
+      "category": "doctor",
       "description": "Dr. Prasad M is a Prosthodontist and Implantologist in Secunderabad, Hyderabad and has an experience of 17 years in these fields. Dr. Prasad M practices at KIMS Dental Care in Secunderabad, Hyderabad. He completed MDS",
       "specialization": "Neurologist",
       " experience": "22 years",
@@ -563,6 +598,7 @@
     {
       "id": 26,
       "name": "Dr. Sneha Reddy",
+      "category": "doctor",
       "description": "Dr. Prasad M is a Prosthodontist and Implantologist in Secunderabad, Hyderabad and has an experience of 17 years in these fields. Dr. Prasad M practices at KIMS Dental Care in Secunderabad, Hyderabad. He completed MDS",
       "specialization": "Pediatrician",
       " experience": "23 years",
@@ -579,6 +615,7 @@
     {
       "id": 27,
       "name": "Dr. Ramesh Yadav",
+      "category": "doctor",
       "description": "Dr. Prasad M is a Prosthodontist and Implantologist in Secunderabad, Hyderabad and has an experience of 17 years in these fields. Dr. Prasad M practices at KIMS Dental Care in Secunderabad, Hyderabad. He completed MDS",
       "specialization": "Pediatrician",
       " experience": "18 years",
@@ -595,6 +632,7 @@
     {
       "id": 28,
       "name": "Dr. Nidhi Pandey",
+      "category": "doctor",
       "description": "Dr. Prasad M is a Prosthodontist and Implantologist in Secunderabad, Hyderabad and has an experience of 17 years in these fields. Dr. Prasad M practices at KIMS Dental Care in Secunderabad, Hyderabad. He completed MDS",
       "specialization": "Pediatrician",
       " experience": "17 years",
@@ -611,6 +649,7 @@
     {
       "id": 29,
       "name": "Dr. Akash Rajput",
+      "category": "doctor",
       "description": "Dr. Prasad M is a Prosthodontist and Implantologist in Secunderabad, Hyderabad and has an experience of 17 years in these fields. Dr. Prasad M practices at KIMS Dental Care in Secunderabad, Hyderabad. He completed MDS",
       "specialization": "Pediatrician",
       " experience": "14 years",
@@ -627,6 +666,7 @@
     {
       "id": 30,
       "name": "Dr. Pooja Saxena",
+      "category": "doctor",
       "description": "Dr. Prasad M is a Prosthodontist and Implantologist in Secunderabad, Hyderabad and has an experience of 17 years in these fields. Dr. Prasad M practices at KIMS Dental Care in Secunderabad, Hyderabad. He completed MDS",
       "specialization": "Pediatrician",
       " experience": "22 years",
@@ -643,6 +683,7 @@
     {
       "id": 26,
       "name": "Dr. Sneha Reddy",
+      "category": "doctor",
       "description": "Dr. Prasad M is a Prosthodontist and Implantologist in Secunderabad, Hyderabad and has an experience of 17 years in these fields. Dr. Prasad M practices at KIMS Dental Care in Secunderabad, Hyderabad. He completed MDS",
       "specialization": "ENT Specialist",
       " experience": "23 years",
@@ -659,6 +700,7 @@
     {
       "id": 27,
       "name": "Dr. Ramesh Yadav",
+      "category": "doctor",
       "description": "Dr. Prasad M is a Prosthodontist and Implantologist in Secunderabad, Hyderabad and has an experience of 17 years in these fields. Dr. Prasad M practices at KIMS Dental Care in Secunderabad, Hyderabad. He completed MDS",
       "specialization": "ENT Specialist",
       " experience": "18 years",
@@ -675,6 +717,7 @@
     {
       "id": 28,
       "name": "Dr. Nidhi Pandey",
+      "category": "doctor",
       "description": "Dr. Prasad M is a Prosthodontist and Implantologist in Secunderabad, Hyderabad and has an experience of 17 years in these fields. Dr. Prasad M practices at KIMS Dental Care in Secunderabad, Hyderabad. He completed MDS",
       "specialization": "ENT Specialist",
       " experience": "17 years",
@@ -691,6 +734,7 @@
     {
       "id": 29,
       "name": "Dr. Akash Rajput",
+      "category": "doctor",
       "description": "Dr. Prasad M is a Prosthodontist and Implantologist in Secunderabad, Hyderabad and has an experience of 17 years in these fields. Dr. Prasad M practices at KIMS Dental Care in Secunderabad, Hyderabad. He completed MDS",
       "specialization": "ENT Specialist",
       " experience": "14 years",
@@ -707,6 +751,7 @@
     {
       "id": 30,
       "name": "Dr. Pooja Saxena",
+      "category": "doctor",
       "description": "Dr. Prasad M is a Prosthodontist and Implantologist in Secunderabad, Hyderabad and has an experience of 17 years in these fields. Dr. Prasad M practices at KIMS Dental Care in Secunderabad, Hyderabad. He completed MDS",
       "specialization": "ENT Specialist",
       " experience": "22 years",
@@ -723,6 +768,7 @@
     {
       "id": 26,
       "name": "Dr. Sneha Reddy",
+      "category": "doctor",
       "description": "Dr. Prasad M is a Prosthodontist and Implantologist in Secunderabad, Hyderabad and has an experience of 17 years in these fields. Dr. Prasad M practices at KIMS Dental Care in Secunderabad, Hyderabad. He completed MDS",
       "specialization": "Orthopedic",
       " experience": "23 years",
@@ -739,6 +785,7 @@
     {
       "id": 27,
       "name": "Dr. Ramesh Yadav",
+      "category": "doctor",
       "description": "Dr. Prasad M is a Prosthodontist and Implantologist in Secunderabad, Hyderabad and has an experience of 17 years in these fields. Dr. Prasad M practices at KIMS Dental Care in Secunderabad, Hyderabad. He completed MDS",
       "specialization": "Orthopedic",
       " experience": "18 years",
@@ -755,6 +802,7 @@
     {
       "id": 28,
       "name": "Dr. Nidhi Pandey",
+      "category": "doctor",
       "description": "Dr. Prasad M is a Prosthodontist and Implantologist in Secunderabad, Hyderabad and has an experience of 17 years in these fields. Dr. Prasad M practices at KIMS Dental Care in Secunderabad, Hyderabad. He completed MDS",
       "specialization": "Orthopedic",
       " experience": "17 years",
@@ -771,6 +819,7 @@
     {
       "id": 29,
       "name": "Dr. Akash Rajput",
+      "category": "doctor",
       "description": "Dr. Prasad M is a Prosthodontist and Implantologist in Secunderabad, Hyderabad and has an experience of 17 years in these fields. Dr. Prasad M practices at KIMS Dental Care in Secunderabad, Hyderabad. He completed MDS",
       "specialization": "Orthopedic",
       " experience": "14 years",
@@ -787,6 +836,7 @@
     {
       "id": 30,
       "name": "Dr. Pooja Saxena",
+      "category": "doctor",
       "description": "Dr. Prasad M is a Prosthodontist and Implantologist in Secunderabad, Hyderabad and has an experience of 17 years in these fields. Dr. Prasad M practices at KIMS Dental Care in Secunderabad, Hyderabad. He completed MDS",
       "specialization": "Orthopedic",
       " experience": "22 years",
@@ -807,7 +857,8 @@
       "id": 1,
       "name": "John Doe",
       "qualification": "MBA in Finance",
-      "specialization": "Investment Banking",
+      "category": "financeexperts",
+      "specialization": "Financial Planning",
       "description": "Expert in investment strategies and portfolio management.",
       "gender": "Male",
       "experience": 10,
@@ -820,7 +871,8 @@
       "id": 2,
       "name": "Jane Smith",
       "qualification": "Chartered Accountant",
-      "specialization": "Taxation",
+      "category": "financeexperts",
+      "specialization": "Financial Planning",
       "description": "Specialist in tax planning and compliance.",
       "gender": "Female",
       "experience": 12,
@@ -833,7 +885,8 @@
       "id": 3,
       "name": "Michael Johnson",
       "qualification": "CFA",
-      "specialization": "Wealth Management",
+      "category": "financeexperts",
+      "specialization": "Financial Planning",
       "description": "Provides expert guidance on financial planning.",
       "gender": "Male",
       "experience": 8,
@@ -846,7 +899,8 @@
       "id": 4,
       "name": "Emily Davis",
       "qualification": "MBA in Finance",
-      "specialization": "Corporate Finance",
+      "category": "financeexperts",
+      "specialization": "Financial Planning",
       "description": "Advises businesses on financial decisions.",
       "gender": "Female",
       "experience": 9,
@@ -859,7 +913,8 @@
       "id": 5,
       "name": "Robert Wilson",
       "qualification": "CPA",
-      "specialization": "Auditing",
+      "category": "financeexperts",
+      "specialization": "Financial Planning",
       "description": "Provides financial auditing services.",
       "gender": "Male",
       "experience": 15,
@@ -872,7 +927,8 @@
       "id": 6,
       "name": "Olivia Martinez",
       "qualification": "CFA",
-      "specialization": "Risk Management",
+      "category": "financeexperts",
+      "specialization": "Financial Planning",
       "description": "Helps businesses mitigate financial risks.",
       "gender": "Female",
       "experience": 11,
@@ -885,7 +941,8 @@
       "id": 7,
       "name": "William Brown",
       "qualification": "MBA in Finance",
-      "specialization": "Financial Consulting",
+      "category": "financeexperts",
+      "specialization": "Financial Planning",
       "description": "Offers expert financial consulting services.",
       "gender": "Male",
       "experience": 13,
@@ -898,7 +955,8 @@
       "id": 8,
       "name": "Sophia Garcia",
       "qualification": "Certified Financial Planner (CFP)",
-      "specialization": "Retirement Planning",
+      "category": "financeexperts",
+      "specialization": "Financial Planning",
       "description": "Provides retirement and pension planning.",
       "gender": "Female",
       "experience": 14,
@@ -911,7 +969,8 @@
       "id": 9,
       "name": "James Miller",
       "qualification": "CPA",
-      "specialization": "Forensic Accounting",
+      "category": "financeexperts",
+      "specialization": "Financial Planning",
       "description": "Expert in financial fraud detection.",
       "gender": "Male",
       "experience": 10,
@@ -924,7 +983,8 @@
       "id": 10,
       "name": "Isabella Taylor",
       "qualification": "CFA",
-      "specialization": "Stock Market Analysis",
+      "category": "financeexperts",
+      "specialization": "Financial Planning",
       "description": "Provides insights into stock market trends.",
       "gender": "Female",
       "experience": 9,
@@ -935,9 +995,10 @@
     },
 
     {
-      "id": 1,
+      "id": 11,
       "name": "Michael Brooks",
       "qualification": "CPA",
+      "category": "financeexperts",
       "specialization": "Tax Advisory",
       "description": "Specialist in corporate and individual tax planning.",
       "gender": "Male",
@@ -948,9 +1009,10 @@
       "image": "https://example.com/images/michael.jpg"
     },
     {
-      "id": 2,
+      "id": 12,
       "name": "Laura Stevens",
       "qualification": "EA",
+      "category": "financeexperts",
       "specialization": "Tax Advisory",
       "description": "Provides expert tax compliance and audit support.",
       "gender": "Female",
@@ -961,9 +1023,10 @@
       "image": "https://example.com/images/laura.jpg"
     },
     {
-      "id": 3,
+      "id": 13,
       "name": "Daniel Foster",
       "qualification": "CPA",
+      "category": "financeexperts",
       "specialization": "Tax Advisory",
       "description": "Advises businesses on tax-saving strategies.",
       "gender": "Male",
@@ -974,9 +1037,10 @@
       "image": "https://example.com/images/daniel.jpg"
     },
     {
-      "id": 4,
+      "id": 14,
       "name": "Sophia Lewis",
       "qualification": "EA",
+      "category": "financeexperts",
       "specialization": "Tax Advisory",
       "description": "Expert in IRS tax dispute resolution.",
       "gender": "Female",
@@ -987,9 +1051,10 @@
       "image": "https://example.com/images/sophia.jpg"
     },
     {
-      "id": 5,
+      "id": 15,
       "name": "John Carter",
       "qualification": "CPA",
+      "category": "financeexperts",
       "specialization": "Tax Advisory",
       "description": "Specializes in international tax compliance.",
       "gender": "Male",
@@ -1000,9 +1065,10 @@
       "image": "https://example.com/images/john.jpg"
     },
     {
-      "id": 6,
+      "id": 16,
       "name": "Emily Zhang",
       "qualification": "EA",
+      "category": "financeexperts",
       "specialization": "Tax Advisory",
       "description": "Expert in cross-border tax treaties.",
       "gender": "Female",
@@ -1013,9 +1079,10 @@
       "image": "https://example.com/images/emily.jpg"
     },
     {
-      "id": 7,
+      "id": 17,
       "name": "Robert Harris",
       "qualification": "CPA",
+      "category": "financeexperts",
       "specialization": "Tax Advisory",
       "description": "Focuses on state and local tax regulations.",
       "gender": "Male",
@@ -1026,9 +1093,10 @@
       "image": "https://example.com/images/robert.jpg"
     },
     {
-      "id": 8,
+      "id": 18,
       "name": "Karen Lee",
       "qualification": "EA",
+      "category": "financeexperts",
       "specialization": "Tax Advisory",
       "description": "Specializes in nonprofit tax compliance.",
       "gender": "Female",
@@ -1039,9 +1107,10 @@
       "image": "https://example.com/images/karen.jpg"
     },
     {
-      "id": 9,
+      "id": 19,
       "name": "James Wilson",
       "qualification": "CPA",
+      "category": "financeexperts",
       "specialization": "Tax Advisory",
       "description": "Expert in expatriate taxation.",
       "gender": "Male",
@@ -1052,9 +1121,10 @@
       "image": "https://example.com/images/james.jpg"
     },
     {
-      "id": 10,
+      "id": 20,
       "name": "Patricia Brown",
       "qualification": "EA",
+      "category": "financeexperts",
       "specialization": "Tax Advisory",
       "description": "Specializes in tax-efficient estate planning.",
       "gender": "Female",
@@ -1066,9 +1136,10 @@
     },
 
     {
-      "id": 11,
+      "id": 21,
       "name": "Christopher Adams",
       "qualification": "CWM",
+      "category": "financeexperts",
       "specialization": "Wealth Management",
       "description": "Expert in asset allocation and portfolio diversification.",
       "gender": "Male",
@@ -1079,9 +1150,10 @@
       "image": "https://example.com/images/christopher.jpg"
     },
     {
-      "id": 12,
+      "id": 22,
       "name": "Rachel Green",
       "qualification": "CFP",
+      "category": "financeexperts",
       "specialization": "Wealth Management",
       "description": "Guides high-net-worth clients in investment growth.",
       "gender": "Female",
@@ -1092,9 +1164,10 @@
       "image": "https://example.com/images/rachel.jpg"
     },
     {
-      "id": 13,
+      "id": 23,
       "name": "Daniel White",
       "qualification": "CWM",
+      "category": "financeexperts",
       "specialization": "Wealth Management",
       "description": "Specializes in sustainable and ethical investing.",
       "gender": "Male",
@@ -1105,9 +1178,10 @@
       "image": "https://example.com/images/daniel.jpg"
     },
     {
-      "id": 14,
+      "id": 24,
       "name": "Sophia Martinez",
       "qualification": "CFP",
+      "category": "financeexperts",
       "specialization": "Wealth Management",
       "description": "Focuses on family wealth preservation.",
       "gender": "Female",
@@ -1118,9 +1192,10 @@
       "image": "https://example.com/images/sophia.jpg"
     },
     {
-      "id": 15,
+      "id": 25,
       "name": "Andrew Clark",
       "qualification": "CWM",
+      "category": "financeexperts",
       "specialization": "Wealth Management",
       "description": "Expert in risk management and asset protection.",
       "gender": "Male",
@@ -1131,9 +1206,10 @@
       "image": "https://example.com/images/andrew.jpg"
     },
     {
-      "id": 16,
+      "id": 26,
       "name": "Olivia Johnson",
       "qualification": "CFP",
+      "category": "financeexperts",
       "specialization": "Wealth Management",
       "description": "Specializes in philanthropic wealth strategies.",
       "gender": "Female",
@@ -1144,9 +1220,10 @@
       "image": "https://example.com/images/olivia.jpg"
     },
     {
-      "id": 17,
+      "id": 27,
       "name": "Ethan Taylor",
       "qualification": "CWM",
+      "category": "financeexperts",
       "specialization": "Wealth Management",
       "description": "Expert in alternative investments.",
       "gender": "Male",
@@ -1157,9 +1234,10 @@
       "image": "https://example.com/images/ethan.jpg"
     },
     {
-      "id": 18,
+      "id": 28,
       "name": "Ava Anderson",
       "qualification": "CFP",
+      "category": "financeexperts",
       "specialization": "Wealth Management",
       "description": "Focuses on generational wealth transfer.",
       "gender": "Female",
@@ -1170,9 +1248,10 @@
       "image": "https://example.com/images/ava.jpg"
     },
     {
-      "id": 19,
+      "id": 29,
       "name": "Noah Thomas",
       "qualification": "CWM",
+      "category": "financeexperts",
       "specialization": "Wealth Management",
       "description": "Specializes in tax-efficient wealth strategies.",
       "gender": "Male",
@@ -1183,9 +1262,10 @@
       "image": "https://example.com/images/noah.jpg"
     },
     {
-      "id": 20,
+      "id": 30,
       "name": "Isabella Moore",
       "qualification": "CFP",
+      "category": "financeexperts",
       "specialization": "Wealth Management",
       "description": "Expert in behavioral finance and client education.",
       "gender": "Female",
@@ -1197,9 +1277,10 @@
     },
 
     {
-      "id": 21,
+      "id": 31,
       "name": "Daniel Moore",
       "qualification": "CRPC",
+      "category": "financeexperts",
       "specialization": "Retirement Planning",
       "description": "Specialist in retirement income strategies.",
       "gender": "Male",
@@ -1210,9 +1291,10 @@
       "image": "https://example.com/images/daniel.jpg"
     },
     {
-      "id": 22,
+      "id": 32,
       "name": "Emily Watson",
       "qualification": "CFP",
+      "category": "financeexperts",
       "specialization": "Retirement Planning",
       "description": "Expert in pension planning and social security benefits.",
       "gender": "Female",
@@ -1223,9 +1305,10 @@
       "image": "https://example.com/images/emily.jpg"
     },
     {
-      "id": 23,
+      "id": 33,
       "name": "Benjamin Walker",
       "qualification": "CRPC",
+      "category": "financeexperts",
       "specialization": "Retirement Planning",
       "description": "Specializes in healthcare cost planning for retirees.",
       "gender": "Male",
@@ -1236,9 +1319,10 @@
       "image": "https://example.com/images/benjamin.jpg"
     },
     {
-      "id": 24,
+      "id": 34,
       "name": "Charlotte Hall",
       "qualification": "CFP",
+      "category": "financeexperts",
       "specialization": "Retirement Planning",
       "description": "Focuses on longevity risk management.",
       "gender": "Female",
@@ -1249,9 +1333,10 @@
       "image": "https://example.com/images/charlotte.jpg"
     },
     {
-      "id": 25,
+      "id": 35,
       "name": "Samuel Young",
       "qualification": "CRPC",
+      "category": "financeexperts",
       "specialization": "Retirement Planning",
       "description": "Expert in 401(k) and IRA rollovers.",
       "gender": "Male",
@@ -1262,9 +1347,10 @@
       "image": "https://example.com/images/samuel.jpg"
     },
     {
-      "id": 26,
+      "id": 36,
       "name": "Amelia Allen",
       "qualification": "CFP",
+      "category": "financeexperts",
       "specialization": "Retirement Planning",
       "description": "Specializes in estate planning integration.",
       "gender": "Female",
@@ -1275,9 +1361,10 @@
       "image": "https://example.com/images/amelia.jpg"
     },
     {
-      "id": 27,
+      "id": 37,
       "name": "Henry King",
       "qualification": "CRPC",
+      "category": "financeexperts",
       "specialization": "Retirement Planning",
       "description": "Expert in tax-efficient withdrawal strategies.",
       "gender": "Male",
@@ -1288,9 +1375,10 @@
       "image": "https://example.com/images/henry.jpg"
     },
     {
-      "id": 28,
+      "id": 38,
       "name": "Ella Wright",
       "qualification": "CFP",
+      "category": "financeexperts",
       "specialization": "Retirement Planning",
       "description": "Focuses on retirement income sustainability.",
       "gender": "Female",
@@ -1301,9 +1389,10 @@
       "image": "https://example.com/images/ella.jpg"
     },
     {
-      "id": 29,
+      "id": 39,
       "name": "Alexander Scott",
       "qualification": "CRPC",
+      "category": "financeexperts",
       "specialization": "Retirement Planning",
       "description": "Specializes in retirement plan design for businesses.",
       "gender": "Male",
@@ -1314,9 +1403,10 @@
       "image": "https://example.com/images/alexander.jpg"
     },
     {
-      "id": 30,
+      "id": 40,
       "name": "Grace Green",
       "qualification": "CFP",
+      "category": "financeexperts",
       "specialization": "Retirement Planning",
       "description": "Expert in retirement plan optimization for individuals.",
       "gender": "Female",
@@ -1330,6 +1420,7 @@
 
   "technologyexperts": [
     {
+      "category": "technologyexperts",
       "id": 1,
       "name": "John Carter",
       "qualification": "ITIL, PMP",
@@ -1343,6 +1434,7 @@
       "image": "https://example.com/images/john.jpg"
     },
     {
+      "category": "technologyexperts",
       "id": 2,
       "name": "Emily Zhang",
       "qualification": "CISSP, MBA",
@@ -1356,6 +1448,7 @@
       "image": "https://example.com/images/emily.jpg"
     },
     {
+      "category": "technologyexperts",
       "id": 3,
       "name": "Michael O'Reilly",
       "qualification": "TOGAF, PMP",
@@ -1369,6 +1462,7 @@
       "image": "https://example.com/images/michael.jpg"
     },
     {
+      "category": "technologyexperts",
       "id": 4,
       "name": "Sarah Thompson",
       "qualification": "ITIL, CSM",
@@ -1382,6 +1476,7 @@
       "image": "https://example.com/images/sarah.jpg"
     },
     {
+      "category": "technologyexperts",
       "id": 5,
       "name": "David Kim",
       "qualification": "PMP, CISM",
@@ -1395,6 +1490,7 @@
       "image": "https://example.com/images/david.jpg"
     },
     {
+      "category": "technologyexperts",
       "id": 6,
       "name": "Laura Evans",
       "qualification": "ITIL, MBA",
@@ -1408,6 +1504,7 @@
       "image": "https://example.com/images/laura.jpg"
     },
     {
+      "category": "technologyexperts",
       "id": 7,
       "name": "Robert Harris",
       "qualification": "TOGAF, CISSP",
@@ -1421,6 +1518,7 @@
       "image": "https://example.com/images/robert.jpg"
     },
     {
+      "category": "technologyexperts",
       "id": 8,
       "name": "Karen Lee",
       "qualification": "ITIL, PMP",
@@ -1434,6 +1532,7 @@
       "image": "https://example.com/images/karen.jpg"
     },
     {
+      "category": "technologyexperts",
       "id": 9,
       "name": "James Wilson",
       "qualification": "CISM, MBA",
@@ -1447,6 +1546,7 @@
       "image": "https://example.com/images/james.jpg"
     },
     {
+      "category": "technologyexperts",
       "id": 10,
       "name": "Patricia Brown",
       "qualification": "ITIL, CSM",
@@ -1461,6 +1561,7 @@
     },
 
     {
+      "category": "technologyexperts",
       "id": 11,
       "name": "Daniel White",
       "qualification": "AWS Certified, Azure Expert",
@@ -1474,6 +1575,7 @@
       "image": "https://example.com/images/daniel.jpg"
     },
     {
+      "category": "technologyexperts",
       "id": 12,
       "name": "Sophia Martinez",
       "qualification": "Google Cloud Professional",
@@ -1487,6 +1589,7 @@
       "image": "https://example.com/images/sophia.jpg"
     },
     {
+      "category": "technologyexperts",
       "id": 13,
       "name": "Andrew Clark",
       "qualification": "AWS Certified, CKA",
@@ -1500,6 +1603,7 @@
       "image": "https://example.com/images/andrew.jpg"
     },
     {
+      "category": "technologyexperts",
       "id": 14,
       "name": "Olivia Johnson",
       "qualification": "Azure Expert, PMP",
@@ -1513,6 +1617,7 @@
       "image": "https://example.com/images/olivia.jpg"
     },
     {
+      "category": "technologyexperts",
       "id": 15,
       "name": "Ethan Taylor",
       "qualification": "AWS Certified, ITIL",
@@ -1526,6 +1631,7 @@
       "image": "https://example.com/images/ethan.jpg"
     },
     {
+      "category": "technologyexperts",
       "id": 16,
       "name": "Ava Anderson",
       "qualification": "Google Cloud Professional, CISSP",
@@ -1539,6 +1645,7 @@
       "image": "https://example.com/images/ava.jpg"
     },
     {
+      "category": "technologyexperts",
       "id": 17,
       "name": "Noah Thomas",
       "qualification": "AWS Certified, CKA",
@@ -1552,6 +1659,7 @@
       "image": "https://example.com/images/noah.jpg"
     },
     {
+      "category": "technologyexperts",
       "id": 18,
       "name": "Isabella Moore",
       "qualification": "Azure Expert, PMP",
@@ -1565,6 +1673,7 @@
       "image": "https://example.com/images/isabella.jpg"
     },
     {
+      "category": "technologyexperts",
       "id": 19,
       "name": "Liam Jackson",
       "qualification": "AWS Certified, CISSP",
@@ -1578,6 +1687,7 @@
       "image": "https://example.com/images/liam.jpg"
     },
     {
+      "category": "technologyexperts",
       "id": 20,
       "name": "Mia Lewis",
       "qualification": "Google Cloud Professional, ITIL",
@@ -1592,6 +1702,7 @@
     },
 
     {
+      "category": "technologyexperts",
       "id": 21,
       "name": "Benjamin Walker",
       "qualification": "CISSP, CEH",
@@ -1605,6 +1716,7 @@
       "image": "https://example.com/images/benjamin.jpg"
     },
     {
+      "category": "technologyexperts",
       "id": 22,
       "name": "Charlotte Hall",
       "qualification": "CISM, OSCP",
@@ -1618,6 +1730,7 @@
       "image": "https://example.com/images/charlotte.jpg"
     },
     {
+      "category": "technologyexperts",
       "id": 23,
       "name": "Samuel Young",
       "qualification": "CISSP, CCIE Security",
@@ -1631,6 +1744,7 @@
       "image": "https://example.com/images/samuel.jpg"
     },
     {
+      "category": "technologyexperts",
       "id": 24,
       "name": "Amelia Allen",
       "qualification": "CISM, CEH",
@@ -1644,6 +1758,7 @@
       "image": "https://example.com/images/amelia.jpg"
     },
     {
+      "category": "technologyexperts",
       "id": 25,
       "name": "Henry King",
       "qualification": "CISSP, OSCP",
@@ -1657,6 +1772,7 @@
       "image": "https://example.com/images/henry.jpg"
     },
     {
+      "category": "technologyexperts",
       "id": 26,
       "name": "Ella Wright",
       "qualification": "CISM, CEH",
@@ -1670,6 +1786,7 @@
       "image": "https://example.com/images/ella.jpg"
     },
     {
+      "category": "technologyexperts",
       "id": 27,
       "name": "Alexander Scott",
       "qualification": "CISSP, CCIE Security",
@@ -1683,6 +1800,7 @@
       "image": "https://example.com/images/alexander.jpg"
     },
     {
+      "category": "technologyexperts",
       "id": 28,
       "name": "Grace Green",
       "qualification": "CISM, OSCP",
@@ -1696,6 +1814,7 @@
       "image": "https://example.com/images/grace.jpg"
     },
     {
+      "category": "technologyexperts",
       "id": 29,
       "name": "Daniel Moore",
       "qualification": "CISSP, CEH",
@@ -1709,6 +1828,7 @@
       "image": "https://example.com/images/daniel.jpg"
     },
     {
+      "category": "technologyexperts",
       "id": 30,
       "name": "Emily Watson",
       "qualification": "CISM, OSCP",
@@ -1723,6 +1843,7 @@
     },
 
     {
+      "category": "technologyexperts",
       "id": 31,
       "name": "Christopher Adams",
       "qualification": "AWS Certified, Azure Expert",
@@ -1736,6 +1857,7 @@
       "image": "https://example.com/images/christopher.jpg"
     },
     {
+      "category": "technologyexperts",
       "id": 32,
       "name": "Rachel Green",
       "qualification": "Google Cloud Professional",
@@ -1749,6 +1871,7 @@
       "image": "https://example.com/images/rachel.jpg"
     },
     {
+      "category": "technologyexperts",
       "id": 33,
       "name": "Daniel White",
       "qualification": "AWS Certified, CKA",
@@ -1762,6 +1885,7 @@
       "image": "https://example.com/images/daniel.jpg"
     },
     {
+      "category": "technologyexperts",
       "id": 34,
       "name": "Sophia Martinez",
       "qualification": "Azure Expert, PMP",
@@ -1775,6 +1899,7 @@
       "image": "https://example.com/images/sophia.jpg"
     },
     {
+      "category": "technologyexperts",
       "id": 35,
       "name": "Andrew Clark",
       "qualification": "AWS Certified, ITIL",
@@ -1788,6 +1913,7 @@
       "image": "https://example.com/images/andrew.jpg"
     },
     {
+      "category": "technologyexperts",
       "id": 36,
       "name": "Olivia Johnson",
       "qualification": "Google Cloud Professional",
@@ -1801,6 +1927,7 @@
       "image": "https://example.com/images/olivia.jpg"
     },
     {
+      "category": "technologyexperts",
       "id": 37,
       "name": "Ethan Taylor",
       "qualification": "AWS Certified, CKA",
@@ -1814,6 +1941,7 @@
       "image": "https://example.com/images/ethan.jpg"
     },
     {
+      "category": "technologyexperts",
       "id": 38,
       "name": "Ava Anderson",
       "qualification": "Azure Expert, PMP",
@@ -1827,6 +1955,7 @@
       "image": "https://example.com/images/ava.jpg"
     },
     {
+      "category": "technologyexperts",
       "id": 39,
       "name": "Noah Thomas",
       "qualification": "AWS Certified, CISSP",
@@ -1840,6 +1969,7 @@
       "image": "https://example.com/images/noah.jpg"
     },
     {
+      "category": "technologyexperts",
       "id": 40,
       "name": "Isabella Moore",
       "qualification": "Google Cloud Professional, ITIL",
@@ -1856,6 +1986,7 @@
 
   "legal": [
     {
+      "category": "legal",
       "id": 1,
       "name": "John Smith",
       "qualification": "LLM in Corporate Law",
@@ -1869,6 +2000,7 @@
       "image": "https://example.com/images/john_smith.jpg"
     },
     {
+      "category": "legal",
       "id": 2,
       "name": "Lisa White",
       "qualification": "JD, Corporate Law",
@@ -1882,6 +2014,7 @@
       "image": "https://example.com/images/lisa_white.jpg"
     },
     {
+      "category": "legal",
       "id": 3,
       "name": "Michael Carter",
       "qualification": "LLB",
@@ -1895,6 +2028,7 @@
       "image": "https://example.com/images/michael_carter.jpg"
     },
     {
+      "category": "legal",
       "id": 4,
       "name": "Sophia Martinez",
       "qualification": "LLM, Business Law",
@@ -1908,6 +2042,7 @@
       "image": "https://example.com/images/sophia_martinez.jpg"
     },
     {
+      "category": "legal",
       "id": 5,
       "name": "David Brown",
       "qualification": "JD, M&A Law",
@@ -1921,6 +2056,7 @@
       "image": "https://example.com/images/david_brown.jpg"
     },
     {
+      "category": "legal",
       "id": 6,
       "name": "John Smith",
       "qualification": "LLM in Corporate Law",
@@ -1934,6 +2070,7 @@
       "image": "https://example.com/images/john_smith.jpg"
     },
     {
+      "category": "legal",
       "id": 7,
       "name": "Lisa White",
       "qualification": "JD, Corporate Law",
@@ -1947,6 +2084,7 @@
       "image": "https://example.com/images/lisa_white.jpg"
     },
     {
+      "category": "legal",
       "id": 8,
       "name": "Michael Carter",
       "qualification": "LLB",
@@ -1960,6 +2098,7 @@
       "image": "https://example.com/images/michael_carter.jpg"
     },
     {
+      "category": "legal",
       "id": 9,
       "name": "Sophia Martinez",
       "qualification": "LLM, Business Law",
@@ -1973,6 +2112,7 @@
       "image": "https://example.com/images/sophia_martinez.jpg"
     },
     {
+      "category": "legal",
       "id": 10,
       "name": "David Brown",
       "qualification": "JD, M&A Law",
@@ -1987,6 +2127,7 @@
     },
 
     {
+      "category": "legal",
       "id": 11,
       "name": "Emma Wilson",
       "qualification": "LLM, Estate Law",
@@ -2000,6 +2141,7 @@
       "image": "https://example.com/images/emma_wilson.jpg"
     },
     {
+      "category": "legal",
       "id": 12,
       "name": "James Anderson",
       "qualification": "JD, Probate Law",
@@ -2013,6 +2155,7 @@
       "image": "https://example.com/images/james_anderson.jpg"
     },
     {
+      "category": "legal",
       "id": 13,
       "name": "Emma Wilson",
       "qualification": "LLM, Estate Law",
@@ -2026,6 +2169,7 @@
       "image": "https://example.com/images/emma_wilson.jpg"
     },
     {
+      "category": "legal",
       "id": 14,
       "name": "James Anderson",
       "qualification": "JD, Probate Law",
@@ -2039,6 +2183,7 @@
       "image": "https://example.com/images/james_anderson.jpg"
     },
     {
+      "category": "legal",
       "id": 15,
       "name": "Emma Wilson",
       "qualification": "LLM, Estate Law",
@@ -2052,6 +2197,7 @@
       "image": "https://example.com/images/emma_wilson.jpg"
     },
     {
+      "category": "legal",
       "id": 16,
       "name": "James Anderson",
       "qualification": "JD, Probate Law",
@@ -2065,6 +2211,7 @@
       "image": "https://example.com/images/james_anderson.jpg"
     },
     {
+      "category": "legal",
       "id": 17,
       "name": "Emma Wilson",
       "qualification": "LLM, Estate Law",
@@ -2078,6 +2225,7 @@
       "image": "https://example.com/images/emma_wilson.jpg"
     },
     {
+      "category": "legal",
       "id": 18,
       "name": "James Anderson",
       "qualification": "JD, Probate Law",
@@ -2091,6 +2239,7 @@
       "image": "https://example.com/images/james_anderson.jpg"
     },
     {
+      "category": "legal",
       "id": 19,
       "name": "Emma Wilson",
       "qualification": "LLM, Estate Law",
@@ -2104,6 +2253,7 @@
       "image": "https://example.com/images/emma_wilson.jpg"
     },
     {
+      "category": "legal",
       "id": 20,
       "name": "James Anderson",
       "qualification": "JD, Probate Law",
@@ -2118,6 +2268,7 @@
     },
 
     {
+      "category": "legal",
       "id": 21,
       "name": "Olivia Scott",
       "qualification": "LLM, IP Law",
@@ -2131,6 +2282,7 @@
       "image": "https://example.com/images/olivia_scott.jpg"
     },
     {
+      "category": "legal",
       "id": 22,
       "name": "William Brooks",
       "qualification": "JD, Patent Law",
@@ -2144,6 +2296,7 @@
       "image": "https://example.com/images/william_brooks.jpg"
     },
     {
+      "category": "legal",
       "id": 23,
       "name": "Olivia Scott",
       "qualification": "LLM, IP Law",
@@ -2157,6 +2310,7 @@
       "image": "https://example.com/images/olivia_scott.jpg"
     },
     {
+      "category": "legal",
       "id": 24,
       "name": "William Brooks",
       "qualification": "JD, Patent Law",
@@ -2170,6 +2324,7 @@
       "image": "https://example.com/images/william_brooks.jpg"
     },
     {
+      "category": "legal",
       "id": 25,
       "name": "Olivia Scott",
       "qualification": "LLM, IP Law",
@@ -2183,6 +2338,7 @@
       "image": "https://example.com/images/olivia_scott.jpg"
     },
     {
+      "category": "legal",
       "id": 26,
       "name": "William Brooks",
       "qualification": "JD, Patent Law",
@@ -2196,6 +2352,7 @@
       "image": "https://example.com/images/william_brooks.jpg"
     },
     {
+      "category": "legal",
       "id": 27,
       "name": "Olivia Scott",
       "qualification": "LLM, IP Law",
@@ -2209,6 +2366,7 @@
       "image": "https://example.com/images/olivia_scott.jpg"
     },
     {
+      "category": "legal",
       "id": 28,
       "name": "William Brooks",
       "qualification": "JD, Patent Law",
@@ -2222,6 +2380,7 @@
       "image": "https://example.com/images/william_brooks.jpg"
     },
     {
+      "category": "legal",
       "id": 29,
       "name": "Olivia Scott",
       "qualification": "LLM, IP Law",
@@ -2235,6 +2394,7 @@
       "image": "https://example.com/images/olivia_scott.jpg"
     },
     {
+      "category": "legal",
       "id": 30,
       "name": "William Brooks",
       "qualification": "JD, Patent Law",
@@ -2249,6 +2409,7 @@
     },
 
     {
+      "category": "legal",
       "id": 31,
       "name": "Ethan Harris",
       "qualification": "JD, Litigation",
@@ -2262,6 +2423,7 @@
       "image": "https://example.com/images/ethan_harris.jpg"
     },
     {
+      "category": "legal",
       "id": 32,
       "name": "Ava Thompson",
       "qualification": "LLB, Criminal Law",
@@ -2275,6 +2437,7 @@
       "image": "https://example.com/images/ava_thompson.jpg"
     },
     {
+      "category": "legal",
       "id": 33,
       "name": "Ethan Harris",
       "qualification": "JD, Litigation",
@@ -2288,6 +2451,7 @@
       "image": "https://example.com/images/ethan_harris.jpg"
     },
     {
+      "category": "legal",
       "id": 34,
       "name": "Ava Thompson",
       "qualification": "LLB, Criminal Law",
@@ -2301,6 +2465,7 @@
       "image": "https://example.com/images/ava_thompson.jpg"
     },
     {
+      "category": "legal",
       "id": 35,
       "name": "Ethan Harris",
       "qualification": "JD, Litigation",
@@ -2314,6 +2479,7 @@
       "image": "https://example.com/images/ethan_harris.jpg"
     },
     {
+      "category": "legal",
       "id": 36,
       "name": "Ava Thompson",
       "qualification": "LLB, Criminal Law",
@@ -2327,6 +2493,7 @@
       "image": "https://example.com/images/ava_thompson.jpg"
     },
     {
+      "category": "legal",
       "id": 37,
       "name": "Ethan Harris",
       "qualification": "JD, Litigation",
@@ -2340,6 +2507,7 @@
       "image": "https://example.com/images/ethan_harris.jpg"
     },
     {
+      "category": "legal",
       "id": 38,
       "name": "Ava Thompson",
       "qualification": "LLB, Criminal Law",
@@ -2353,6 +2521,7 @@
       "image": "https://example.com/images/ava_thompson.jpg"
     },
     {
+      "category": "legal",
       "id": 39,
       "name": "Ethan Harris",
       "qualification": "JD, Litigation",
@@ -2366,6 +2535,7 @@
       "image": "https://example.com/images/ethan_harris.jpg"
     },
     {
+      "category": "legal",
       "id": 40,
       "name": "Ava Thompson",
       "qualification": "LLB, Criminal Law",
