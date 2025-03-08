@@ -12,7 +12,7 @@ import Specialities1 from './Specialities1'
 
 function MainContent() {
   return (
-    <div>
+    <div className='bg-gray-100'>
       <Content />
       <Specialities1 />
       <HealthCard />

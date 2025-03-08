@@ -59,7 +59,7 @@ const DoctorConsultationVideos = () => {
   };
 
   return (
-    <div className="w-full overflow-hidden bg-white py-8">
+    <div className="w-full overflow-hidden py-8">
       <div className="max-w-6xl mx-auto p-4">
         <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-8">
           Experience online doctor consultations
