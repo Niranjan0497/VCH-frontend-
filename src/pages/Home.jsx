@@ -3,6 +3,7 @@ import Specialities from "../Components/homecomponents/TopConsultants/TopConsult
 
 import Articles from "../Components/homecomponents/article/Articles.jsx";
 import Bookappointmenthome from "../Components/homecomponents/HomeBookAppoinment/Bookappointmenthome.jsx";
+import SearchBar from "../Components/homecomponents/HomeBookAppoinment/Searchbar.jsx";
 
 
 
@@ -11,7 +12,7 @@ const Home = () => {
     <>
      
       
-      
+      <SearchBar/>
       <Specialities />
       {/* <hr className="w-4/5  border-t-2 border-gray-300 mx-auto" /> */}
         
