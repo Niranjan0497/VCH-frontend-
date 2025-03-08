@@ -2,8 +2,11 @@ import { Link, useLocation } from 'react-router-dom';
 import { useState, useEffect, useRef } from 'react';
 import {  FaUser, FaBars, FaTimes } from 'react-icons/fa';
 import {FaChevronLeft,FaChevronDown } from "react-icons/fa";
+import vch_logo from "../assets/vch_logo.png"
 
 function Navbar() {
+const [sticky,setSticky] = useState(false)
+
   const [isProfileOpen, setIsProfileOpen] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMobileDropdownOpen, setIsMobileDropdownOpen] = useState(null);
@@ -33,6 +36,14 @@ function Navbar() {
       [e.target.name]: e.target.value
     });
   };
+
+  // Navbar bg-change
+
+  useEffect(() => {
+    window.addEventListener('scroll', () => {
+      window.scrollY > 150 ? setSticky(true) : setSticky(false)
+    })
+  }, [])
 
   // Improved click outside handler
   useEffect(() => {
@@ -83,16 +94,16 @@ function Navbar() {
   }, [isMenuOpen]);
 
   return (
-    <nav className="bg-white shadow-md sticky top-0  left-0 right-0 z-50">
+    <nav className={`${sticky ? 'bg-slate-900' : 'bg-slate-900'} shadow-md sticky top-0  left-0 right-0 z-50`}>
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-between items-center h-16">
           {/* Left side - Logo and main links */}
           <div className="flex items-center space-x-4 sm:space-x-6 md:space-x-8">
             <Link to="/" className="flex-shrink-0">
               <img
-                src="https://static.vecteezy.com/system/resources/previews/020/037/356/non_2x/vch-letter-logo-design-on-white-background-vch-creative-circle-letter-logo-concept-vch-letter-design-vector.jpg"
+                src={vch_logo}
                 alt="VCH"
-                className="h-12 sm:h-14 md:h-16"
+                className="h-16 sm:h-14 md:h-20"
               />
             </Link>
 
@@ -100,8 +111,8 @@ function Navbar() {
               
               
               {/* Services Dropdown */}
-              <div className="relative group">
-                <button className="flex items-center text-black font-Normal text-sm sm:text-base lg:text-lg pb-1 hover:text-blue-900">
+              <div className="relative group ">
+                <button className="flex items-center text-white font-semibold text-sm sm:text-base lg:text-lg pb-1 hover:text-blue-900 hover:font-bold">
                 Find Experts <FaChevronDown className="ml-1 h-3 w-3" />
                 </button>
                 <div className=" flex dropdown-menu opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 absolute left-0 mt-2 w-105 bg-white rounded-md shadow-lg py-2 z-20">
@@ -196,7 +207,7 @@ function Navbar() {
               </div>
               <Link
                 to="/video-consult"
-                className={`text-black font-Normal text-sm sm:text-base lg:text-lg pb-1 hover:text-blue-900 ${
+                className={`text-white font-semibold text-sm sm:text-base lg:text-lg pb-1 hover:text-blue-900 hover:font-bold ${
                   isActive('/services') ? 'text-blue-500 border-b-4 border-practo-blue font-medium' : ''
                 }`}
                 style={{ fontFamily: '"Lato", "Open Sans", sans-serif' }}
@@ -205,9 +216,9 @@ function Navbar() {
               </Link>
               
               <Link
-                to="/contact-us"
-                className={`text-black font-Normal text-sm sm:text-base lg:text-lg pb-1 hover:text-blue-900 ${
-                  isActive('/contact-us') ? 'text-blue-500 border-b-4 border-practo-blue font-medium' : ''
+                to="/contacts"
+                className={`text-white font-semibold text-sm sm:text-base lg:text-lg pb-1 hover:text-blue-900 hover:font-bold ${
+                  isActive('/contacts') ? 'text-blue-500 border-b-4 border-practo-blue font-medium' : ''
                 }`}
                 style={{ fontFamily: '"Lato", "Open Sans", sans-serif' }}
               >
@@ -232,12 +243,6 @@ function Navbar() {
             </button>
 
             {/* Dropdowns for Tablets and Desktop */}
-
-
-            
-
-           
-            
 
             {/* Profile Section - Desktop and Tablet */}
             <div
@@ -359,7 +364,7 @@ function Navbar() {
               
               <Link
                 to="/contacts"
-                className={`flex items-center text-lg py-2 px-4 rounded-lg transition-colors ${
+                className={`text-white flex items-center text-lg py-2 px-4 rounded-lg transition-colors ${
                   isActive('/contacts') 
                     ? 'bg-blue-50 text-blue-600 font-medium' 
                     : 'text-gray-800 hover:bg-gray-100'

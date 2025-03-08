@@ -5,9 +5,12 @@ import Articles from "../Components/homecomponents/article/Articles.jsx";
 import Bookappointmenthome from "../Components/homecomponents/HomeBookAppoinment/Bookappointmenthome.jsx";
 import SearchBar from "../Components/homecomponents/HomeBookAppoinment/Searchbar.jsx";
 
+
+
 const Home = () => {
   return (
     <>
+     
       
       <SearchBar/>
       <Specialities />

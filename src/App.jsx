@@ -15,18 +15,16 @@ import Doctorbooking from "./Components/homecomponents/HomeBookAppoinment/Doctor
 import ExpertProfile from "./Components/homecomponents/HomeBookAppoinment/ExpertProfile.jsx";
 import BlogCards from "./Components/homecomponents/article/BlogCards.jsx";
 import ViewBlogCard from "./Components/homecomponents/article/ViewBlogCard.jsx";
-
 import Articles from "./Components/homecomponents/article/Articles.jsx";
-
 import OTPVerification from "./Components/homecomponents/Admin/OtpVerification.jsx";
 import UploadPage from "./Components/homecomponents/Admin/Uploadform.jsx";
-
 import Finance from "./Finance.jsx";
-
 import MainContent from "./Components/videoconsult/MainContent.jsx";
 import Contact from "./pages/Contact.jsx";
 import ExpertFilter from "./Components/homecomponents/HomeBookAppoinment/ExpertFilter.jsx";
 import ExpertDetails from "./Components/homecomponents/HomeBookAppoinment/ExpertDetalis.jsx";
+import FAQPage from "../src/Components/homecomponents/Faq.jsx";
+import Aboutus from "./Components/homecomponents/Aboutus.jsx";
 
 
 function App() {
@@ -40,25 +38,29 @@ function App() {
         <Route path="/articles" element={<Articles />} />
         <Route path="/blogcards" element={<BlogCards />} />
         <Route path="/viewblogcard/:id" element={<ViewBlogCard />} />
+        <Route path="/faq" element={<FAQPage />} />
+        <Route path="aboutus" element={<Aboutus />} />
         {/* Homebookappointment */}
-
         <Route path="/bookappointment" element={<Bookappointmenthome />}/>
-       
         <Route path="/expertdetails/:title" element={<ExpertFilter />} />
-        
-
-
         <Route path="/oneexpert/:id" element={< ExpertProfile/>}/>
-
         <Route path="/doctorbooking/:id" element={<Doctorbooking/>}/>
         <Route path="/finance" element={<Finance/>}/>
         <Route path="/expertdetails" element={<ExpertDetails/>}/>
-      
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           
 
        
+        <Route path="/treatmentdetails/:title" element={<Doctorfilter />} />
+        <Route path="/onedoctor/:id" element={<Onlyonedoctor />} />
+        <Route path="/doctorbooking/:id" element={<Doctorbooking />} />
+        <Route path="/finance" element={<Finance />} />
+
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+
+
         {/* <Route path="/treatmentdetails/:title" element={<Doctorfilter />} /> */}
         {/* <Route path="/onedoctor/:id" element={<Onlyonedoctor />} /> */}
         {/* <Route path="/doctorbooking/:id" element={<Doctorbooking />} /> */}
