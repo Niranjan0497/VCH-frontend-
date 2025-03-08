@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import Doctorslist from "./Doctorslist";
-import Filtercomponent from "./Filtercomponent";
+import Filtercomponent from"./Filtercomponent";
 
 const Doctorfilter = () => {
   const { title } = useParams(); // Get dynamic route parameter
@@ -10,7 +10,7 @@ const Doctorfilter = () => {
   const [gender, setGender] = useState("");
 
   useEffect(() => {
-    axios.get(`http://localhost:4000/doctor?specialization=${title}`)
+    axios.get(`http://localhost:4000/experts?specialization=${title}`)
       .then((res) => setDoctors(res.data))
       .catch((err) => console.error("Error fetching doctor data:", err));
   }, [title]);

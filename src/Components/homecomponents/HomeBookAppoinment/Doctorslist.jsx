@@ -18,13 +18,13 @@ const DoctorList = ({ doctors = [], gender }) => {
         
         {filteredDoctors.length ? (
           filteredDoctors.map((doctor) => (
-            <div key={doctor.id} className="flex flex-col p-4 mb-4 rounded-lg shadow-md cursor-pointer mt-5" onClick={() => setSelectedLocation(doctor.mapLocation)}>
+            <div key={experts.id} className="flex flex-col p-4 mb-4 rounded-lg shadow-md cursor-pointer mt-5" onClick={() => setSelectedLocation(doctor.mapLocation)}>
 
             <div className="md:flex justify-between  ">
               
               <div>
               <img src={doctor.image} alt={doctor.name} className="w-20 h-20 rounded-full border float-left mr-4"/>
-                <NavLink to={`/onedoctor/${doctor.id}`}>
+                <NavLink to={`/oneexpert/${experts.id}`}>
                   <h2 className="text-xl font-semibold text-blue-900">{doctor.name}</h2>
                 </NavLink>
                 <p className="text-gray-700">{doctor.specialization}</p>
@@ -47,7 +47,7 @@ const DoctorList = ({ doctors = [], gender }) => {
                 </div>
 
                 <div className="mt-5 flex flex-col sm:flex-row text-sm justify-between px-1 py-1 sm:block lg:relative lg:mt-24 space-y-2 sm:space-y-0 sm:space-x-2">
-  <NavLink to={`/onedoctor/${doctor.id}`} className="w-full sm:w-auto">
+  <NavLink to={`/onedoctor/${experts.id}`} className="w-full sm:w-auto">
     <button className="bg-blue-600 text-white w-full sm:w-auto px-3 py-2 rounded-lg text-center md:mb-2 md:ms-3">
       Book Clinic Visit
     </button>

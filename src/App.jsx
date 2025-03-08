@@ -11,9 +11,8 @@ import ConsultationForm from "./Components/homecomponents/TopConsultants/TopCons
 
 import Bookappointmenthome from "../src/Components/homecomponents/HomeBookAppoinment/Bookappointmenthome.jsx";
 import Doctorfilter from "./Components/homecomponents/HomeBookAppoinment/Doctorfilter.jsx";
-import Onlyonedoctor from "./Components/homecomponents/HomeBookAppoinment/Onlyonedoctor.jsx";
 import Doctorbooking from "./Components/homecomponents/HomeBookAppoinment/Doctorbooking.jsx";
-
+import ExpertProfile from "./Components/homecomponents/HomeBookAppoinment/ExpertProfile.jsx";
 import BlogCards from "./Components/homecomponents/article/BlogCards.jsx";
 import ViewBlogCard from "./Components/homecomponents/article/ViewBlogCard.jsx";
 
@@ -26,6 +25,8 @@ import Finance from "./Finance.jsx";
 
 import MainContent from "./Components/videoconsult/MainContent.jsx";
 import Contact from "./pages/Contact.jsx";
+import ExpertFilter from "./Components/homecomponents/HomeBookAppoinment/ExpertFilter.jsx";
+import ExpertDetails from "./Components/homecomponents/HomeBookAppoinment/ExpertDetalis.jsx";
 
 
 function App() {
@@ -42,10 +43,16 @@ function App() {
         {/* Homebookappointment */}
 
         <Route path="/bookappointment" element={<Bookappointmenthome />}/>
-        <Route path="/treatmentdetails/:title" element={<Doctorfilter/>}/>
-        <Route path="/onedoctor/:id" element={<Onlyonedoctor/>}/>
+       
+        <Route path="/expertdetails/:title" element={<ExpertFilter />} />
+        
+
+
+        <Route path="/oneexpert/:id" element={< ExpertProfile/>}/>
+
         <Route path="/doctorbooking/:id" element={<Doctorbooking/>}/>
         <Route path="/finance" element={<Finance/>}/>
+        <Route path="/expertdetails" element={<ExpertDetails/>}/>
       
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
