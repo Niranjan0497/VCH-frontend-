@@ -52,13 +52,13 @@ function App() {
           
 
        
-        <Route path="/treatmentdetails/:title" element={<Doctorfilter />} />
-        <Route path="/onedoctor/:id" element={<Onlyonedoctor />} />
+        {/* <Route path="/treatmentdetails/:title" element={<Doctorfilter />} /> */}
+        {/* <Route path="/onedoctor/:id" element={<Onlyonedoctor />} /> */}
         <Route path="/doctorbooking/:id" element={<Doctorbooking />} />
         <Route path="/finance" element={<Finance />} />
 
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
+        {/* <Route path="/login" element={<Login />} /> */}
+        {/* <Route path="/register" element={<Register />} /> */}
 
 
         {/* <Route path="/treatmentdetails/:title" element={<Doctorfilter />} /> */}

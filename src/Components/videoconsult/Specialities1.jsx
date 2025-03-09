@@ -83,9 +83,9 @@ const CustomPrevArrow = (props) => {
       <button
         className="slick-arrow slick-prev"
         onClick={onClick}
-        style={{ left: '-25px', zIndex: 1 ,marginTop:'2px',marginLeft:'8px', }}
+        style={{ left: '-25px', zIndex: 1 ,marginTop:'5px',marginLeft:'10px', }}
       >
-        <ChevronLeft className="w-6 h-6 text-black absolute top-1/2 left-1/1 transform -translate-x-1/2 -translate-y-1/2" />
+        <ChevronLeft className="w-6 h-6 text-black absolute top-1/2 left-1/1 transform -translate-x-1/2 -translate-y-1/2  mt-[10px]" />
       </button>
     );
 };
@@ -94,11 +94,11 @@ const CustomNextArrow = (props) => {
     const { onClick } = props;
     return (
       <button
-        className="slick-arrow slick-next"
+        className="slick-arrow slick-next "
         onClick={onClick}
-        style={{ right: '-25px',marginTop:'2px',marginRight:'8px' }}
+        style={{ right: '-24px',marginTop:'5px',marginRight:'8px' }}
       >
-        <ChevronRight className="w-6 h-6 text-black absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
+        <ChevronRight className="w-6 h-6 text-black absolute top-1/2 left-1/1 transform -translate-x-1/2 -translate-y-1/2 mt-[10px]" />
       </button>
     );
 };
@@ -174,7 +174,7 @@ function Specialities1() {
         {/* Specialties Carousel */}
         <Slider {...specialtySettings}>
           {specialties.map(specialty => (
-            <div key={specialty.id} className="px-2">
+            <div key={specialty.id} className="px-2 ">
               <SpecialtyCard
                 icon={specialty.icon}
                 title={specialty.title}

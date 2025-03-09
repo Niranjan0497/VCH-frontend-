@@ -69,7 +69,7 @@ const healthConcerns = [
 ];
 
 const HealthConcernCard = ({ concern }) => (
-  <div className="bg-white rounded-lg shadow overflow-hidden h-full mx-2">
+  <div className="bg-white rounded-lg overflow-hidden h-full mx-2">
     <div className="relative h-48">
       <img
         src={concern.image}
@@ -103,7 +103,7 @@ function HealthCard() {
 
     return (
       <button
-        className="slick-arrow  absolute left-0 top-1/2 transform -translate-y-1/2 bg-white rounded-full shadow z-10"
+        className="slick-arrow  absolute left-0 top-1/2 transform -translate-y-1/2 rounded-full shadow z-10"
         onClick={onClick}
         style={{ left: '-25px', zIndex: 1,marginLeft:'8px', }}
       >

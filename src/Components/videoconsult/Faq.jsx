@@ -55,7 +55,7 @@ const Faq = () => {
                     {faqData.map((item, index) => (
                         <div
                             key={index}
-                            className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow"
+                            className="bg-gray-200 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow"
                         >
                             <h3 className="text-xl font-semibold mb-2">{item.question}</h3>
                             <p className="text-gray-600">{item.answer}</p>
@@ -117,7 +117,7 @@ const Faq = () => {
 
                             {/* Right Side: Consult Now Button */}
                             <div>
-                                <button className="bg-[#2196F3] text-white px-32 py-3 rounded-lg font-semibold hover:text-black hover:bg-gray-100 transition-colors">
+                                <button className="bg-[#2196F3] px-6 py-3 text-white sm:px-32 sm:py-3 rounded-lg font-semibold hover:text-black hover:bg-gray-100 transition-colors">
                                     Consult Now
                                 </button>
                             </div>
