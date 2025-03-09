@@ -1,54 +1,186 @@
-import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { FaUser, FaEnvelope, FaPhone } from "react-icons/fa";
+import { CiUser } from "react-icons/ci";
+import { motion } from "framer-motion";
+import bg_img from "../../../assets/sign_in/bg_image.png";
 
 function Register() {
-  const [formData, setFormData] = useState({ username: '', email: '', phoneNumber: '', role: 'user' });
+  const [formData, setFormData] = useState({
+    username: "",
+    email: "",
+    phoneNumber: "",
+    role: "user",
+  });
   const navigate = useNavigate();
 
-  const handleChange = (e) => setFormData({ ...formData, [e.target.name]: e.target.value });
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+
+    if (name === "phoneNumber") {
+      // Allow only numbers
+      setFormData({ ...formData, phoneNumber: value.replace(/\D/g, "") });
+    } else {
+      setFormData({ ...formData, [name]: value });
+    }
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    
-    if (formData.role === 'user') {
-      alert('OTP Sent to the Registered Email.');
-      navigate('/otp', { state: formData });
+
+    if (formData.phoneNumber.length < 10) {
+      alert("Please enter a valid 10-digit phone number.");
+      return;
+    }
+
+    if (formData.role === "user") {
+      alert("OTP Sent to the Registered Email.");
+      navigate("/otp", { state: formData });
     } else {
-      navigate('/upload');
+      navigate("/upload");
     }
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100 p-6">
-      <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md transition hover:scale-105 duration-300">
-        <h2 className="text-2xl font-bold text-center mb-6">Register</h2>
-        <form onSubmit={handleSubmit} className="space-y-4">
-          <div>
-            <label className="block text-sm font-medium">Username</label>
-            <input type="text" name="username" onChange={handleChange} required className="w-full p-2 border rounded-lg focus:ring-2 focus:ring-blue-400" />
+    <div className={`min-h-screen flex items-center justify-center bg-[url('${bg_img}')] bg-cover bg-center px-6`}>
+      <motion.div 
+        initial={{ scale: 0 }} 
+        animate={{ scale: 1 }} 
+        exit={{ scale: 0 }} 
+        transition={{ duration: 0.8, ease: "easeInOut" }}
+         className="bg-transparent shadow-2xl p-8 rounded-lg max-w-md w-full text-center"
+      >
+        {/* User Icon */}
+        <div className="flex justify-center mb-4">
+          <CiUser className="text-8xl text-amber-50 bg-slate-900 border-none rounded-full px-5 py-6" />
+        </div>
+
+        {/* Title */}
+        <h2
+          className="text-black text-4xl font-semibold mb-6 tracking-widest"
+          style={{
+            fontFamily: "Teko",
+            fontWeight: "900",
+            textShadow: "2px 2px 4px #fff",
+          }}
+        >
+          CUSTOMER REGISTER
+        </h2>
+
+        {/* Form */}
+        <form className="space-y-6" onSubmit={handleSubmit}>
+          {/* Username */}
+          <div className="relative">
+            <FaUser className="absolute left-3 top-6 text-gray-200" />
+            <input
+              id="username"
+              name="username"
+              type="text"
+              required
+              value={formData.username}
+              onChange={handleChange}
+              className="peer w-full pl-10 pr-4 pt-6 pb-2 border-b border-gray-300 bg-transparent text-white focus:ring-0 focus:outline-none"
+            />
+            <label
+              htmlFor="username"
+              className={`absolute left-10 tracking-widest text-white text-sm transition-all ${
+                formData.username
+                  ? "top-2 text-sm"
+                  : "top-5 text-base peer-placeholder-shown:top-5 peer-placeholder-shown:text-base peer-focus:top-2 peer-focus:text-sm"
+              }`}
+            >
+              Username
+            </label>
           </div>
-          <div>
-            <label className="block text-sm font-medium">Email</label>
-            <input type="email" name="email" onChange={handleChange} required className="w-full p-2 border rounded-lg focus:ring-2 focus:ring-blue-400" />
+
+          {/* Email */}
+          <div className="relative">
+            <FaEnvelope className="absolute left-3 top-6 text-gray-200" />
+            <input
+              id="email"
+              name="email"
+              type="email"
+              required
+              value={formData.email}
+              onChange={handleChange}
+              className="peer w-full pl-10 pr-4 pt-6 pb-2 border-b border-gray-300 bg-transparent text-white focus:ring-0 focus:outline-none"
+            />
+            <label
+              htmlFor="email"
+              className={`absolute left-10 tracking-widest text-white text-sm transition-all ${
+                formData.email
+                  ? "top-2 text-sm"
+                  : "top-5 text-base peer-placeholder-shown:top-5 peer-placeholder-shown:text-base peer-focus:top-2 peer-focus:text-sm"
+              }`}
+            >
+              Email ID
+            </label>
           </div>
-          <div>
-            <label className="block text-sm font-medium">Phone Number</label>
-            <input type="tel" name="phoneNumber" onChange={handleChange} required className="w-full p-2 border rounded-lg focus:ring-2 focus:ring-blue-400" />
+
+          {/* Phone Number */}
+          <div className="relative">
+            <FaPhone className="absolute left-3 top-6 text-gray-200" />
+            <input
+              id="phoneNumber"
+              name="phoneNumber"
+              type="tel"
+              required
+              maxLength="10"
+              inputMode="numeric"
+              pattern="[0-9]*"
+              value={formData.phoneNumber}
+              onChange={handleChange}
+              onInput={(e) => e.target.value = e.target.value.replace(/\D/g, '')} // Restrict input to numbers
+              className="peer w-full pl-10 pr-4 pt-6 pb-2 border-b border-gray-300 bg-transparent text-white focus:ring-0 focus:outline-none"
+            />
+            <label
+              htmlFor="phoneNumber"
+              className={`absolute left-10 tracking-widest text-white text-sm transition-all ${
+                formData.phoneNumber
+                  ? "top-2 text-sm"
+                  : "top-5 text-base peer-placeholder-shown:top-5 peer-placeholder-shown:text-base peer-focus:top-2 peer-focus:text-sm"
+              }`}
+            >
+              Phone Number
+            </label>
           </div>
-          <div>
-            <label className="block text-sm font-medium">Role</label>
-            <div className="flex gap-4">
-              <label className="flex items-center gap-2">
-                <input type="radio" name="role" value="user" checked={formData.role === 'user'} onChange={handleChange} /> User
-              </label>
-              <label className="flex items-center gap-2">
-                <input type="radio" name="role" value="expert" onChange={handleChange} /> Expert
-              </label>
-            </div>
+
+          {/* Role Selection */}
+          <div className="text-white text-md flex justify-center gap-4">
+            <label className="flex items-center gap-2">
+              <input
+                type="radio"
+                name="role"
+                value="user"
+                checked={formData.role === "user"}
+                onChange={handleChange}
+                className="accent-blue-500"
+              />
+              User
+            </label>
+            <label className="flex items-center gap-2">
+              <input
+                type="radio"
+                name="role"
+                value="expert"
+                onChange={handleChange}
+                className="accent-blue-500"
+              />
+              Expert
+            </label>
           </div>
-          <button type="submit" className="w-full bg-blue-500 text-white p-2 rounded-lg hover:bg-blue-600 transition">{formData.role === 'user' ? 'Submit' : 'Next'}</button>
+
+          {/* Submit Button */}
+          <button
+            type="submit"
+            className="w-full py-2 rounded-md bg-blue-700 text-white font-semibold shadow-md hover:bg-blue-800 transition"
+          >
+            {formData.role === "user" ? "Submit" : "Next"}
+          </button>
         </form>
-      </div>
+        </motion.div>
+      {/* </div> */}
     </div>
   );
 }
