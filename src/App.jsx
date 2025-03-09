@@ -11,28 +11,38 @@ import ConsultationForm from "./Components/homecomponents/TopConsultants/TopCons
 
 import Bookappointmenthome from "../src/Components/homecomponents/HomeBookAppoinment/Bookappointmenthome.jsx";
 import Doctorfilter from "./Components/homecomponents/HomeBookAppoinment/Doctorfilter.jsx";
-import Onlyonedoctor from "./Components/homecomponents/HomeBookAppoinment/Onlyonedoctor.jsx";
 import Doctorbooking from "./Components/homecomponents/HomeBookAppoinment/Doctorbooking.jsx";
-
+import ExpertProfile from "./Components/homecomponents/HomeBookAppoinment/ExpertProfile.jsx";
 import BlogCards from "./Components/homecomponents/article/BlogCards.jsx";
 import ViewBlogCard from "./Components/homecomponents/article/ViewBlogCard.jsx";
-
 import Articles from "./Components/homecomponents/article/Articles.jsx";
-
 import OTPVerification from "./Components/homecomponents/Admin/OtpVerification.jsx";
 import UploadPage from "./Components/homecomponents/Admin/Uploadform.jsx";
-
 import Finance from "./Finance.jsx";
-
 import MainContent from "./Components/videoconsult/MainContent.jsx";
 import Contact from "./pages/Contact.jsx";
+import ExpertFilter from "./Components/homecomponents/HomeBookAppoinment/ExpertFilter.jsx";
+import ExpertDetails from "./Components/homecomponents/HomeBookAppoinment/ExpertDetalis.jsx";
 import FAQPage from "../src/Components/homecomponents/Faq.jsx";
 import Aboutus from "./Components/homecomponents/Aboutus.jsx";
+import AdminDashboard from "./admin/index.jsx";
+import Dashboard from "./admin/Dashboard.jsx";
+import CustomerService from "./admin/CustomerService.jsx";
+import Settings from "./admin/Settings.jsx";
+import FAQManager from "./admin/contentmangement/FAQsList.jsx";
+import CategoryList from "./admin/contentmangement/Categories.jsx";
+import UserManagement from "./admin/UserMangement.jsx";
+import { useLocation } from "react-router-dom";
 
 function App() {
+
+  const location = useLocation();
+   // Check if the path starts with "/admin"
+   const isAdminRoute = location.pathname.startsWith("/admin");
   return (
     <>
-      <Navbar />
+    
+    {!isAdminRoute &&<Navbar />}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/specialities" element={<Specialities />} />
@@ -43,15 +53,25 @@ function App() {
         <Route path="/faq" element={<FAQPage />} />
         <Route path="aboutus" element={<Aboutus />} />
         {/* Homebookappointment */}
+        <Route path="/bookappointment" element={<Bookappointmenthome />}/>
+        <Route path="/expertdetails/:title" element={<ExpertFilter />} />
+        <Route path="/oneexpert/:id" element={< ExpertProfile/>}/>
+        <Route path="/doctorbooking/:id" element={<Doctorbooking/>}/>
+        <Route path="/finance" element={<Finance/>}/>
+        <Route path="/expertdetails" element={<ExpertDetails/>}/>
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          
 
-        <Route path="/bookappointment" element={<Bookappointmenthome />} />
-        <Route path="/treatmentdetails/:title" element={<Doctorfilter />} />
-        <Route path="/onedoctor/:id" element={<Onlyonedoctor />} />
+       
+        {/* <Route path="/treatmentdetails/:title" element={<Doctorfilter />} /> */}
+        {/* <Route path="/onedoctor/:id" element={<Onlyonedoctor />} /> */}
         <Route path="/doctorbooking/:id" element={<Doctorbooking />} />
         <Route path="/finance" element={<Finance />} />
 
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
+        {/* <Route path="/login" element={<Login />} /> */}
+        {/* <Route path="/register" element={<Register />} /> */}
+
 
         {/* <Route path="/treatmentdetails/:title" element={<Doctorfilter />} /> */}
         {/* <Route path="/onedoctor/:id" element={<Onlyonedoctor />} /> */}
@@ -63,8 +83,19 @@ function App() {
         <Route path="/upload" element={<UploadPage />} />
         <Route path="/video-consult" element={<MainContent />} />
         <Route path="/contact-us" element={<Contact />} />
+
+        {/* Admin Routes */}
+        <Route path="/admin" element={<AdminDashboard />}>
+          <Route index element={<Dashboard/>} />
+          <Route path="dashboard" element={<Dashboard />} />
+          <Route path="customer-service" element={<CustomerService/>} />
+          <Route path="settings" element={<Settings/>} />
+          <Route path="faqs" element={<FAQManager />} />
+          <Route path="categories" element={<CategoryList/>} />
+          <Route path="users-management" element={<UserManagement />} />
+        </Route>
       </Routes>
-      <Footer />
+      {!isAdminRoute &&<Footer />}
     </>
   );
 }
