@@ -31,6 +31,7 @@ import FAQManager from "./admin/contentmangement/FAQsList.jsx";
 import CategoryList from "./admin/contentmangement/Categories.jsx";
 import UserManagement from "./admin/UserMangement.jsx";
 import { useLocation } from "react-router-dom";
+import ExpertManagment from "./admin/ExpertManagment.jsx";
 
 function App() {
 
@@ -89,6 +90,7 @@ function App() {
           <Route path="settings" element={<Settings/>} />
           <Route path="faqs" element={<FAQManager />} />
           <Route path="categories" element={<CategoryList/>} />
+          <Route path="experts-management" element={<ExpertManagment />} />
           <Route path="users-management" element={<UserManagement />} />
         </Route>
       </Routes>

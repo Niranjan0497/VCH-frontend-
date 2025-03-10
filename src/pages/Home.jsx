@@ -5,6 +5,8 @@ import Articles from "../Components/homecomponents/article/Articles.jsx";
 import Bookappointmenthome from "../Components/homecomponents/HomeBookAppoinment/Bookappointmenthome.jsx";
 import SearchBar from "../Components/homecomponents/HomeBookAppoinment/Searchbar.jsx";
 import Carousel from "../Components/homecomponents/carousel/carousel.jsx";
+import Aboutus from "../Components/homecomponents/Aboutus.jsx";
+import Faq from "../Components/homecomponents/Faq.jsx";
 
 const Home = () => {
   return (
@@ -17,6 +19,8 @@ const Home = () => {
 
         <Bookappointmenthome />
         <Articles />
+        <Faq />
+        <Aboutus />
       </div>
     </>
   );
