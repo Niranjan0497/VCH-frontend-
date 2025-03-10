@@ -43,7 +43,7 @@ function Register() {
   };
 
   return (
-    <div className={`min-h-screen flex items-center justify-center bg-[url('${bg_img}')] bg-cover bg-center px-6`}>
+    <div className={`min-h-screen flex items-center justify-center bg-gradient-to-r from-gray-700 to-blue-800 bg-cover bg-center px-6`}>
       <motion.div 
         initial={{ scale: 0 }} 
         animate={{ scale: 1 }} 
@@ -58,14 +58,14 @@ function Register() {
 
         {/* Title */}
         <h2
-          className="text-black text-4xl font-semibold mb-6 tracking-widest"
+          className="text-white text-3xl font-semibold mb-6 tracking-widest"
           style={{
-            fontFamily: "Teko",
-            fontWeight: "900",
-            textShadow: "2px 2px 4px #fff",
+            // fontFamily: "Teko",
+            fontWeight: "800",
+            textShadow: "1px 1px 2px #fff",
           }}
         >
-          CUSTOMER REGISTER
+           REGISTER
         </h2>
 
         {/* Form */}

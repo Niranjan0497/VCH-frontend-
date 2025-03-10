@@ -23,7 +23,7 @@ function Login() {
   };
 
   return (
-<div className={`min-h-screen flex items-center justify-center bg-[url('${bg_img}')] bg-cover bg-center px-6`}>
+<div className={`min-h-screen flex items-center justify-center bg-gradient-to-r from-gray-700 to-blue-800  bg-cover bg-center px-6`}>
 
       
       {/* Framer Motion Animation for Zoom In & Out */}
@@ -37,15 +37,15 @@ function Login() {
         <div className="flex justify-center mb-4">
           <CiUser className='text-8xl text-amber-50 bg-slate-900 border border-none rounded-full px-5 py-6' />
         </div>
-        <h2 className="text-black text-4xl font-bold mb-6 tracking-widest"
+        <h2 className="text-white text-3xl font-bold mb-6 tracking-widest"
           style={{
-            "font-family": "Teko",
+            // "font-family": "Teko",
             "font-optical-sizing": "auto",
             "font-weight": "900",
             "font-style": "normal",
-            "text-shadow": "2px 2px 2px #ffff"
+            "text-shadow": "1px 1px 1px #ffff"
           }}>
-          CUSTOMER&nbsp;&nbsp;LOGIN
+          LOG&nbsp;IN
         </h2>
         
         <form className="space-y-8" onSubmit={handleSubmit}>
@@ -101,7 +101,7 @@ function Login() {
 
         <p className="mt-4 text-center text-sm text-white font-semibold">
           Don't have an account?{' '}
-          <Link to="/register" className="font-bold border-b-2 border-blue-400 text-gray-900 hover:text-blue-200">Register</Link>
+          <Link to="/register" className="font-bold  text-gray-900 hover:text-blue-200">Register</Link>
         </p>
       </motion.div>
     </div>
