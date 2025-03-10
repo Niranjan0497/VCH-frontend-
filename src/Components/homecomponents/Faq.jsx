@@ -51,11 +51,11 @@ const Faq = () => {
   };
 
   return (
-    <div className="max-w-7xl mx-auto px-4 py-12 md:py-16 bg-white">
+    <div className="max-w-7xl mx-auto px-4 py-12 md:py-16">
       <div className="grid md:grid-cols-2 gap-12 items-start">
         <div className="space-y-8">
           <div className="space-y-4">
-            <h6 className="text-indigo-700 font-semibold  text-xl">FAQ'S</h6>
+            <h6 className="text-indigo-700 font-semibold  text-xl">FAQs</h6>
 
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
               General <span className="text-indigo-600">Frequently</span> Asked
@@ -64,7 +64,7 @@ const Faq = () => {
             <p className="text-gray-600 leading-relaxed">
               There are many variations of passages of Lorem Ipsum available,
               but the majority have suffered alteration in some form, by
-              injected humour, or randomised words which don't look even.
+              injected humour, or randomised words which look even.
             </p>
           </div>
 
