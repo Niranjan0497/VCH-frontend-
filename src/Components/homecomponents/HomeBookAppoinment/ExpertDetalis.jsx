@@ -44,8 +44,16 @@ export default function ExpertDetails() {
     });
   };
 
-  const isFavorite = (expertId) => {
-    return favorites.includes(expertId);
+  const isFavorite = (expertId) => favorites.includes(expertId);
+
+  // Function to render star ratings
+  const renderStars = (rating) => {
+    const totalStars = 5;
+    return Array.from({ length: totalStars }, (_, index) => (
+      <span key={index} className={index < rating ? "text-yellow-500" : "text-gray-300"}>
+        ★
+      </span>
+    ));
   };
 
   return (
@@ -79,10 +87,16 @@ export default function ExpertDetails() {
               <h2 className="text-xl font-bold text-gray-800 mb-1">{expert.name}</h2>
               <p className="text-indigo-600 font-medium mb-2">{expert.specialization}</p>
               
-              <div className="flex items-center mb-4">
+              <div className="flex items-center mb-2">
                 <span className="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded-full mr-2">
                   {expert.experience} years experience
                 </span>
+              </div>
+
+              {/* Star Rating Display */}
+              <div className="flex items-center mb-4">
+                {renderStars(expert.rating)}
+                <span className="ml-2 text-gray-600 text-sm">({expert.rating}/5)</span>
               </div>
               
               <p className="text-gray-600 mb-4 line-clamp-3">{expert.description}</p>
@@ -100,7 +114,6 @@ export default function ExpertDetails() {
                       <AiOutlineHeart className="text-gray-400 hover:text-red-500 text-xl" />
                     )}
                   </button>
-                  <span>{expert.likes}</span>
                 </div>
                 
                 <button
