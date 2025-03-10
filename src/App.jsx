@@ -34,14 +34,12 @@ import { useLocation } from "react-router-dom";
 import ExpertManagment from "./admin/ExpertManagment.jsx";
 
 function App() {
-
   const location = useLocation();
-   // Check if the path starts with "/admin"
-   const isAdminRoute = location.pathname.startsWith("/admin");
+  // Check if the path starts with "/admin"
+  const isAdminRoute = location.pathname.startsWith("/admin");
   return (
     <>
-    
-    {!isAdminRoute &&<Navbar />}
+      {!isAdminRoute && <Navbar />}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/specialities" element={<Specialities />} />
@@ -52,24 +50,26 @@ function App() {
         <Route path="/faq" element={<FAQPage />} />
         <Route path="aboutus" element={<Aboutus />} />
         {/* Homebookappointment */}
-        <Route path="/bookappointment" element={<Bookappointmenthome />}/>
+        <Route path="/bookappointment" element={<Bookappointmenthome />} />
         <Route path="/expertdetails/:title" element={<ExpertFilter />} />
-        <Route path="/oneexpert/:id" element={< ExpertProfile/>}/>
-       
-        <Route path="/finance" element={<Finance/>}/>
-        <Route path="/expertdetails" element={<ExpertDetails/>}/>
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-          
+        <Route path="/oneexpert/:id" element={<ExpertProfile />} />
 
-       
-       
+        <Route path="/finance" element={<Finance />} />
+        <Route path="/expertdetails" element={<ExpertDetails />} />
+
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/otp" element={<OTPVerification />} />
+        <Route path="/upload" element={<UploadPage />} />
+
+        <Route path="/contact-us" element={<Contact />} />
+        <Route path="/video-consult" element={<MainContent />} />
+
         <Route path="/expertsbooking/:id" element={<Expertbooking />} />
         <Route path="/finance" element={<Finance />} />
 
         {/* <Route path="/login" element={<Login />} /> */}
         {/* <Route path="/register" element={<Register />} /> */}
-
 
         {/* <Route path="/treatmentdetails/:title" element={<Doctorfilter />} /> */}
         {/* <Route path="/onedoctor/:id" element={<Onlyonedoctor />} /> */}
@@ -77,24 +77,19 @@ function App() {
         {/* <Route path="/login" element={<Login />} /> */}
         {/* <Route path="/register" element={<Register />} /> */}
 
-        <Route path="/otp" element={<OTPVerification />} />
-        <Route path="/upload" element={<UploadPage />} />
-        <Route path="/video-consult" element={<MainContent />} />
-        <Route path="/contact-us" element={<Contact />} />
-
         {/* Admin Routes */}
         <Route path="/admin" element={<AdminDashboard />}>
-          <Route index element={<Dashboard/>} />
+          <Route index element={<Dashboard />} />
           <Route path="dashboard" element={<Dashboard />} />
-          <Route path="customer-service" element={<CustomerService/>} />
-          <Route path="settings" element={<Settings/>} />
+          <Route path="customer-service" element={<CustomerService />} />
+          <Route path="settings" element={<Settings />} />
           <Route path="faqs" element={<FAQManager />} />
-          <Route path="categories" element={<CategoryList/>} />
+          <Route path="categories" element={<CategoryList />} />
           <Route path="experts-management" element={<ExpertManagment />} />
           <Route path="users-management" element={<UserManagement />} />
         </Route>
       </Routes>
-      {!isAdminRoute &&<Footer />}
+      {!isAdminRoute && <Footer />}
     </>
   );
 }
