@@ -106,33 +106,33 @@ const [sticky,setSticky] = useState(false)
                 className="h-16 sm:h-14 md:h-20"
               />
             </Link>
-
+<Link to='/usermangement' className="flex items-center text-white font-Normal text-sm sm:text-base lg:text-lg pb-1 hover:text--900">User</Link>
             <div className="hidden md:flex items-center space-x-2 lg:space-x-6">
               
-              
+               
               {/* Services Dropdown */}
-              <div className="relative group ">
-                <button className="flex items-center text-white font-semibold text-sm sm:text-base lg:text-lg pb-1 ">
+              <div className="relative group">
+                <button className="flex items-center text-white font-Normal text-sm sm:text-base lg:text-lg pb-1 hover:text--900">
                 Find Experts <FaChevronDown className="ml-1 h-3 w-3" />
                 </button>
-                <div className=" flex dropdown-menu opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 absolute left-0 mt-2 w-130 bg-white rounded-md shadow-lg py-2 z-20">
+                <div className=" flex dropdown-menu opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 absolute left-0 mt-2 w-105 bg-white rounded-md shadow-lg py-2 z-20">
                   {/* Finance Link with Nested Dropdown */}
                   <div className="relative group/finance px-4 py-2">
                     <div className="flex justify-between items-center text-sm text-gray-700 hover:bg-gray-100 group-hover/finance:bg-gray-100 cursor-pointer">
-                      <span className='px-4 py-1'>Finance</span>
-                      < FaChevronDown />
+                      <span>Finance</span>
+                      < FaChevronDown className="ml-1 h-3 w-3" />
                     </div>
                     <div className="absolute down-full top-0 w-56 mt-10 bg-white rounded-md shadow-lg py-2 opacity-0 invisible group-hover/finance:opacity-100 group-hover/finance:visible transition-all duration-200">
-                      <Link to="/services/finance/planning" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      <Link to="expertdetails/Financial Planning" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                         Financial Planning
                       </Link>
-                      <Link to="/services/finance/tax" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      <Link to="/expertdetails/Tax Advisory" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                         Tax Advisory
                       </Link>
-                      <Link to="/services/finance/wealth" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      <Link to="/expertdetails/Wealth Management" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                         Wealth Management
                       </Link>
-                      <Link to="/services/finance/retirement" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      <Link to="/expertdetails/Retirement Planning" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                         Retirement Planning
                       </Link>
                       
@@ -143,20 +143,20 @@ const [sticky,setSticky] = useState(false)
                   {/* Legal Link with Nested Dropdown */}
                   <div className="relative group/legal px-4 py-2">
                     <div className="flex justify-between items-center text-sm text-gray-700 hover:bg-gray-100 group-hover/legal:bg-gray-100 cursor-pointer">
-                      <span className='px-4 py-1'>Legal</span>
-                      < FaChevronDown  />
+                      <span>Legal</span>
+                      < FaChevronDown className="ml-1 h-3 w-3" />
                     </div>
                     <div className="absolute down-full top-0 w-56 mt-10 bg-white rounded-md shadow-lg py-2 opacity-0 invisible group-hover/legal:opacity-100 group-hover/legal:visible transition-all duration-200">
-                      <Link to="/services/legal/corporate" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      <Link to="/expertdetails/Corporate Law" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                         Corporate Law
                       </Link>
-                      <Link to="/services/legal/estate" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      <Link to="/expertdetails/Estate Planning" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                         Estate Planning
                       </Link>
-                      <Link to="/services/legal/intellectual" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      <Link to="/expertdetails/Intellectual Property" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                         Intellectual Property
                       </Link>
-                      <Link to="/services/legal/litigation" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      <Link to="/expertdetails/Litigation" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                         Litigation
                       </Link>
                     </div>
@@ -165,20 +165,18 @@ const [sticky,setSticky] = useState(false)
                   {/* Technology Link with Nested Dropdown */}
                   <div className="relative group/technology px-4 py-2">
                     <div className="flex justify-between items-center text-sm text-gray-700 hover:bg-gray-100 group-hover/technology:bg-gray-100 cursor-pointer">
-                      <span className='px-4 py-1'>Technology</span>
-                      < FaChevronDown />
+                      <span>Technology</span>
+                      < FaChevronDown className="ml-1 h-3 w-3" />
                     </div>
                     <div className="absolute down-full top-0 w-56 mt-10 bg-white rounded-md shadow-lg py-2 opacity-0 invisible group-hover/technology:opacity-100 group-hover/technology:visible transition-all duration-200">
-                      <Link to="/services/technology/consulting" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      <Link to="expertdetails/IT Consulting" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                         IT Consulting
                       </Link>
-                      <Link to="/services/technology/development" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                        Software Development
-                      </Link>
-                      <Link to="/services/technology/security" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      
+                      <Link to="/expertdetails/Cybersecurity" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                         Cybersecurity
                       </Link>
-                      <Link to="/services/technology/cloud" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      <Link to="/expertdetails/Cloud Services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                         Cloud Services
                       </Link>
                     </div>
@@ -187,21 +185,21 @@ const [sticky,setSticky] = useState(false)
                   {/* Wellness Link with Nested Dropdown */}
                   <div className="relative group/wellness px-4 py-2">
                     <div className="flex justify-between items-center text-sm text-gray-700 hover:bg-gray-100 group-hover/wellness:bg-gray-100 cursor-pointer">
-                      <span className='px-4 py-1'>Wellness</span>
-                      < FaChevronDown />
+                      <span>Wellness</span>
+                      < FaChevronDown className="ml-1 h-3 w-3" />
                     </div>
                     <div className="absolute down-full top-0 w-56 mt-10 bg-white rounded-md shadow-lg py-2 opacity-0 invisible group-hover/wellness:opacity-100 group-hover/wellness:visible transition-all duration-200">
-                      <Link to="/services/wellness/mental" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                        Mental Health
+                      <Link to="/expertdetails/Dentist" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                        Dentist
                       </Link>
-                      <Link to="/services/wellness/fitness" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                        Fitness Coaching
+                      <Link to="/expertdetails/Gynecologist" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                       Gynecologist
                       </Link>
-                      <Link to="/services/wellness/nutrition" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                        Nutrition Counseling
+                      <Link to="/expertdetails/Dermatologist" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                        Dermatologist
                       </Link>
-                      <Link to="/services/wellness/lifestyle" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                        Lifestyle Medicine
+                      <Link to="/expertdetails/Cardiologist" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                        Cardiologist
                       </Link>
                     </div>
                   </div>

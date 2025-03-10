@@ -16,8 +16,7 @@ export default function SearchBar() {
   const [subcategory, setSubcategory] = useState("");
   const [experts, setExperts] = useState([]);
   const [visibleCount, setVisibleCount] = useState(6);
-  const [favorites, setFavorites] = useState([]);
-
+  
   const navigate = useNavigate();
 
   const handleView = () => {
@@ -25,7 +24,6 @@ export default function SearchBar() {
   }
 
   useEffect(() => {
-    // Fetch experts data
     axios
       .get("http://localhost:4000/experts")
       .then((response) => {
@@ -33,46 +31,16 @@ export default function SearchBar() {
           .filter((expert) =>
             expert.name.toLowerCase().includes(search.toLowerCase())
           );
-        
-        console.log("Filtered Experts:", filteredExperts);
         setExperts(filteredExperts);
       })
       .catch((error) => {
         console.error("Error fetching experts:", error);
         setExperts([]);
       });
-
-    // Load favorites from localStorage if available
-    const savedFavorites = localStorage.getItem("expertFavorites");
-    if (savedFavorites) {
-      setFavorites(JSON.parse(savedFavorites));
-    }
   }, [search]);
-
-  // Save favorites to localStorage whenever they change
-  useEffect(() => {
-    localStorage.setItem("expertFavorites", JSON.stringify(favorites));
-  }, [favorites]);
-
-  const toggleFavorite = (expertId) => {
-    setFavorites((prevFavorites) => {
-      if (prevFavorites.includes(expertId)) {
-        // Remove from favorites
-        return prevFavorites.filter((id) => id !== expertId);
-      } else {
-        // Add to favorites
-        return [...prevFavorites, expertId];
-      }
-    });
-  };
-
-  const isFavorite = (expertId) => {
-    return favorites.includes(expertId);
-  };
 
   return (
     <div className="p-4 sm:p-6 max-w-5xl mx-auto">
-      {/* Search filters - always side by side with flex-wrap for small screens */}
       <div className="flex flex-wrap gap-2 justify-center mb-6">
         <input
           type="text"
@@ -105,7 +73,6 @@ export default function SearchBar() {
         </select>
       </div>
 
-      {/* Expert cards - responsive grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
         {experts.slice(0, visibleCount).map((expert, index) => (
           <div key={expert.id || index} className="border p-4 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 bg-white">
@@ -115,19 +82,15 @@ export default function SearchBar() {
             <h2 className="text-lg font-semibold">{expert.name}</h2>
             <p className="text-sm text-gray-600">{expert.specialization || "Specialization"}</p>
             <p className="text-sm text-gray-500">{expert.experience ? `${expert.experience} years experience` : "Experience"}</p>
-            <div className="mt-2 flex items-center justify-between">
-              <button 
-                onClick={() => toggleFavorite(expert.id)}
-                className="flex items-center focus:outline-none"
-                aria-label={isFavorite(expert.id) ? "Remove from favorites" : "Add to favorites"}
-              >
-                {isFavorite(expert.id) ? (
-                  <AiFillHeart className="text-red-500 text-xl mr-1" />
-                ) : (
-                  <AiOutlineHeart className="text-gray-400 hover:text-red-500 text-xl mr-1" />
-                )}
-                <span>{expert.likes || 0}</span>
-              </button>
+            <div className="flex items-center mt-2">
+              {Array.from({ length: 5 }, (_, i) => (
+                <span key={i} className={`text-yellow-400 text-lg ${i < Math.round(expert.rating || 0) ? '' : 'opacity-30'}`}>
+                  ★
+                </span>
+              ))}
+              <span className="text-gray-600 text-sm ml-2">({expert.rating || "No rating"})</span>
+            </div>
+            <div className="mt-2 flex items-center justify-end">
               <button 
                 onClick={() => navigate(`/oneexpert/${expert.id || index}`)}
                 className="text-blue-600 hover:underline"
@@ -139,14 +102,12 @@ export default function SearchBar() {
         ))}
       </div>
 
-      {/* Empty state message */}
       {experts.length === 0 && (
         <div className="text-center py-8 text-gray-500">
           No experts found matching your search criteria.
         </div>
       )}
 
-      {/* View more button */}
       {visibleCount < experts.length && (
         <div className="flex justify-center mt-6">
           <button

@@ -29,6 +29,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
       ],
     },
     { name: "Users Management", icon: <FiUsers />, path: "users-management" },
+    { name: "Expert Management", icon: <FiUsers />, path: "expertmanagement" },
     {
       name: "Customer Service",
       icon: <FiMessageSquare />,

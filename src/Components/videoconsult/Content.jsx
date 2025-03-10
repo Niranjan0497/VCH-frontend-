@@ -2,7 +2,12 @@ import React from 'react'
 import { RiVerifiedBadgeFill } from 'react-icons/ri';
 import { LiaFilePrescriptionSolid } from 'react-icons/lia';
 import { RiChatFollowUpFill } from 'react-icons/ri';
+import { useNavigate } from 'react-router-dom';
 function Content() {
+  const navigate = useNavigate();
+  const handleNavigate = (link) => {
+    navigate(link);
+  };
   return (
     <div>
             <div className="w-full overflow-hidden bg-[#F8E9E6] pt-14">
@@ -16,16 +21,12 @@ function Content() {
                   {/* Doctor Images */}
                   <div className="flex justify-center lg:justify-start mt-3">
                     <img className="w-8 h-8 lg:w-10 lg:h-10 rounded-full border-2 border-white" src="https://media.istockphoto.com/id/177373093/photo/indian-male-doctor.jpg?s=612x612&w=0&k=20&c=5FkfKdCYERkAg65cQtdqeO_D0JMv6vrEdPw3mX1Lkfg=" alt="Doctor 1" />
-                    <img className="w-8 h-8 lg:w-10 lg:h-10 rounded-full border-2 border-white ml-[-8px]" src="https://www.freestock.com/450/freestock_41742406.jpg" alt="Doctor 2" />
-                    <img className="w-8 h-8 lg:w-10 lg:h-10 rounded-full border-2 border-white ml-[-8px]" src="https://plus.unsplash.com/premium_photo-1658506671316-0b293df7c72b?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGRvY3RvcnxlbnwwfHwwfHx8MA%3D%3D" alt="Doctor 3" />
-                    <h5 className="text-sm lg:text-md mt-2 ml-2"> +161 Doctors are online </h5>
-                  </div>
-      
                   {/* Button */}
-                  <button className="mt-6 px-6 py-2 text-md lg:text-lg text-white font-semibold rounded-md bg-[#2DAA9E]">
+                  <button onClick={() => handleNavigate("/expertdetails/Cardiologist")} className="mt-6 px-6 py-2 text-md lg:text-lg text-white font-semibold rounded-md bg-[#2DAA9E]">
                     Consult Now
                   </button>
-      
+                  
+                  </div> {/* Closing div for flex justify-center lg:justify-start mt-3 */}
                   {/* Features */}
                   <div className="flex flex-wrap lg:flex-row items-center gap-4 mt-6">
                     <p className="flex items-center gap-2">

@@ -61,7 +61,7 @@ const ExpertList = ({ experts = [], gender }) => {
 
               {/* Action Buttons */}
               <div className="mt-5 flex flex-col sm:flex-row text-sm justify-between px-1 py-1 lg:relative lg:mt-4 space-y-2 sm:space-y-0 sm:space-x-2">
-                <NavLink to={`/oneexpert/${expert.category}/${expert.specialization}/${expert.id}`} className="w-full sm:w-auto">
+                <NavLink to={`/oneexpert/${expert.id}`} className="w-full sm:w-auto">
                   <button className="bg-blue-600 text-white w-full sm:w-auto px-4 py-2 rounded-lg text-center md:mb-2 md:ms-3 hover:bg-blue-700">
                     Book Consultation
                   </button>

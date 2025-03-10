@@ -8,14 +8,18 @@ import OnlineConsult from './OnlineConsultant'
 import DoctorConsultationVideos from './DoctorConsultationVideos'
 import UserExperience from './UserExperience'
 import Faq from './Faq'
-import Specialities1 from './Specialities1'
+import FinancialCard from './FinanceCard'
+import LegalCard from './LegalCard'
+// import Specialities1 from './Specialities1'
 
 function MainContent() {
   return (
     <div className='bg-gray-100'>
       <Content />
-      <Specialities1 />
+      {/* <Specialities1 /> */}
       <HealthCard />
+      <FinancialCard/>
+      <LegalCard/>
       <Offers />
       <Doctors />
       <HowitWorks />
