@@ -3,13 +3,13 @@ import img from "../../assets/Aboutus.jpeg";
 
 const Aboutus = () => {
   return (
-    <div className="flex flex-col md:flex-row items-center justify-between p-10 bg-white w-full max-w-7xl mx-auto">
+    <div className="flex flex-col md:flex-row items-center justify-between p-10 bg-white w-full max-w-7xl mx-auto hover:scale-[1.02]">
       {/* Left Side - Image */}
-      <div className="w-full md:w-1/2">
+      <div className="rounded-2xl overflow-hidden shadow-lg transform transition-transform duration-300 hover:scale-[1.02]">
         <img
-          src={img} // Replace with actual image URL
-          alt="Rental Service"
-          className="rounded-lg shadow-lg w-full"
+          src={img}
+          alt="About us"
+          className="w-full h-[300px] object-cover"
         />
       </div>
 
@@ -17,13 +17,17 @@ const Aboutus = () => {
       <div className="w-full md:w-1/2 px-6">
         <h5 className="text-blue-600 font-bold uppercase">About Us</h5>
         <h2 className="text-3xl font-bold mb-4">
-          We Provide Quality <span className="text-blue-600">Rental</span>{" "}
+          We Provide Quality <span className="text-blue-600">Doctors</span>{" "}
           Services
         </h2>
         <p className="text-gray-600 mb-4">
-          There are many variations of passages of Lorem Ipsum available, but
-          the majority have suffered alteration in some form, by injected
-          humour, or randomised words which don’t look even slightly believable.
+          we are a dedicated team of experienced physicians committed to
+          providing compassionate, comprehensive healthcare to our patients.
+          With a focus on preventative care and personalized treatment plans, we
+          strive to be your trusted partner in achieving optimal health and
+          well-being. Our team is passionate about staying at the forefront of
+          medical advancements to deliver the highest quality care in a
+          supportive and caring environment."
         </p>
         <ul className="text-gray-700 space-y-2 mb-4">
           <li className="flex items-center">
