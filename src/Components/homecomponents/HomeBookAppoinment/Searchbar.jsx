@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 
 const categories = {
   Finance: ["Financial Planning", "Tax Experts", "Wealth Management", "Retirement Planning"],
@@ -16,63 +15,42 @@ export default function SearchBar() {
   const [subcategory, setSubcategory] = useState("");
   const [experts, setExperts] = useState([]);
   const [visibleCount, setVisibleCount] = useState(6);
-  const [favorites, setFavorites] = useState([]);
 
   const navigate = useNavigate();
 
-  const handleView = () => {
-    navigate('/expertdetails');
-  }
-
   useEffect(() => {
-    // Fetch experts data
     axios
       .get("http://localhost:4000/experts")
       .then((response) => {
-        const filteredExperts = response.data
-          .filter((expert) =>
-            expert.name.toLowerCase().includes(search.toLowerCase())
-          );
-        
-        console.log("Filtered Experts:", filteredExperts);
+        const filteredExperts = response.data.filter((expert) =>
+          expert.name.toLowerCase().includes(search.toLowerCase())
+        );
+
         setExperts(filteredExperts);
       })
       .catch((error) => {
         console.error("Error fetching experts:", error);
         setExperts([]);
       });
-
-    // Load favorites from localStorage if available
-    const savedFavorites = localStorage.getItem("expertFavorites");
-    if (savedFavorites) {
-      setFavorites(JSON.parse(savedFavorites));
-    }
   }, [search]);
 
-  // Save favorites to localStorage whenever they change
-  useEffect(() => {
-    localStorage.setItem("expertFavorites", JSON.stringify(favorites));
-  }, [favorites]);
+  // Function to render star ratings
+  const renderStars = (rating) => {
+    const fullStars = Math.floor(rating);
+    const halfStar = rating % 1 !== 0;
 
-  const toggleFavorite = (expertId) => {
-    setFavorites((prevFavorites) => {
-      if (prevFavorites.includes(expertId)) {
-        // Remove from favorites
-        return prevFavorites.filter((id) => id !== expertId);
-      } else {
-        // Add to favorites
-        return [...prevFavorites, expertId];
-      }
-    });
-  };
-
-  const isFavorite = (expertId) => {
-    return favorites.includes(expertId);
+    return (
+      <span className="text-yellow-500">
+        {"★".repeat(fullStars)}
+        {halfStar && "☆"}
+        {"☆".repeat(5 - fullStars - (halfStar ? 1 : 0))}
+      </span>
+    );
   };
 
   return (
     <div className="p-4 sm:p-6 max-w-5xl mx-auto">
-      {/* Search filters - always side by side with flex-wrap for small screens */}
+      {/* Search filters */}
       <div className="flex flex-wrap gap-2 justify-center mb-6">
         <input
           type="text"
@@ -105,7 +83,7 @@ export default function SearchBar() {
         </select>
       </div>
 
-      {/* Expert cards - responsive grid */}
+      {/* Expert cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
         {experts.slice(0, visibleCount).map((expert, index) => (
           <div key={expert.id || index} className="border p-4 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 bg-white">
@@ -115,22 +93,15 @@ export default function SearchBar() {
             <h2 className="text-lg font-semibold">{expert.name}</h2>
             <p className="text-sm text-gray-600">{expert.specialization || "Specialization"}</p>
             <p className="text-sm text-gray-500">{expert.experience ? `${expert.experience} years experience` : "Experience"}</p>
-            <div className="mt-2 flex items-center justify-between">
-              <button 
-                onClick={() => toggleFavorite(expert.id)}
-                className="flex items-center focus:outline-none"
-                aria-label={isFavorite(expert.id) ? "Remove from favorites" : "Add to favorites"}
-              >
-                {isFavorite(expert.id) ? (
-                  <AiFillHeart className="text-red-500 text-xl mr-1" />
-                ) : (
-                  <AiOutlineHeart className="text-gray-400 hover:text-red-500 text-xl mr-1" />
-                )}
-                <span>{expert.likes || 0}</span>
-              </button>
+
+            {/* Rating Display */}
+            <div className="mt-2">{renderStars(expert.rating || 0)}</div>
+
+            {/* View Profile Button - Small & Aligned Right */}
+            <div className="mt-4 flex justify-end">
               <button 
                 onClick={() => navigate(`/oneexpert/${expert.id || index}`)}
-                className="text-blue-600 hover:underline"
+                className="text-sm px-3 py-1 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-all duration-300"
               >
                 View Profile
               </button>
@@ -150,7 +121,7 @@ export default function SearchBar() {
       {visibleCount < experts.length && (
         <div className="flex justify-center mt-6">
           <button
-            onClick={handleView}
+            onClick={() => navigate('/expertdetails')}
             className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all duration-300"
           >
             View More

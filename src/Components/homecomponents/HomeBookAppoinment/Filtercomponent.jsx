@@ -27,7 +27,14 @@ const Dropdown = ({ label, options, selected, setSelected, isOpen, setOpen }) =>
 );
 
 const FilterComponent = ({ gender, setGender }) => {
-  const defaultFilters = { stories: "", experience: "", sortBy: "Relevance", fees: "", availability: "Available Today", consultType: "" };
+  const defaultFilters = {
+    stories: "",
+    experience: "",
+    sortBy: "Relevance",
+    fees: "",
+    availability: "Available Today",
+    consultType: ""
+  };
   const [filters, setFilters] = useState(defaultFilters);
   const [filtersOpen, setFiltersOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null);
@@ -42,7 +49,6 @@ const FilterComponent = ({ gender, setGender }) => {
 
   return (
     <div className="w-full p-4">
-      
       <div className="flex justify-between items-center md:hidden">
         <h2 className="text-gray-800 text-lg font-semibold">Filters</h2>
         <button className="text-gray-800 p-2 rounded flex items-center" onClick={() => setMobileFiltersVisible(!mobileFiltersVisible)}>
@@ -50,35 +56,24 @@ const FilterComponent = ({ gender, setGender }) => {
         </button>
       </div>
 
-
       <div className={`flex flex-wrap items-start gap-2 md:items-center ${mobileFiltersVisible ? "flex flex-col" : "hidden"} md:flex md:flex-row md:bg-blue-500 md:p-3 md:rounded-lg`}>
-        {[
-          { label: "Gender", options: ["Male", "Female"], value: gender, setValue: setGender },
-          { label: "Patient Stories", options: ["With stories", "Most stories", "Recent stories"], value: filters.stories, setValue: (val) => setFilters(prev => ({ ...prev, stories: val })) },
-          { label: "Experience", options: ["0-5 years", "5-10 years", "10+ years"], value: filters.experience, setValue: (val) => setFilters(prev => ({ ...prev, experience: val })) }
-        ].map(({ label, options, value, setValue }) => (
+        {["Gender", "Patient Stories", "Experience", "Relevance"].map((filter) => (
           <Dropdown
-            key={label}
-            label={label}
-            options={options}
-            selected={value}
-            setSelected={setValue}
-            isOpen={openDropdown === label}
+            key={filter}
+            label={filter}
+            options={{
+              "Gender": ["Male", "Female"],
+              "Patient Stories": ["With stories", "Most stories", "Recent stories"],
+              "Experience": ["0-5 years", "5-10 years", "10+ years"],
+              "Relevance": ["Relevance"]
+            }[filter]}
+            selected={filters[filter.toLowerCase().replace(/ /g, "")] || (filter === "Gender" ? gender : "")}
+            setSelected={(value) => filter === "Gender" ? setGender(value) : setFilters(prev => ({ ...prev, [filter.toLowerCase().replace(/ /g, "")]: value }))}
+            isOpen={openDropdown === filter}
             setOpen={setOpenDropdown}
           />
         ))}
 
-       
-        <Dropdown
-          label="Relevance"
-          options={["Relevance"]}
-          selected={filters.sortBy}
-          setSelected={(value) => setFilters((prev) => ({ ...prev, sortBy: value }))}
-          isOpen={openDropdown === "Relevance"}
-          setOpen={setOpenDropdown}
-        />
-
-      
         <button
           className="border border-gray-500 rounded px-4 py-2 text-gray-800 md:bg-blue-600 md:text-white flex items-center justify-between w-full md:w-auto"
           onClick={() => setFiltersOpen(!filtersOpen)}
@@ -94,16 +89,26 @@ const FilterComponent = ({ gender, setGender }) => {
 
       {filtersOpen && (
         <div className="mt-6 flex flex-wrap gap-8 text-gray-800">
-          {[
-            { label: "Fees", options: ["₹0-₹500", "Above ₹500", "Above ₹1000", "Above ₹2000"] },
-            { label: "Availability", options: ["Available in next 4 hours", "Available Today", "Available Tomorrow", "Available in next 7 days"] },
-            { label: "Consult Type", options: ["Video consult"] }
-          ].map(({ label, options }) => (
-            <div key={label} className="flex flex-col gap-2">
-              <h3 className="font-medium mb-2">{label}</h3>
-              {options.map((option) => (
+          {["Fees", "Availability", "Consult Type"].map((filter) => (
+            <div key={filter} className="flex flex-col gap-2">
+              <h3 className="font-medium mb-2">{filter}</h3>
+              {["Fees", "Availability", "Consult Type"].reduce((acc, key) => {
+                acc[key] = {
+                  "Fees": ["₹0-₹500", "Above ₹500", "Above ₹1000", "Above ₹2000"],
+                  "Availability": ["Available in next 4 hours", "Available Today", "Available Tomorrow", "Available in next 7 days"],
+                  "Consult Type": ["Video consult"]
+                }[key];
+                return acc;
+              }, {})[filter].map((option) => (
                 <div key={option} className="flex items-center gap-2">
-                  <input type="radio" id={option} name={label} className="h-4 w-4" />
+                  <input
+                    type="radio"
+                    id={option}
+                    name={filter}
+                    className="h-4 w-4"
+                    checked={filters[filter.toLowerCase().replace(/ /g, "")] === option}
+                    onChange={() => setFilters(prev => ({ ...prev, [filter.toLowerCase().replace(/ /g, "")]: option }))}
+                  />
                   <label htmlFor={option} className="cursor-pointer">{option}</label>
                 </div>
               ))}
