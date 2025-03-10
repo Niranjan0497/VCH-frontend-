@@ -18,8 +18,9 @@ const Home = () => {
         {/* <hr className="w-4/5  border-t-2 border-gray-300 mx-auto" /> */}
 
         <Bookappointmenthome />
-        <Articles />
         <Faq />
+        <Articles />
+
         <Aboutus />
       </div>
     </>
