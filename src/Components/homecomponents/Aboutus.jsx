@@ -3,7 +3,7 @@ import img from "../../assets/Aboutus.jpeg";
 
 const Aboutus = () => {
   return (
-    <div className="flex flex-col md:flex-row items-center justify-between p-10 bg-white w-full max-w-7xl mx-auto hover:scale-[1.02]">
+    <div className="flex flex-col md:flex-row items-center justify-between p-10 bg-white w-full max-w-7xl mx-auto">
       {/* Left Side - Image */}
       <div className="rounded-2xl overflow-hidden shadow-lg transform transition-transform duration-300 hover:scale-[1.02]">
         <img
