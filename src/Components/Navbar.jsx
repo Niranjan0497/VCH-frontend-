@@ -415,9 +415,9 @@ function Navbar() {
 
               <Link
                 to="/video-consult"
-                className={`text-white flex items-center text-lg py-2 px-4 rounded-lg transition-colors ${
+                className={`text-black flex items-center text-lg py-2 px-4 rounded-lg transition-colors ${
                   isActive('/video-consult')
-                    ? 'bg-blue-500 text-blue-600 font-medium'
+                    ? 'bg-blue-500 text-white font-medium'
                     : 'text-gray-800 hover:bg-gray-100'
                 }`}
                 onClick={() => setIsMenuOpen(false)}
@@ -427,9 +427,9 @@ function Navbar() {
 
               <Link
                 to="/contacts"
-                className={`text-white flex items-center text-lg py-2 px-4 rounded-lg transition-colors ${
+                className={`text-black flex items-center text-lg py-2 px-4 rounded-lg transition-colors ${
                   isActive('/contacts')
-                    ? 'bg-blue-500 text-blue-600 font-medium'
+                    ? 'bg-blue-500 text-white font-medium'
                     : 'text-gray-800 hover:bg-gray-100'
                 }`}
                 onClick={() => setIsMenuOpen(false)}
