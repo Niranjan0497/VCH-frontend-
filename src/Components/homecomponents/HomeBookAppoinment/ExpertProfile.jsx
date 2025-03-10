@@ -1,8 +1,8 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { NavLink, useParams } from "react-router-dom";
+import { NavLink, useNavigate, useParams } from "react-router-dom";
 import { FaCheckCircle, FaStar, FaBolt } from "react-icons/fa";
-import { MdStar, MdPayment } from "react-icons/md";
+import { MdStar, MdPayment, MdCalendarMonth } from "react-icons/md";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const ExpertsProfile = () => {
@@ -10,29 +10,88 @@ const ExpertsProfile = () => {
   const [expert, setexperts] = useState(null);
   const [activeTab, setActiveTab] = useState("info");
   const [showFullDescription, setShowFullDescription] = useState(false);
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [showCalendar, setShowCalendar] = useState(false);
+  const [selectedSlot, setSelectedSlot] = useState(null);
 
-  const allDates = [
-    { label: "Today", slots: ["10:00 AM", "10:30 AM", "11:00 AM", "11:30 AM", "12:00 PM"] },
-    { label: "Tomorrow", slots: ["11:00 AM", "11:30 AM", "12:00 PM", "12:30 PM", "01:00 PM"] },
-    { label: "Wed, 5 Mar", slots: ["01:00 PM", "01:30 PM", "02:00 PM", "02:30 PM", "03:00 PM"] },
-      { label: "Thu, 6 Mar", slots: ["09:00 AM", "09:30 AM", "10:00 AM", "10:30 AM", "11:00 AM"] },
-      { label: "Fri, 7 Mar", slots: ["03:00 PM", "03:30 PM", "04:00 PM", "04:30 PM", "05:00 PM"] },
-      { label: "Sat, 8 Mar", slots: ["12:00 PM", "12:30 PM", "01:00 PM", "01:30 PM", "02:00 PM"] },
-  ];
-  const [selectedDate, setSelectedDate] = useState(allDates[0]);
-  const visibleDates = allDates.slice(currentIndex, currentIndex + 3);
+  // Calendar related states
+  const [currentDate, setCurrentDate] = useState(new Date());
+  const [selectedDate, setSelectedDate] = useState(new Date());
+  
 
-  const nextDates = () => {
-    if (currentIndex + 3 < allDates.length) {
-      setCurrentIndex(currentIndex + 1);
+
+  // Generate time slots based on selected date
+  const generateTimeSlots = (date) => {
+    // You can modify this logic to fetch real availability from your backend
+    const dayOfWeek = date.getDay();
+    
+    // Different slots for weekdays vs weekends
+    if (dayOfWeek === 0) { // Sunday
+      return ["Closed"];
+    } else if (dayOfWeek === 6) { // Saturday
+      return ["10:00 AM", "10:30 AM", "11:00 AM", "11:30 AM", "12:00 PM", "12:30 PM"];
+    } else { // Weekdays
+      return ["01:00 PM", "01:30 PM", "02:00 PM", "02:30 PM", "03:00 PM", "03:30 PM", "04:00 PM"];
     }
   };
 
-  const prevDates = () => {
-    if (currentIndex > 0) {
-      setCurrentIndex(currentIndex - 1);
+  const [availableSlots, setAvailableSlots] = useState(generateTimeSlots(selectedDate));
+
+  // Get days in month for calendar
+  const getDaysInMonth = (year, month) => {
+    return new Date(year, month + 1, 0).getDate();
+  };
+
+  // Get days of week for calendar header
+  const daysOfWeek = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  // Generate calendar days
+  const generateCalendarDays = () => {
+    const year = currentDate.getFullYear();
+    const month = currentDate.getMonth();
+    
+    const firstDay = new Date(year, month, 1).getDay();
+    const daysInMonth = getDaysInMonth(year, month);
+    
+    const days = [];
+    
+    // Add empty cells for days before the first of the month
+    for (let i = 0; i < firstDay; i++) {
+      days.push(null);
     }
+    
+    // Add the days of the month
+    for (let i = 1; i <= daysInMonth; i++) {
+      days.push(i);
+    }
+    
+    return days;
+  };
+
+  // Change month
+  const changeMonth = (increment) => {
+    const newDate = new Date(currentDate);
+    newDate.setMonth(newDate.getMonth() + increment);
+    setCurrentDate(newDate);
+  };
+
+  // Format date for display
+  const formatDateLabel = (date) => {
+    return date.toLocaleDateString('en-US', { 
+      weekday: 'short', 
+      day: 'numeric', 
+      month: 'short' 
+    });
+  };
+
+  // Select a date from calendar
+  const handleDateSelect = (day) => {
+    if (!day) return;
+    
+    const newDate = new Date(currentDate.getFullYear(), currentDate.getMonth(), day);
+    setSelectedDate(newDate);
+    setShowCalendar(false);
+    setAvailableSlots(generateTimeSlots(newDate));
+    setSelectedSlot(null); // Reset selected slot when date changes
   };
 
   const tabs = ["info", "stories"];
@@ -41,13 +100,11 @@ const ExpertsProfile = () => {
     axios.get(`http://localhost:4000/experts/${id}`)
       .then((res) => setexperts(res.data))
       .catch((err) => console.log("Error fetching experts data:", err));
-      console.log("experts", expert);
   }, [id]);
 
   if (!expert) {
-    return <p className="text-center text-gray-500">expertss are not Available</p>;
+    return <p className="text-center text-gray-500">Experts are not Available</p>;
   }
-
 
   const dummyStories = [
     {
@@ -61,12 +118,26 @@ const ExpertsProfile = () => {
       id: 2,
       name: "Amit (Verified)",
       visitReason: "Visited For Vaginal Infection Treatment",
-      review: "experts was very helpful and provided a detailed explanation. Highly recommend.",
+      review: "Expert was very helpful and provided a detailed explanation. Highly recommend.",
       time: "2 months ago"
     }
   ];
 
+  // Check if date is in the past
+  const isPastDate = (date) => {
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    return date < today;
+  };
   
+  // Check if date is today
+  const isToday = (date) => {
+    const today = new Date();
+    return date.getDate() === today.getDate() && 
+           date.getMonth() === today.getMonth() && 
+           date.getFullYear() === today.getFullYear();
+  };
+
   return (
     <div className="max-w-7xl mx-auto p-4 bg-gray-100">
       {/* Main Content Section */}
@@ -84,7 +155,6 @@ const ExpertsProfile = () => {
               </div>
               <p className="text-green-600 font-bold mt-1 flex items-center">
                 <MdStar className="text-yellow-500" /> 
-                
                 {expert?.rating || 0}
               </p>
               <p className="text-gray-700">
@@ -103,7 +173,7 @@ const ExpertsProfile = () => {
             <div className="flex border-b text-gray-600">
               {tabs.map((tab) => (
                 <button key={tab} onClick={() => setActiveTab(tab)}
-                  className={`pb-2 px-4 font-semibold text-sm ${activeTab === tab ? "border-blue-500 text-blue-600" : ""}`}>
+                  className={`pb-2 px-4 font-semibold text-sm ${activeTab === tab ? "border-b-2 border-blue-500 text-blue-600" : ""}`}>
                   {tab.charAt(0).toUpperCase() + tab.slice(1)}
                 </button>
               ))}
@@ -114,7 +184,6 @@ const ExpertsProfile = () => {
              {/* Tab Content */}
             {activeTab === "info" && (
               <div>
-
                 {showFullDescription ? expert?.description : `${expert?.location}`}
                 <h3 className="text-lg font-semibold mt-4"></h3>
                 <div className="flex justify-between items-start text-sm text-gray-700 mt-4 border-b pb-3">
@@ -175,30 +244,106 @@ const ExpertsProfile = () => {
         <div className="w-full lg:w-1/3 p-6 rounded-lg shadow-lg bg-white">
           <h2 className="text-lg font-semibold text-center">Book Appointment</h2>
 
-          <div className="flex items-center justify-between my-3">
-            <ChevronLeft className="cursor-pointer" onClick={prevDates} />
-            {visibleDates.map((date) => (
-              <div key={date.label} onClick={() => setSelectedDate(date)}
-                className={`text-center px-2 py-1 rounded-md cursor-pointer ${
-                  selectedDate.label === date.label ? "border-b-2 border-blue-600 text-blue-600" : "text-gray-500"
-                }`}>
-                <p className="text-sm font-medium">{date.label}</p>
-                <p className="text-xs text-green-600">{date.slots.length} Slots Available</p>
+          {/* Date Selection with Calendar */}
+          <div className="mt-4 mb-6">
+            <p className="text-sm font-semibold text-gray-700 mb-2">Select Date</p>
+            <div 
+              onClick={() => setShowCalendar(!showCalendar)} 
+              className="flex items-center justify-between border p-3 rounded-md cursor-pointer hover:bg-gray-50"
+            >
+              <span>{formatDateLabel(selectedDate)}</span>
+              <MdCalendarMonth className="text-blue-600" />
+            </div>
+
+            {/* Calendar Popup */}
+            {showCalendar && (
+              <div className="mt-2 bg-white border rounded-lg shadow-lg p-3 absolute z-10">
+                <div className="flex justify-between mb-2">
+                  <button onClick={() => changeMonth(-1)} className="text-blue-600">
+                    <ChevronLeft />
+                  </button>
+                  <h3 className="font-medium">
+                    {currentDate.toLocaleDateString('en-US', { month: 'long', year: 'numeric' })}
+                  </h3>
+                  <button onClick={() => changeMonth(1)} className="text-blue-600">
+                    <ChevronRight />
+                  </button>
+                </div>
+
+                <div className="grid grid-cols-7 gap-1">
+                  {/* Calendar header */}
+                  {daysOfWeek.map(day => (
+                    <div key={day} className="text-center text-xs font-medium text-gray-500 p-1">
+                      {day}
+                    </div>
+                  ))}
+
+                  {/* Calendar days */}
+                  {generateCalendarDays().map((day, index) => (
+                    <div 
+                      key={index}
+                      onClick={() => day && !isPastDate(new Date(currentDate.getFullYear(), currentDate.getMonth(), day)) && handleDateSelect(day)}
+                      className={`
+                        text-center p-2 text-sm rounded-md
+                        ${!day ? 'text-transparent cursor-default' : 'cursor-pointer'}
+                        ${day && isPastDate(new Date(currentDate.getFullYear(), currentDate.getMonth(), day)) ? 
+                          'text-gray-300 cursor-not-allowed' : ''}
+                        ${day && selectedDate.getDate() === day && 
+                          selectedDate.getMonth() === currentDate.getMonth() && 
+                          selectedDate.getFullYear() === currentDate.getFullYear() ? 
+                          'bg-blue-600 text-white' : ''}
+                        ${day && isToday(new Date(currentDate.getFullYear(), currentDate.getMonth(), day)) && 
+                          !(selectedDate.getDate() === day && 
+                            selectedDate.getMonth() === currentDate.getMonth() && 
+                            selectedDate.getFullYear() === currentDate.getFullYear()) ? 
+                          'border border-blue-600 text-blue-600' : ''}
+                        ${day && !isPastDate(new Date(currentDate.getFullYear(), currentDate.getMonth(), day)) &&
+                          !(selectedDate.getDate() === day && 
+                            selectedDate.getMonth() === currentDate.getMonth() && 
+                            selectedDate.getFullYear() === currentDate.getFullYear()) &&
+                          !isToday(new Date(currentDate.getFullYear(), currentDate.getMonth(), day)) ?
+                          'hover:bg-blue-100' : ''}
+                      `}
+                    >
+                      {day}
+                    </div>
+                  ))}
+                </div>
               </div>
-            ))}
-            <ChevronRight className="cursor-pointer" onClick={nextDates} />
+            )}
           </div>
 
-          <p className="text-sm font-semibold text-gray-700">Available Slots</p>
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 mt-2">
-            {selectedDate.slots.map((slot) => (
-              <button key={slot} className="border p-2 rounded-md text-sm text-center hover:bg-blue-100">{slot}</button>
-            ))}
+          {/* Time Slots Selection */}
+          <div className="mt-4">
+            <p className="text-sm font-semibold text-gray-700 mb-2">Available Slots for {formatDateLabel(selectedDate)}</p>
+            
+            {availableSlots.length === 0 || availableSlots[0] === "Closed" ? (
+              <p className="text-red-500 text-center py-4">No slots available for this date</p>
+            ) : (
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 mt-2">
+                {availableSlots.map((slot) => (
+                  <button 
+                    key={slot} 
+                    onClick={() => setSelectedSlot(slot)}
+                    className={`border p-2 rounded-md text-sm text-center transition-colors ${
+                      selectedSlot === slot ? 'bg-blue-600 text-white' : 'hover:bg-blue-100'
+                    }`}
+                  >
+                    {slot}
+                  </button>
+                ))}
+              </div>
+            )}
           </div>
 
-          <div className="mt-4 flex justify-center">
-            <NavLink to={`/expertsbooking/${expert.id}`}>
-              <button className="bg-blue-600 text-white px-6 py-2 rounded-md flex items-center hover:bg-blue-700">
+          <div className="mt-6 flex justify-center">
+            <NavLink to={selectedSlot ? `/expertsbooking/${expert.id}?date=${selectedDate.toISOString()}&time=${selectedSlot}` : "#"}>
+              <button 
+                className={`px-6 py-2 rounded-md flex items-center ${
+                  selectedSlot ? 'bg-blue-600 text-white hover:bg-blue-700' : 'bg-gray-300 text-gray-500 cursor-not-allowed'
+                }`}
+                disabled={!selectedSlot}
+              >
                 <FaBolt className="mr-1" /> Book Appointment
               </button>
             </NavLink>

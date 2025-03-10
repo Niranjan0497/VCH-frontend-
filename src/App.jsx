@@ -5,13 +5,11 @@ import Home from "./pages/Home.jsx";
 
 import Login from "./Components/homecomponents/Admin/Login.jsx";
 import Register from "./Components/homecomponents/Admin/Register.jsx";
-
+import Expertbooking from "./Components/homecomponents/HomeBookAppoinment/ExpertBooking.jsx";
 import Specialities from "./Components/homecomponents/TopConsultants/TopConsultant.jsx";
 import ConsultationForm from "./Components/homecomponents/TopConsultants/TopConsultantForm.jsx";
 
 import Bookappointmenthome from "../src/Components/homecomponents/HomeBookAppoinment/Bookappointmenthome.jsx";
-import Doctorfilter from "./Components/homecomponents/HomeBookAppoinment/Doctorfilter.jsx";
-import Doctorbooking from "./Components/homecomponents/HomeBookAppoinment/Doctorbooking.jsx";
 import ExpertProfile from "./Components/homecomponents/HomeBookAppoinment/ExpertProfile.jsx";
 import BlogCards from "./Components/homecomponents/article/BlogCards.jsx";
 import ViewBlogCard from "./Components/homecomponents/article/ViewBlogCard.jsx";
@@ -56,7 +54,7 @@ function App() {
         <Route path="/bookappointment" element={<Bookappointmenthome />}/>
         <Route path="/expertdetails/:title" element={<ExpertFilter />} />
         <Route path="/oneexpert/:id" element={< ExpertProfile/>}/>
-        <Route path="/doctorbooking/:id" element={<Doctorbooking/>}/>
+       
         <Route path="/finance" element={<Finance/>}/>
         <Route path="/expertdetails" element={<ExpertDetails/>}/>
           <Route path="/login" element={<Login />} />
@@ -64,9 +62,8 @@ function App() {
           
 
        
-        {/* <Route path="/treatmentdetails/:title" element={<Doctorfilter />} /> */}
-        {/* <Route path="/onedoctor/:id" element={<Onlyonedoctor />} /> */}
-        <Route path="/doctorbooking/:id" element={<Doctorbooking />} />
+       
+        <Route path="/expertsbooking/:id" element={<Expertbooking />} />
         <Route path="/finance" element={<Finance />} />
 
         {/* <Route path="/login" element={<Login />} /> */}
