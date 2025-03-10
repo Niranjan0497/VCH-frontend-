@@ -22,7 +22,7 @@ const Home = () => {
         <Howitswork />
         <Faq />
         <Articles />
-
+        <Faq />
         <Aboutus />
       </div>
     </>

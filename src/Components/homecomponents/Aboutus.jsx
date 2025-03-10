@@ -27,7 +27,7 @@ const Aboutus = () => {
           strive to be your trusted partner in achieving optimal health and
           well-being. Our team is passionate about staying at the forefront of
           medical advancements to deliver the highest quality care in a
-          supportive and caring environment."
+          supportive and caring environment.
         </p>
         <ul className="text-gray-700 space-y-2 mb-4">
           <li className="flex items-center">
