@@ -32,6 +32,7 @@ import CategoryList from "./admin/contentmangement/Categories.jsx";
 import UserManagement from "./admin/UserMangement.jsx";
 import { useLocation } from "react-router-dom";
 import ExpertManagment from "./admin/ExpertManagment.jsx";
+import Doctorfilter from "./Components/homecomponents/HomeBookAppoinment/Doctorfilter.jsx";
 
 function App() {
   const location = useLocation();
@@ -50,15 +51,16 @@ function App() {
         <Route path="/faq" element={<FAQPage />} />
         <Route path="aboutus" element={<Aboutus />} />
         {/* Homebookappointment */}
+        
         <Route path="/bookappointment" element={<Bookappointmenthome />} />
         <Route path="/expertdetails/:title" element={<ExpertFilter />} />
         <Route path="/oneexpert/:id" element={<ExpertProfile />} />
 
 
        
-        <Route path="/treatmentdetails" element={<Doctorfilter />} />
+        <Route path="/treatmentdetails" element={<Doctorfilter/>} />
         {/* <Route path="/onedoctor/:id" element={<Onlyonedoctor />} /> */}
-        <Route path="/doctorbooking/:id" element={<Doctorbooking />} />
+        <Route path="/Expertbooking/:id" element={<Expertbooking />} />
 
         <Route path="/finance" element={<Finance />} />
         <Route path="/expertdetails" element={<ExpertDetails />} />

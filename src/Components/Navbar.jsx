@@ -2,13 +2,8 @@
 import { Link, useLocation } from 'react-router-dom';
 import { useState, useEffect, useRef } from 'react';
 
-import { FaBars, FaTimes, FaChevronDown, FaChevronLeft } from 'react-icons/fa';
+import { FaBars, FaTimes, FaChevronDown, FaChevronLeft,FaUser  } from 'react-icons/fa';
 import vch_logo from "../assets/vch_logo.png";
-
-import {  FaUser, FaBars, FaTimes } from 'react-icons/fa';
-import {FaChevronLeft,FaChevronDown } from "react-icons/fa";
-
-
 import { BsPersonCircle } from "react-icons/bs";
 
 function Navbar() {
@@ -136,16 +131,16 @@ function Navbar() {
                       <FaChevronDown />
                     </div>
                     <div className="absolute down-full top-0 w-56 mt-10 bg-white rounded-md shadow-lg py-2 opacity-0 invisible group-hover/finance:opacity-100 group-hover/finance:visible transition-all duration-200">
-                      <Link to="/services/finance/planning" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      <Link to="/expertdetails/planning" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                         Financial Planning
                       </Link>
-                      <Link to="/services/finance/tax" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      <Link to="/expertdetails/tax" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                         Tax Advisory
                       </Link>
-                      <Link to="/services/finance/wealth" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      <Link to="/expertdetails//wealth" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                         Wealth Management
                       </Link>
-                      <Link to="/services/finance/retirement" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      <Link to="/expertdetails/retirement" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                         Retirement Planning
                       </Link>
                     </div>
@@ -158,16 +153,16 @@ function Navbar() {
                       <FaChevronDown />
                     </div>
                     <div className="absolute down-full top-0 w-56 mt-10 bg-white rounded-md shadow-lg py-2 opacity-0 invisible group-hover/legal:opacity-100 group-hover/legal:visible transition-all duration-200">
-                      <Link to="/services/legal/corporate" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      <Link to="/expertdetails/Corporate law" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                         Corporate Law
                       </Link>
-                      <Link to="/services/legal/estate" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      <Link to="/expertdetails/estate" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                         Estate Planning
                       </Link>
-                      <Link to="/services/legal/intellectual" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      <Link to="/expertdetails/intellectual" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                         Intellectual Property
                       </Link>
-                      <Link to="/services/legal/litigation" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      <Link to="/expertdetails/litigation" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                         Litigation
                       </Link>
                     </div>
@@ -180,16 +175,16 @@ function Navbar() {
                       <FaChevronDown />
                     </div>
                     <div className="absolute down-full top-0 w-56 mt-10 bg-white rounded-md shadow-lg py-2 opacity-0 invisible group-hover/technology:opacity-100 group-hover/technology:visible transition-all duration-200">
-                      <Link to="/services/technology/consulting" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      <Link to="/expertdetails/consulting" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                         IT Consulting
                       </Link>
-                      <Link to="/services/technology/development" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      <Link to="/expertdetails/development" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                         Software Development
                       </Link>
-                      <Link to="/services/technology/security" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      <Link to="/expertdetails/security" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                         Cybersecurity
                       </Link>
-                      <Link to="/services/technology/cloud" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      <Link to="/expertdetails/cloud" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                         Cloud Services
                       </Link>
                     </div>
@@ -202,16 +197,16 @@ function Navbar() {
                       <FaChevronDown />
                     </div>
                     <div className="absolute down-full top-0 w-56 mt-10 bg-white rounded-md shadow-lg py-2 opacity-0 invisible group-hover/wellness:opacity-100 group-hover/wellness:visible transition-all duration-200">
-                      <Link to="/services/wellness/mental" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      <Link to="/expertdetails/mental" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                         Mental Health
                       </Link>
-                      <Link to="/services/wellness/fitness" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      <Link to="/expertdetails/fitness" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                         Fitness Coaching
                       </Link>
-                      <Link to="/services/wellness/nutrition" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      <Link to="/expertdetails/nutrition" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                         Nutrition Counseling
                       </Link>
-                      <Link to="/services/wellness/lifestyle" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      <Link to="/expertdetails/lifestyle" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                         Lifestyle Medicine
                       </Link>
                     </div>
@@ -232,7 +227,7 @@ function Navbar() {
               </Link>
 
               <Link
-                to="/contacts"
+                to="/contact-us"
 
                 className={`text-white font-semibold text-sm sm:text-base lg:text-lg pb-1 hover:text-sky-400 ${
                   isActive('/contacts') ? 'text-blue-500 border-practo-blue font-medium' : ''

@@ -41,7 +41,7 @@ const doctors = [
 
 function Bookappointmenthome() {
   const specialtySettings = {
-    dots:true,
+    dots:false,
     infinite: true,
 
     arrows: false,
@@ -71,7 +71,7 @@ function Bookappointmenthome() {
       <Slider {...specialtySettings} className="relative">
         {doctors.map((doctor) => (
           <div key={doctor.id} className="px-2 mb-5">
-            <NavLink to={`/treatmentdetails/${doctor.title}`} className="block text-inherit no-underline hover:text-blue-500">
+            <NavLink to={`/Expertbooking/${doctor.title}`} className="block text-inherit no-underline hover:text-blue-500">
               <div className="w-full h-48 md:h-56 lg:h-64 rounded-lg overflow-hidden shadow-md ">
                 <img src={doctor.image} alt={doctor.title} className="w-full h-full object-cover" />
               </div>
