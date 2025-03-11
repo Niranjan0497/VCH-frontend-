@@ -72,7 +72,9 @@ function Carousel() {
   return (
     <div className="relative w-full h-[80vh] overflow-hidden">
       <div
-        className="flex transition-transform duration-500 ease-in-out"
+
+        className="flex transition-transform duration-500 ease-in-out "
+
         style={{ transform: `translateX(-${current * 100}%)` }}
       >
         {slides.map((slide, index) => (
@@ -83,7 +85,9 @@ function Carousel() {
             <img
               src={slide.image}
               alt="Slide"
-              className="w-full h-screen object-cover"
+
+              className="w-full h-screen object-cover blur-sm"
+
             />
 
             <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center px-4 sm:px-10 text-center">
@@ -100,14 +104,21 @@ function Carousel() {
                   {slide.description}
                 </p>
 
-                <div className="mt-4 flex flex-col sm:flex-row justify-center space-y-3 sm:space-y-0 sm:space-x-4">
+
+                {/* <div className="mt-4 flex flex-col sm:flex-row justify-center space-y-3 sm:space-y-0 sm:space-x-4">
+
+                
                   <button className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-full text-sm sm:text-lg font-semibold">
                     Learn More →
                   </button>
                   <button className="bg-white hover:bg-gray-200 text-green-600 px-6 py-3 rounded-full text-sm sm:text-lg font-semibold">
                     Get Started →
                   </button>
-                </div>
+
+                </div> */}
+
+               
+
               </div>
             </div>
           </div>
