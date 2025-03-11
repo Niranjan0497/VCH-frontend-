@@ -54,13 +54,24 @@ function App() {
         <Route path="/expertdetails/:title" element={<ExpertFilter />} />
         <Route path="/oneexpert/:id" element={<ExpertProfile />} />
 
+
+       
+        <Route path="/treatmentdetails" element={<Doctorfilter />} />
+        {/* <Route path="/onedoctor/:id" element={<Onlyonedoctor />} /> */}
+        <Route path="/doctorbooking/:id" element={<Doctorbooking />} />
+
         <Route path="/finance" element={<Finance />} />
         <Route path="/expertdetails" element={<ExpertDetails />} />
+
+
+        {/* <Route path="/login" element={<Login />} /> */}
+        {/* <Route path="/register" element={<Register />} /> */}
 
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/otp" element={<OTPVerification />} />
         <Route path="/upload" element={<UploadPage />} />
+
 
         <Route path="/contact-us" element={<Contact />} />
         <Route path="/video-consult" element={<MainContent />} />
