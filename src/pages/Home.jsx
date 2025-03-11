@@ -9,6 +9,7 @@ import Carousel from "../Components/homecomponents/carousel/carousel.jsx";
 import Aboutus from "../Components/homecomponents/Aboutus.jsx";
 import Faq from "../Components/homecomponents/Faq.jsx";
 import Howitswork from "../Components/homecomponents/Howitswork.jsx";
+import BestReviews from "../Components/homecomponents/BestReviews.jsx";
 
 
 const Home = () => {
@@ -19,16 +20,13 @@ const Home = () => {
         <SearchBar />
         <Specialities />
         {/* <hr className="w-4/5  border-t-2 border-gray-300 mx-auto" /> */}
-
         <Bookappointmenthome />
-
-        <Articles />
-
+        <BestReviews />
         <Howitswork />
         <Faq />
         <Articles />
-        <Faq />
         <Aboutus />
+        
 
       </div>
     </>

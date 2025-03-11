@@ -1,304 +1,286 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { InputText } from "primereact/inputtext";
-import { DataTable } from "primereact/datatable";
-import { Column } from "primereact/column";
+import { Dropdown } from "primereact/dropdown";
+import axios from "axios";
+import "primereact/resources/themes/lara-light-indigo/theme.css";
+import "primereact/resources/primereact.min.css";
+import "primeicons/primeicons.css";
 
 const UserManagement = () => {
-  const [customers, setCustomers] = useState([
-    { id: 1,  name: "John Doe",addedProducts:23, joined: "2023-10-01",  status: "Active" },
-    { id: 2, name: "Jane Smith",addedProducts:3,joined: "2023-09-15",  status: "Active" },
-    { id: 3, name:  "Alice Johnson",addedProducts:17,joined: "2023-11-01",  status: "Blocked" },
-    { id: 4, name: "Bob Brown",addedProducts:28,joined: "2023-12-01",  status: "Active" },
-    { id: 5, name:  "Charlie Davis",addedProducts:103,joined: "2023-11-15",  status: "Blocked" },
-    { id: 6, name: "Eve White",addedProducts:85,joined: "2023-10-15",  status: "Active" },
-    { id: 7, name: "Frank Green",addedProducts:14,joined: "2023-09-01",  status: "Blocked" },
-    { id: 8, name: "Grace Hall",addedProducts:39,joined: "2023-08-15",  status: "Active" },
-    { id: 9, name: "Hank Hill",addedProducts:53,joined: "2023-07-01",  status: "Blocked" },
-    { id: 10, name: "Ivy Lane",addedProducts:8,joined: "2023-06-15",  status: "Active" },
-    { id: 11, name:  "Jack King",addedProducts:113,joined: "2023-05-01",  status: "Blocked" },
-    { id: 12, name:  "Karen Lee",addedProducts:72,joined: "2023-04-15",  status: "Active" },
-    { id: 13, name: "Leo Martinez",addedProducts:33,joined: "2023-03-01",  status: "Blocked" },
-    { id: 14, name:  "Mona Patel",addedProducts:59,joined: "2023-02-15",  status: "Active" },
-    { id: 15, name: "Nina Rao",addedProducts:42,joined: "2023-01-01",  status: "Blocked" },
-  ]);
-
+  const [customers, setCustomers] = useState([]);
   const [searchText, setSearchText] = useState("");
-  const [selectedCustomer, setSelectedCustomer] = useState(null);
-  const [isEditing, setIsEditing] = useState(false);
-  const [isViewing, setIsViewing] = useState(false);
+  const [currentPage, setCurrentPage] = useState(1);
+  const rowsPerPage = 10;
+  const [selectedUser, setSelectedUser] = useState(null);
+  const [modalType, setModalType] = useState(null);
+  const [editedUser, setEditedUser] = useState(null);
 
-  const handleView = (rowData) => {
-    setSelectedCustomer(rowData);
-    setIsViewing(true);
+  useEffect(() => {
+    fetchCustomers();
+  }, []);
+
+  const fetchCustomers = async () => {
+    try {
+      const response = await axios.get("http://localhost:4000/experts/");
+      const modifiedData = response.data.map((customer) => ({
+        ...customer,
+        status: Math.random() > 0.5 ? "Active" : "Blocked",
+        verification: Math.random() > 0.5 ? "Verified" : "Unverified",
+        joined: getRandomDate(),
+        visitedClients: customer.visitedClients || Math.floor(Math.random() * 50),
+      }));
+      setCustomers(modifiedData);
+    } catch (error) {
+      console.error("Error fetching user data:", error);
+    }
   };
 
-  const handleEdit = (rowData) => {
-    setSelectedCustomer(rowData);
-    setIsEditing(true);
+  const getRandomDate = () => {
+    const start = new Date(2022, 0, 1);
+    const end = new Date();
+    return new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime())).toLocaleDateString();
   };
 
-  const handleSave = (updatedCustomer) => {
-    setCustomers(customers.map((customer) =>
-      customer.id === updatedCustomer.id ? updatedCustomer : customer
-    ));
-    setIsEditing(false);
-    setSelectedCustomer(null);
-  };
-
-  const handleCancel = () => {
-    setIsEditing(false);
-    setIsViewing(false);
-    setSelectedCustomer(null);
-  };
-
-  const handleStatusChange = (rowData, newStatus) => {
-    setCustomers(customers.map((customer) =>
-      customer.id === rowData.id ? { ...customer, status: newStatus } : customer
-    ));
-  };
-
-  const actionBodyTemplate = (rowData) => {
-    return (
-      <div className="flex  items-center gap-2">
-        <button
-          onClick={() => handleView(rowData)}
-          className="flex items-center bg-blue-500 text-white px-3 py-1 rounded-lg transform hover:scale-105 transition-all duration-300 overflow-hidden"
-        >
-          <i className="pi pi-eye mr-1"></i> View
-        </button>
-        <button
-          onClick={() => handleEdit(rowData)}
-          className="flex items-center bg-yellow-500 text-white px-3 py-1 rounded-lg transform hover:scale-105 transition-all duration-300"
-        >
-          <i className="pi pi-pencil mr-1"></i> Edit
-        </button>
-      </div>
-    );
-  };
-
-  const statusBodyTemplate = (rowData) => {
-    return (
-      <div className="flex gap-2 justify-center md:justify-start">
-        <button
-          onClick={() => handleStatusChange(rowData, "Active")}
-          className={`px-3 py-1 rounded-lg flex items-center justify-center transition-all duration-300 ${
-            rowData.status === "Active"
-              ? "bg-green-500 text-white "
-              : "bg-gray-200 text-gray-700 hover:bg-gray-300"
-          }`}
-        >
-          <i className={`pi ${rowData.status === "Active" ? "pi-check-circle" : "pi-circle"} mr-1`}></i> Active
-        </button>
-        <button
-          onClick={() => handleStatusChange(rowData, "Blocked")}
-          className={`px-3 py-1 rounded-lg flex items-center justify-center transition-all duration-300 ${
-            rowData.status === "Blocked"
-              ? "bg-red-500 text-white shadow-lg"
-              : "bg-gray-200 text-gray-700 hover:bg-gray-300"
-          }`}
-        >
-          <i className={`pi ${rowData.status === "Blocked" ? "pi-ban" : "pi-circle"} mr-1`}></i> Block
-        </button>
-      </div>
+  const handleStatusToggle = (rowData) => {
+    setCustomers(
+      customers.map((customer) =>
+        customer.id === rowData.id
+          ? { ...customer, status: customer.status === "Active" ? "Blocked" : "Active" }
+          : customer
+      )
     );
   };
 
   const filteredCustomers = customers.filter((customer) =>
-    customer.name.toLowerCase().includes(searchText.toLowerCase()) 
+    customer.name.toLowerCase().includes(searchText.toLowerCase())
   );
 
+  const totalPages = Math.ceil(filteredCustomers.length / rowsPerPage);
+  const paginatedCustomers = filteredCustomers.slice((currentPage - 1) * rowsPerPage, currentPage * rowsPerPage);
+
+  const handleView = (user) => {
+    setSelectedUser(user);
+    setModalType("view");
+  };
+
+  const handleEdit = (user) => {
+    setSelectedUser(user);
+    setEditedUser({...user});
+    setModalType("edit");
+  };
+
+  const handleSaveChanges = () => {
+    setCustomers(
+      customers.map((customer) =>
+        customer.id === editedUser.id ? editedUser : customer
+      )
+    );
+    setSelectedUser(null);
+    setEditedUser(null);
+    setModalType(null);
+  };
+
+  const handlePagination = (page) => {
+    setCurrentPage(page);
+  };
+
+  const statusOptions = [
+    { label: 'Active', value: 'Active' },
+    { label: 'Blocked', value: 'Blocked' }
+  ];
+
   return (
-    <div className="min-h-screen p-4 md:p-6">
-      <div className="max-w-7xl mx-auto ">
-       
-        <h1 className="text-3xl font-bold mb-6 text-indigo-800 flex items-center ">
-        <i className="pi pi-users mr-2 text-xl"></i>
-          User Management
-        </h1>
-        
-        <div className="mb-6 relative">
-          <span className="p-input-icon-left w-full">
-            <InputText
-              value={searchText}
-              onChange={(e) => setSearchText(e.target.value)}
-              placeholder="Search by Product Name or Buyer"
-              className="w-full p-3 rounded-lg bg-white border-2 border-gray-200 focus:ring-2 focus:ring-indigo-500 focus:outline-none transition-all duration-300"
-            />
-          </span>
-        </div>
-        
-        <div className="card rounded-lg backdrop-blur-sm bg-white/60 border-2 border-gray-300 shadow-xl overflow-hidden">
-          <DataTable
-            value={filteredCustomers}
-            paginator
-            rows={10}
-            rowsPerPageOptions={[5, 10, 15, 20]}
-            tableStyle={{ minWidth: "100%" }}
-            responsiveLayout="stack"
-            breakpoint="960px"
-            rowHover
-            className="custom-datatable"
-          >
-            <Column field="name" header="Name" sortable></Column>
-            <Column field="addedProducts" header="Added Products" sortable></Column>
-            <Column field="joined" header="Joined At" sortable></Column>
-  
-            <Column
-              body={statusBodyTemplate}
-              header="Status"
-              style={{ width: "20%" }}
-            ></Column>
-            <Column
-              body={actionBodyTemplate}
-              header="Actions"
-              style={{ width: "20%" }}
-            ></Column>
-          </DataTable>
-        </div>
+    <div className="p-6 bg-white shadow-md rounded-lg">
+      <h1 className="text-2xl font-bold text-indigo-800 mb-4">User Management</h1>
+
+      <div className="flex justify-between mb-4">
+        <InputText
+          value={searchText}
+          onChange={(e) => setSearchText(e.target.value)}
+          placeholder="Search by Name"
+          className="w-2/3 p-2 rounded-lg focus:ring-2 focus:ring-indigo-500"
+        />
       </div>
 
-      {/* View Modal */}
-      {isViewing && selectedCustomer && (
-        <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50 p-4">
-          <div className="bg-white/90 border border-white/50 backdrop-blur-md p-6 rounded-lg w-full max-w-md shadow-2xl transform transition-all duration-300 animate-fadeIn">
-            <h2 className="text-xl font-bold mb-4 text-indigo-800 flex items-center">
-              <i className="pi pi-info-circle mr-2"></i> Customer Details
-            </h2>
-            <div className="space-y-4">
-              <div>
-                <label className="block text-sm font-medium mb-2 text-gray-700">Name</label>
-                <p className="p-3 border rounded-lg bg-indigo-50/50 border-indigo-100">{selectedCustomer.name}</p>
-              </div>
-              <div>
-                <label className="block text-sm font-medium mb-2 text-gray-700">Joined at</label>
-                <p className="p-3 border rounded-lg bg-indigo-50/50 border-indigo-100">{selectedCustomer.joined}</p>
-              </div>
-              <div>
-                <label className="block text-sm font-medium mb-2 text-gray-700">Status</label>
-                <p className={`p-3 border rounded-lg flex items-center ${
-                  selectedCustomer.status === "Active" 
-                    ? "bg-green-50 border-green-100 text-green-700" 
-                    : "bg-red-50 border-red-100 text-red-700"
-                }`}>
-                  <i className={`pi ${selectedCustomer.status === "Active" ? "pi-check-circle" : "pi-ban"} mr-2`}></i>
-                  {selectedCustomer.status}
-                </p>
-              </div>
-            </div>
-            <div className="flex justify-end mt-6">
+      <div className="overflow-x-auto">
+        {/* Header row */}
+        <div className="grid grid-cols-5 bg-gray-100 text-gray-700 text-left rounded-t-lg shadow-md">
+          <div className="p-3 font-medium">Name</div>
+          <div className="p-3 font-medium">Visited Clients</div>
+          <div className="p-3 font-medium">Joined At</div>
+          <div className="p-3 font-medium">Status</div>
+          <div className="p-3 font-medium">Actions</div>
+        </div>
+        
+        {/* Data rows */}
+        {paginatedCustomers.map((customer, index) => (
+          <div key={customer.id} className={`grid grid-cols-5 hover:bg-gray-50 shadow-sm ${index % 2 === 0 ? 'bg-white' : 'bg-gray-50'}`}>
+            <div className="p-3">{customer.name}</div>
+            <div className="p-3">{customer.visitedClients}</div>
+            <div className="p-3">{customer.joined}</div>
+            <div className="p-3">
               <button
-                type="button"
-                onClick={handleCancel}
-                className="bg-gray-500 text-white px-4 py-2 rounded-lg flex items-center transform hover:scale-105 transition-all duration-300"
+                className={`px-3 py-1 text-white rounded-full transition-all ${
+                  customer.status === "Active"
+                    ? "bg-green-500 hover:bg-green-600"
+                    : "bg-red-500 hover:bg-red-600"
+                }`}
+                onClick={() => handleStatusToggle(customer)}
               >
-                <i className="pi pi-times mr-2"></i> Close
+                {customer.status}
+              </button>
+            </div>
+            <div className="p-3 flex gap-2">
+              <button onClick={() => handleView(customer)} className="bg-blue-500 hover:bg-blue-600 text-white px-3 py-1 rounded transition-colors duration-200">
+                View
+              </button>
+              <button onClick={() => handleEdit(customer)} className="bg-yellow-500 hover:bg-yellow-600 text-white px-3 py-1 rounded transition-colors duration-200">
+                Edit
               </button>
             </div>
           </div>
-        </div>
-      )}
+        ))}
+      </div>
 
-      {/* Edit Modal */}
-      {isEditing && selectedCustomer && (
-        <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50 p-4">
-          <div className="bg-white/90 border border-white/50 backdrop-blur-md p-6 rounded-lg w-full max-w-md shadow-2xl transform transition-all duration-300 animate-fadeIn">
-            <h2 className="text-xl font-bold mb-4 text-indigo-800 flex items-center">
-              <i className="pi pi-pencil mr-2"></i> Edit Customer
-            </h2>
-            <form
-              onSubmit={(e) => {
-                e.preventDefault();
-                handleSave(selectedCustomer);
-              }}
-            >
-              <div className="mb-4">
-                <label className="block text-sm font-medium mb-2 text-gray-700">Name</label>
-                <InputText
-                  value={selectedCustomer.name}
-                  onChange={(e) =>
-                    setSelectedCustomer({
-                      ...selectedCustomer,
-                      name: e.target.value,
-                    })
-                  }
-                  className="w-full p-3 border rounded-lg bg-white/80 focus:ring-2 focus:ring-indigo-500 focus:outline-none transition-all duration-300"
-                />
-              </div>
-              <div className="mb-4">
-                <label className="block text-sm font-medium mb-2 text-gray-700">Added Products</label>
-                <InputText
-                  value={selectedCustomer.addedProducts}
-                  onChange={(e) =>
-                    setSelectedCustomer({
-                      ...selectedCustomer,
-                      addedProducts: e.target.value,
-                    })
-                  }
-                  className="w-full p-3 border rounded-lg bg-white/80 focus:ring-2 focus:ring-indigo-500 focus:outline-none transition-all duration-300"
-                />
-              </div>
-              <div className="mb-4">
-                <label className="block text-sm font-medium mb-2 text-gray-700">Joined at</label>
-                <InputText
-                  value={selectedCustomer.joined}
-                  onChange={(e) =>
-                    setSelectedCustomer({
-                      ...selectedCustomer,
-                    joined: e.target.value,
-                    })
-                  }
-                  className="w-full p-3 border rounded-lg bg-white/80 focus:ring-2 focus:ring-indigo-500 focus:outline-none transition-all duration-300"
-                />
-              </div>
-              <div className="flex justify-end space-x-3 mt-6">
-                <button
-                  type="button"
-                  onClick={handleCancel}
-                  className="bg-gray-500 text-white px-4 py-2 rounded-lg flex items-center transform hover:scale-105 transition-all duration-300"
-                >
-                  <i className="pi pi-times mr-2"></i> Cancel
-                </button>
-                <button
-                  type="submit"
-                  className="bg-blue-500 text-white px-4 py-2 rounded-lg flex items-center transform hover:scale-105 transition-all duration-300"
-                >
-                  <i className="pi pi-check mr-2"></i> Save
-                </button>
-              </div>
-            </form>
+      {/* Pagination */}
+      {totalPages > 1 && (
+        <div className="flex justify-center mt-4">
+          <div className="flex gap-2">
+            {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+              <button
+                key={page}
+                onClick={() => handlePagination(page)}
+                className={`px-3 py-1 rounded ${
+                  currentPage === page
+                    ? "bg-indigo-600 text-white"
+                    : "bg-gray-200 hover:bg-gray-300 text-gray-700"
+                } transition-colors duration-200`}
+              >
+                {page}
+              </button>
+            ))}
           </div>
         </div>
       )}
 
-      {/* Add custom styles for glass effect and animations */}
-      <style jsx="true">{`
-        @keyframes fadeIn {
-          from { opacity: 0; transform: scale(0.95); }
-          to { opacity: 1; transform: scale(1); }
-        }
-        .animate-fadeIn {
-          animation: fadeIn 0.3s ease-out forwards;
-        }
-        .custom-datatable .p-datatable-header,
-        .custom-datatable .p-datatable-thead > tr > th {
-          background: rgba(255, 255, 255, 0.6) !important;
-          backdrop-filter: blur(8px) !important;
-          border-color: rgba(255, 255, 255, 0.3) !important;
-        }
-        .custom-datatable .p-datatable-tbody > tr {
-          background: rgba(255, 255, 255, 0.4) !important;
-          transition: all 0.2s ease-in-out !important;
-        }
-        .custom-datatable .p-datatable-tbody > tr:hover {
-          background: rgba(245, 245, 255, 0.7) !important;
-          transform: translateY(-2px) !important;
-          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05) !important;
-        }
-        .custom-datatable .p-paginator {
-          background: rgba(255, 255, 255, 0.4) !important;
-          backdrop-filter: blur(8px) !important;
-        }
-      `}</style>
+      {/* Improved View/Edit Modal */}
+      {selectedUser && (
+        <div className="fixed inset-0 bg-gray-800 bg-opacity-50 flex justify-center items-center z-10 transition-opacity duration-300">
+          <div className="bg-white p-6 rounded-lg shadow-lg w-1/3 max-w-md transform transition-transform duration-300">
+            <div className="flex justify-between items-center mb-4">
+              <h2 className="text-xl font-bold text-indigo-700">
+                {modalType === "view" ? "User Details" : "Edit User"}
+              </h2>
+              <button 
+                onClick={() => {
+                  setSelectedUser(null);
+                  setEditedUser(null);
+                  setModalType(null);
+                }}
+                className="text-gray-500 hover:text-gray-700 transition-colors duration-200"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+
+            {modalType === "view" ? (
+              <div className="space-y-4">
+                <div>
+                  <label className="block mb-1 text-gray-700 font-medium">Name:</label>
+                  <InputText
+                    value={selectedUser.name}
+                    disabled
+                    className="w-full p-2 rounded-md focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 bg-gray-50"
+                  />
+                </div>
+
+                <div>
+                  <label className="block mb-1 text-gray-700 font-medium">Visited Clients:</label>
+                  <InputText
+                    value={selectedUser.visitedClients}
+                    disabled
+                    className="w-full p-2 rounded-md focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 bg-gray-50"
+                  />
+                </div>
+
+                <div>
+                  <label className="block mb-1 text-gray-700 font-medium">Status:</label>
+                  <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${
+                    selectedUser.status === "Active" 
+                      ? "bg-green-100 text-green-800" 
+                      : "bg-red-100 text-red-800"
+                  }`}>
+                    {selectedUser.status}
+                  </span>
+                </div>
+
+                <div>
+                  <label className="block mb-1 text-gray-700 font-medium">Joined At:</label>
+                  <InputText
+                    value={selectedUser.joined}
+                    disabled
+                    className="w-full p-2 rounded-md focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 bg-gray-50"
+                  />
+                </div>
+              </div>
+            ) : (
+              <div className="space-y-4">
+                <div className="form-group">
+                  <label className="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                  <InputText 
+                    value={editedUser?.name || ''} 
+                    onChange={(e) => setEditedUser({...editedUser, name: e.target.value})}
+                    className="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500"
+                  />
+                </div>
+                
+                <div className="form-group">
+                  <label className="block text-sm font-medium text-gray-700 mb-1">Visited Clients</label>
+                  <InputText 
+                    type="number"
+                    value={editedUser?.visitedClients || 0} 
+                    onChange={(e) => setEditedUser({...editedUser, visitedClients: parseInt(e.target.value)})}
+                    className="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500"
+                  />
+                </div>
+                
+                <div className="form-group">
+                  <label className="block text-sm font-medium text-gray-700 mb-1">Status</label>
+                  <Dropdown
+                    value={editedUser?.status}
+                    options={statusOptions}
+                    onChange={(e) => setEditedUser({...editedUser, status: e.value})}
+                    className="w-full"
+                  />
+                </div>
+              </div>
+            )}
+
+            <div className="flex justify-end gap-2 mt-6">
+              <button
+                onClick={() => {
+                  setSelectedUser(null);
+                  setEditedUser(null);
+                  setModalType(null);
+                }}
+                className="px-4 py-2 bg-gray-400 hover:bg-gray-500 text-white rounded transition-colors duration-200"
+              >
+                {modalType === "view" ? "Close" : "Cancel"}
+              </button>
+              {modalType === "edit" && (
+                <button
+                  onClick={handleSaveChanges}
+                  className="px-4 py-2 bg-green-500 hover:bg-green-600 text-white rounded transition-colors duration-200"
+                >
+                  Save
+                </button>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

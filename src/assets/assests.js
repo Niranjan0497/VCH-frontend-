@@ -21,3 +21,18 @@ export const ImageAssets = {
   verified_doctor,
   follow_up
 };
+
+
+import finance from "../assets/carouselImages/carousel_finance.jpg"
+import legal from "../assets/carouselImages/carousel_legal.jpg"
+// import wellness from "../assets/carouselImages/carousel_wellness.jpg"
+import tech from "../assets/carouselImages/carousel_tech.jpg"
+import wellness from "../assets/carouselImages/vecteezy_medical.jpg"
+
+export const carousel_img ={
+     finance,
+     legal,
+     tech,
+     wellness
+     
+}

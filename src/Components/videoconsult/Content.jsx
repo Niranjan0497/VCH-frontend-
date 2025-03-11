@@ -30,7 +30,7 @@ function Content() {
       
                   {/* Button */}
                   <button className="mt-6 px-6 py-2 text-md lg:text-lg text-white font-semibold rounded-md bg-[#2DAA9E]">
-                    <Link to="/treatmentdetails" className="text-white">Consult Now</Link>
+                    <Link to="/expertdetails/Dentist" className="text-white">Consult Now</Link>
                     
 
                   </button>

@@ -1,4 +1,3 @@
-
 import { Link, useLocation } from 'react-router-dom';
 import { useState, useEffect, useRef } from 'react';
 
@@ -131,16 +130,16 @@ function Navbar() {
                       <FaChevronDown />
                     </div>
                     <div className="absolute down-full top-0 w-56 mt-10 bg-white rounded-md shadow-lg py-2 opacity-0 invisible group-hover/finance:opacity-100 group-hover/finance:visible transition-all duration-200">
-                      <Link to="/expertdetails/planning" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      <Link to="/expertdetails/Financial Planning" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                         Financial Planning
                       </Link>
-                      <Link to="/expertdetails/tax" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      <Link to="/expertdetails/Tax Advisory" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                         Tax Advisory
                       </Link>
-                      <Link to="/expertdetails//wealth" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      <Link to="/expertdetails/Wealth Management" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                         Wealth Management
                       </Link>
-                      <Link to="/expertdetails/retirement" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      <Link to="/expertdetails/Retirement Planning" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                         Retirement Planning
                       </Link>
                     </div>
@@ -153,16 +152,16 @@ function Navbar() {
                       <FaChevronDown />
                     </div>
                     <div className="absolute down-full top-0 w-56 mt-10 bg-white rounded-md shadow-lg py-2 opacity-0 invisible group-hover/legal:opacity-100 group-hover/legal:visible transition-all duration-200">
-                      <Link to="/expertdetails/Corporate law" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      <Link to="/expertdetails/Corporate Law" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                         Corporate Law
                       </Link>
-                      <Link to="/expertdetails/estate" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      <Link to="/expertdetails/Estate Planning" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                         Estate Planning
                       </Link>
-                      <Link to="/expertdetails/intellectual" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      <Link to="/expertdetails/Intellectual Property" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                         Intellectual Property
                       </Link>
-                      <Link to="/expertdetails/litigation" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      <Link to="/expertdetails/Litigation" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                         Litigation
                       </Link>
                     </div>
@@ -175,16 +174,16 @@ function Navbar() {
                       <FaChevronDown />
                     </div>
                     <div className="absolute down-full top-0 w-56 mt-10 bg-white rounded-md shadow-lg py-2 opacity-0 invisible group-hover/technology:opacity-100 group-hover/technology:visible transition-all duration-200">
-                      <Link to="/expertdetails/consulting" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      <Link to="/expertdetails/IT Consulting" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                         IT Consulting
                       </Link>
-                      <Link to="/expertdetails/development" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      <Link to="/expertdetails/Software Development" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                         Software Development
                       </Link>
-                      <Link to="/expertdetails/security" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      <Link to="/expertdetails/Cybersecurity" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                         Cybersecurity
                       </Link>
-                      <Link to="/expertdetails/cloud" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      <Link to="/expertdetails/Cloud Services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                         Cloud Services
                       </Link>
                     </div>
@@ -197,17 +196,17 @@ function Navbar() {
                       <FaChevronDown />
                     </div>
                     <div className="absolute down-full top-0 w-56 mt-10 bg-white rounded-md shadow-lg py-2 opacity-0 invisible group-hover/wellness:opacity-100 group-hover/wellness:visible transition-all duration-200">
-                      <Link to="/expertdetails/mental" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                        Mental Health
+                      <Link to="/expertdetails/Dentist" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                        Dentist
                       </Link>
-                      <Link to="/expertdetails/fitness" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                        Fitness Coaching
+                      <Link to="/expertdetails/Gynecologist" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                        Gynecologist
                       </Link>
-                      <Link to="/expertdetails/nutrition" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                        Nutrition Counseling
+                      <Link to="/expertdetails/Dermatologist" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                        Dermatologist
                       </Link>
-                      <Link to="/expertdetails/lifestyle" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                        Lifestyle Medicine
+                      <Link to="/expertdetails/Cardiologist" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                        Cardiologist
                       </Link>
                     </div>
                   </div>
@@ -322,16 +321,16 @@ function Navbar() {
 
                       {openNestedDropdown === 'finance' && (
                         <div className="ml-4 mt-2 space-y-2 pl-4 border-l-2 border-gray-200">
-                          <Link to="/services/finance/planning" className="block py-2 px-3 text-gray-700 hover:text-blue-600">
+                          <Link to="/expertdetails/Financial Planning" className="block py-2 px-3 text-gray-700 hover:text-blue-600">
                             Financial Planning
                           </Link>
-                          <Link to="/services/finance/tax" className="block py-2 px-3 text-gray-700 hover:text-blue-600">
+                          <Link to="/expertdetails/Tax Advisory" className="block py-2 px-3 text-gray-700 hover:text-blue-600">
                             Tax Advisory
                           </Link>
-                          <Link to="/services/finance/wealth" className="block py-2 px-3 text-gray-700 hover:text-blue-600">
+                          <Link to="/expertdetails/Wealth Management" className="block py-2 px-3 text-gray-700 hover:text-blue-600">
                             Wealth Management
                           </Link>
-                          <Link to="/services/finance/retirement" className="block py-2 px-3 text-gray-700 hover:text-blue-600">
+                          <Link to="/expertdetails/Retirement Planning" className="block py-2 px-3 text-gray-700 hover:text-blue-600">
                             Retirement Planning
                           </Link>
                         </div>
@@ -350,16 +349,16 @@ function Navbar() {
 
                       {openNestedDropdown === 'legal' && (
                         <div className="ml-4 mt-2 space-y-2 pl-4 border-l-2 border-gray-200">
-                          <Link to="/services/legal/corporate" className="block py-2 px-3 text-gray-700 hover:text-blue-600">
+                          <Link to="/expertdetails/Corporate Law" className="block py-2 px-3 text-gray-700 hover:text-blue-600">
                             Corporate Law
                           </Link>
-                          <Link to="/services/legal/estate" className="block py-2 px-3 text-gray-700 hover:text-blue-600">
+                          <Link to="/expertdetails/Estate Planning" className="block py-2 px-3 text-gray-700 hover:text-blue-600">
                             Estate Planning
                           </Link>
-                          <Link to="/services/legal/intellectual" className="block py-2 px-3 text-gray-700 hover:text-blue-600">
+                          <Link to="/expertdetails/Intellectual Property" className="block py-2 px-3 text-gray-700 hover:text-blue-600">
                             Intellectual Property
                           </Link>
-                          <Link to="/services/legal/litigation" className="block py-2 px-3 text-gray-700 hover:text-blue-600">
+                          <Link to="/expertdetails/Litigation" className="block py-2 px-3 text-gray-700 hover:text-blue-600">
                             Litigation
                           </Link>
                         </div>
@@ -378,16 +377,16 @@ function Navbar() {
 
                       {openNestedDropdown === 'technology' && (
                         <div className="ml-4 mt-2 space-y-2 pl-4 border-l-2 border-gray-200">
-                          <Link to="/services/technology/consulting" className="block py-2 px-3 text-gray-700 hover:text-blue-600">
+                          <Link to="expertdetails/IT Consulting" className="block py-2 px-3 text-gray-700 hover:text-blue-600">
                             IT Consulting
                           </Link>
-                          <Link to="/services/technology/development" className="block py-2 px-3 text-gray-700 hover:text-blue-600">
+                          <Link to="/expertdetails/Software Development" className="block py-2 px-3 text-gray-700 hover:text-blue-600">
                             Software Development
                           </Link>
-                          <Link to="/services/technology/security" className="block py-2 px-3 text-gray-700 hover:text-blue-600">
+                          <Link to="/expertdetails/Cybersecurity" className="block py-2 px-3 text-gray-700 hover:text-blue-600">
                             Cybersecurity
                           </Link>
-                          <Link to="/services/technology/cloud" className="block py-2 px-3 text-gray-700 hover:text-blue-600">
+                          <Link to="/expertdetails/Cloud Services" className="block py-2 px-3 text-gray-700 hover:text-blue-600">
                             Cloud Services
                           </Link>
                         </div>
@@ -406,17 +405,17 @@ function Navbar() {
 
                       {openNestedDropdown === 'wellness' && (
                         <div className="ml-4 mt-2 space-y-2 pl-4 border-l-2 border-gray-200">
-                          <Link to="/services/wellness/mental" className="block py-2 px-3 text-gray-700 hover:text-blue-600">
-                            Mental Health
+                          <Link to="/expertdetails/Dentist" className="block py-2 px-3 text-gray-700 hover:text-blue-600">
+                            Dentist
                           </Link>
-                          <Link to="/services/wellness/fitness" className="block py-2 px-3 text-gray-700 hover:text-blue-600">
-                            Fitness Coaching
+                          <Link to="/expertdetails/Gynecologist" className="block py-2 px-3 text-gray-700 hover:text-blue-600">
+                            Gynecologist
                           </Link>
-                          <Link to="/services/wellness/nutrition" className="block py-2 px-3 text-gray-700 hover:text-blue-600">
-                            Nutrition Counseling
+                          <Link to="/expertdetails/Dermatologist" className="block py-2 px-3 text-gray-700 hover:text-blue-600">
+                            Dermatologist
                           </Link>
-                          <Link to="/services/wellness/lifestyle" className="block py-2 px-3 text-gray-700 hover:text-blue-600">
-                            Lifestyle Medicine
+                          <Link to="/expertdetails/Cardiologist" className="block py-2 px-3 text-gray-700 hover:text-blue-600">
+                            Cardiologist
                           </Link>
                         </div>
                       )}
