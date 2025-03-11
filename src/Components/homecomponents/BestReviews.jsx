@@ -21,10 +21,11 @@ const slides = [
 ];
 
 const BestReviews = () => {
-  const [clickedButtonIndex, setClickedButtonIndex] = useState(null);
+  const [hoveredIndex, setHoveredIndex] = useState(null);
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const settings = {
+    arrows: false,
     autoplay: true,
     autoplaySpeed: 2000,
     className: "center",
@@ -52,20 +53,12 @@ const BestReviews = () => {
     ],
   };
 
-  const handleButtonClick = (index) => {
-    setClickedButtonIndex(index);
-    setTimeout(() => {
-      setClickedButtonIndex(null);
-    }, 3000);
-  };
-
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-gray-900 to-gray-800 text-white px-4 py-10">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br text-white px-2 py-10">
       {/* Testimonials Header */}
-      <div className="text-center mb-10">
-        <p className="text-indigo-500 font-medium uppercase tracking-wider mb-2">TESTIMONIALS</p>
+      <div className="text-center mb-10 text-black">
         <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
-          What our <span className="text-indigo-500">Clients Say</span>
+          <span className="text-black">What our Clients Say</span>
         </h2>
       </div>
 
@@ -73,58 +66,53 @@ const BestReviews = () => {
       <div className="w-full max-w-6xl">
         <Slider {...settings}>
           {slides.map((slide, index) => {
-            let scale = 0.95;
-            let opacity = 0.4;
+            let scale = 0.60
+            let opacity = 0.40;
 
             if (index === currentSlide) {
               scale = 1.15;
               opacity = 1;
             } else if (
-              index === currentSlide - 1 || 
-              index === currentSlide + 1 || 
-              (currentSlide === 0 && index === slides.length - 1) || 
+              index === currentSlide - 1 ||
+              index === currentSlide + 1 ||
+              (currentSlide === 0 && index === slides.length - 1) ||
               (currentSlide === slides.length - 1 && index === 0)
             ) {
-              scale = 0.85;
-              opacity = 0.5;
+              scale = 0.80;
+              opacity = 0.85;
             }
 
             return (
               <div key={index} className="p-4">
                 <motion.div
-                  className="relative w-full shadow-2xl rounded-xl overflow-hidden"
+                  className="relative rounded-xl overflow-hidden h-64"
                   initial={{ scale: 1, opacity: 1 }}
                   animate={{
                     scale: scale,
                     opacity: opacity,
-                    transition: { duration: 0.5 },
+                    transition: { duration:0.5},
                   }}
+                  onMouseEnter={() => setHoveredIndex(index)}
+                  onMouseLeave={() => setHoveredIndex(null)}
                 >
-                  <img src={slide.image} className="w-full h-64 object-cover" alt={slide.title} />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
-                  <div className="absolute bottom-5 p-3 w-full text-center">
-                    {clickedButtonIndex === index ? (
-                      <motion.div
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: 10 }}
-                        transition={{ duration: 0.5 }}
-                        className="p-4 bg-indigo-600 bg-opacity-90 text-white rounded-lg"
-                      >
-                        <p className="text-sm">{slide.description}</p>
-                        <div className="flex justify-center mt-2">
-                          <ReactStars count={5} value={slide.rating} size={20} edit={false} color2={"#ffd700"} />
-                        </div>
-                      </motion.div>
-                    ) : (
-                      <button
-                        onClick={() => handleButtonClick(index)}
-                        className="mt-2 inline-block bg-indigo-500 hover:bg-indigo-600 text-white py-2 px-6 rounded-lg transition-transform transform hover:scale-105"
-                      >
-                        {slide.button}
-                      </button>
-                    )}
-                  </div>
+                  {/* Image Container */}
+                  <motion.img
+                    src={slide.image}
+                    className="absolute w-full h-full object-cover transition-opacity duration-500"
+                    style={{ opacity: hoveredIndex === index ? 0 : 1 }}
+                    alt={slide.title}
+                  />
+
+                  {/* Description Container */}
+                  <motion.div
+                    className="absolute inset-0 flex flex-col items-center justify-center bg-indigo-600 text-white p-6 rounded-lg transition-opacity duration-500"
+                    style={{ opacity: hoveredIndex === index ? 1 : 0 }}
+                  >
+                    <p className="text-sm">{slide.description}</p>
+                    <div className="flex justify-center mt-2">
+                      <ReactStars count={5} value={slide.rating} size={20} edit={false} color2={"#ffd700"} />
+                    </div>
+                  </motion.div>
                 </motion.div>
               </div>
             );
