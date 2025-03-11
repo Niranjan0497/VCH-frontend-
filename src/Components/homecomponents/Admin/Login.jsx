@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -8,7 +9,6 @@ import "../../../../src/index.css";
 
 function Login() {
   const [formData, setFormData] = useState({ email: "", password: "" });
-
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Login form submitted:", formData);
@@ -22,6 +22,7 @@ function Login() {
   };
 
   return (
+
     <div
       className={`min-h-screen flex items-center justify-center bg-white  bg-cover bg-center px-6`}
     >
@@ -34,6 +35,7 @@ function Login() {
         className="bg-transparent shadow-2xl p-8 rounded-lg max-w-md w-full text-center"
       >
         <div className="flex justify-center mb-4">
+
           <CiUser className="text-8xl text-amber-50 bg-slate-900 border border-none rounded-full px-5 py-6" />
         </div>
         <h2
@@ -60,6 +62,7 @@ function Login() {
               required
               value={formData.email}
               onChange={handleChange}
+
               className="peer w-full pl-10 pr-4 pt-6 pb-2 border-b border-gray-300 bg-transparent text-black focus:ring-0 focus:outline-none"
             />
 
@@ -81,6 +84,7 @@ function Login() {
               required
               value={formData.password}
               onChange={handleChange}
+
               className="peer w-full  pl-10 pr-4 pt-6 pb-2 border-b border-gray-300 bg-transparent text-black focus:ring-0 focus:outline-none"
             />
             <label
@@ -93,6 +97,7 @@ function Login() {
 
           <div className="flex items-center justify-between text-black text-sm">
             <label className="flex items-center">
+
               <input
                 type="checkbox"
                 className="h-4 w-4 text-blue-500 border-gray-300"
@@ -108,7 +113,6 @@ function Login() {
               Forgot Password?
             </Link>
           </div>
-
           <button
             type="submit"
             className="w-full tracking-wide py-2 rounded-md bg-blue-700 text-white font-semibold shadow-md hover:bg-blue-800 transition"
@@ -116,6 +120,7 @@ function Login() {
             SIGN&nbsp;&nbsp;IN
           </button>
         </form>
+
 
         <p className="mt-4 text-center text-sm text-black font-semibold">
           Don't have an account?{" "}
@@ -125,6 +130,7 @@ function Login() {
           >
             Register
           </Link>
+
         </p>
       </motion.div>
     </div>
@@ -132,3 +138,4 @@ function Login() {
 }
 
 export default Login;
+

@@ -1,8 +1,14 @@
 
 import { Link, useLocation } from 'react-router-dom';
 import { useState, useEffect, useRef } from 'react';
+
 import { FaBars, FaTimes, FaChevronDown, FaChevronLeft } from 'react-icons/fa';
 import vch_logo from "../assets/vch_logo.png";
+
+import {  FaUser, FaBars, FaTimes } from 'react-icons/fa';
+import {FaChevronLeft,FaChevronDown } from "react-icons/fa";
+
+
 import { BsPersonCircle } from "react-icons/bs";
 
 function Navbar() {
@@ -99,7 +105,9 @@ function Navbar() {
   };
 
   return (
+
     <nav className={`${sticky ? 'bg-slate-900' : 'bg-slate-900'} shadow-md sticky top-0 left-0 right-0 z-50 py-2`}>
+
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-between items-center h-16">
           {/* Left side - Logo and main links */}
@@ -114,9 +122,11 @@ function Navbar() {
 
             <div className="hidden md:flex items-center space-x-2 lg:space-x-6">
               {/* Services Dropdown */}
+
               <div className="relative group">
                 <button className="flex items-center text-white font-semibold text-sm sm:text-base lg:text-lg pb-1 hover:text-emerald-400">
                   Find Experts <FaChevronDown className="ml-1 h-3 w-3" />
+
                 </button>
                 <div className="flex dropdown-menu opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 absolute left-0 mt-2 w-130 bg-white rounded-md shadow-lg py-2 z-20">
                   {/* Finance Link with Nested Dropdown */}
@@ -211,8 +221,10 @@ function Navbar() {
 
               <Link
                 to="/video-consult"
+
                 className={`text-white font-semibold text-sm sm:text-base lg:text-lg pb-1 hover:text-rose-400 ${
                   isActive('/services') ? 'text-blue-500 border-practo-blue font-medium' : ''
+
                 }`}
                 style={{ fontFamily: '"Lato", "Open Sans", sans-serif' }}
               >
@@ -221,8 +233,10 @@ function Navbar() {
 
               <Link
                 to="/contacts"
+
                 className={`text-white font-semibold text-sm sm:text-base lg:text-lg pb-1 hover:text-sky-400 ${
                   isActive('/contacts') ? 'text-blue-500 border-practo-blue font-medium' : ''
+
                 }`}
                 style={{ fontFamily: '"Lato", "Open Sans", sans-serif' }}
               >
@@ -251,14 +265,17 @@ function Navbar() {
               ref={profileTriggerRef}
               className="relative profile-trigger"
             >
+
               <button
                 className="flex items-center justify-center w-10 h-10 rounded-full transition-colors"
                 onClick={() => setIsProfileOpen(!isProfileOpen)}
               >
+
                 <BsPersonCircle className='text-white h-9 w-9' />
               </button>
 
               {isProfileOpen && (
+
                 <div
                   ref={profileMenuRef}
                   className={"absolute right-0 mt-2 w-48 h-19 text-center bg-white border border-gray-200 rounded-lg shadow-lg transition-all duration-300 ease-in-out overflow-hidden "}
@@ -412,6 +429,7 @@ function Navbar() {
                   </div>
                 )}
               </div>
+              
 
               <Link
                 to="/video-consult"

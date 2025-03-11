@@ -13,6 +13,7 @@ import {
   FiChevronUp,
 } from "react-icons/fi";
 import { FaHome } from "react-icons/fa";
+import { HiOutlineUserGroup } from "react-icons/hi2";
 
 const Sidebar = ({ isOpen, toggleSidebar }) => {
   const [openMenus, setOpenMenus] = useState({});
@@ -28,6 +29,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
         { name: "Categories", path: "categories", icon: <FiTag /> },
       ],
     },
+    { name: "Experts Management", icon: <HiOutlineUserGroup />, path: "experts-management" },
     { name: "Users Management", icon: <FiUsers />, path: "users-management" },
     {
       name: "Customer Service",

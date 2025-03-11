@@ -14,12 +14,14 @@ import { motion } from "framer-motion";
 import { FaBriefcaseMedical } from "react-icons/fa6";
 import "../../../../src/index.css";
 
+
 function Register() {
   const [formData, setFormData] = useState({
     username: "",
     email: "",
     phoneNumber: "",
     role: "user",
+
     specialities: "",
     experience: "",
     gender: "",
@@ -27,15 +29,19 @@ function Register() {
     qualification: "",
   });
 
+
   const navigate = useNavigate();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
 
+
     setFormData((prevData) => ({
       ...prevData,
       [name]: name === "phoneNumber" ? value.replace(/\D/g, "") : value,
     }));
+
+   
   };
 
   const handleSubmit = (e) => {
@@ -55,18 +61,19 @@ function Register() {
   };
 
   return (
+
     <div className="min-h-screen  flex items-center justify-center bg-white px-6">
       <motion.div
         initial={{ scale: 0 }}
         animate={{ scale: 1 }}
         exit={{ scale: 0 }}
         transition={{ duration: 0.8, ease: "easeInOut" }}
-        className="bg-transparent shadow-2xl p-8 rounded-lg max-w-md w-full"
-      >
+        className="bg-transparent shadow-2xl p-8 rounded-lg max-w-md w-full">
         {/* User Icon */}
         <div className="flex justify-center mb-4">
           <CiUser className="text-8xl text-amber-50 bg-slate-900 border-none rounded-full px-5 py-6" />
         </div>
+
 
         {/* Dynamic Heading */}
         <h2
@@ -219,14 +226,18 @@ function Register() {
           <button
             type="submit"
             className="w-full py-2 rounded-md bg-blue-700 text-black font-semibold shadow-md hover:bg-blue-800 transition"
+
           >
             {formData.role === "user" ? "Submit" : "Next"}
           </button>
         </form>
+
       </motion.div>
+
     </div>
   );
 }
+
 
 // InputField Component
 const InputField = ({
@@ -263,5 +274,6 @@ const InputField = ({
     </div>
   );
 };
+
 
 export default Register;

@@ -27,7 +27,16 @@ const Dropdown = ({ label, options, selected, setSelected, isOpen, setOpen }) =>
 );
 
 const FilterComponent = ({ gender, setGender }) => {
-  const defaultFilters = { stories: "", experience: "", sortBy: "Relevance", fees: "", availability: "Available Today", consultType: "" };
+
+  const defaultFilters = {
+    stories: "",
+    experience: "",
+    sortBy: "Relevance",
+    fees: "",
+    availability: "Available Today",
+    consultType: ""
+  };
+
   const [filters, setFilters] = useState(defaultFilters);
   const [filtersOpen, setFiltersOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null);
@@ -42,7 +51,7 @@ const FilterComponent = ({ gender, setGender }) => {
 
   return (
     <div className="w-full p-4">
-      
+
       <div className="flex justify-between items-center md:hidden">
         <h2 className="text-gray-800 text-lg font-semibold">Filters</h2>
         <button className="text-gray-800 p-2 rounded flex items-center" onClick={() => setMobileFiltersVisible(!mobileFiltersVisible)}>
@@ -64,9 +73,11 @@ const FilterComponent = ({ gender, setGender }) => {
             selected={value}
             setSelected={setValue}
             isOpen={openDropdown === label}
+
             setOpen={setOpenDropdown}
           />
         ))}
+
 
        
         <Dropdown
@@ -79,6 +90,7 @@ const FilterComponent = ({ gender, setGender }) => {
         />
 
       
+
         <button
           className="border border-gray-500 rounded px-4 py-2 text-gray-800 md:bg-blue-600 md:text-white flex items-center justify-between w-full md:w-auto"
           onClick={() => setFiltersOpen(!filtersOpen)}
@@ -104,6 +116,7 @@ const FilterComponent = ({ gender, setGender }) => {
               {options.map((option) => (
                 <div key={option} className="flex items-center gap-2">
                   <input type="radio" id={option} name={label} className="h-4 w-4" />
+
                   <label htmlFor={option} className="cursor-pointer">{option}</label>
                 </div>
               ))}

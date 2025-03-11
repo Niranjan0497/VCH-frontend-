@@ -2,8 +2,14 @@ import React from 'react'
 import { RiVerifiedBadgeFill } from 'react-icons/ri';
 import { LiaFilePrescriptionSolid } from 'react-icons/lia';
 import { RiChatFollowUpFill } from 'react-icons/ri';
+
 import { Link } from 'react-router-dom';
+
+import { useNavigate } from 'react-router-dom';
+
+
 function Content() {
+  const handleNavigate = useNavigate();
   return (
     <div>
             <div className="w-full overflow-hidden bg-[#F8E9E6] pt-14">
@@ -26,6 +32,7 @@ function Content() {
                   <button className="mt-6 px-6 py-2 text-md lg:text-lg text-white font-semibold rounded-md bg-[#2DAA9E]">
                     <Link to="/treatmentdetails" className="text-white">Consult Now</Link>
                     
+
                   </button>
       
                   {/* Features */}
